@@ -15883,7 +15883,18 @@ namespace ts {
                         return;
                     }
                     (symbolStack || (symbolStack = [])).push(symbol);
-                    inferFromObjectTypesWorker(source, target);
+                    try {
+                        inferFromObjectTypesWorker(source, target);
+                    }
+                    catch (err) {
+                        if (err.message.indexOf("Maximum call stack") !== -1) {
+                            error(originalTarget.symbol.valueDeclaration, Diagnostics.Inference_for_0_is_too_complex_and_could_not_be_inferred, symbolToString(originalTarget.symbol));
+                            source.flags |= TypeFlags.Any;
+                        }
+                        else {
+                            throw err;
+                        }
+                    }
                     symbolStack.pop();
                 }
                 else {

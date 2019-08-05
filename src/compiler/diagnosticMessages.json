@@ -2693,7 +2693,10 @@
         "category": "Error",
         "code": 2773
     },
-
+    "Inference for '{0}' is too complex and could not be inferred.": {
+        "category": "Error",
+        "code": 2774
+    },
     "Import declaration '{0}' is using private name '{1}'.": {
         "category": "Error",
         "code": 4000
