@@ -46,7 +46,7 @@ namespace ts.formatting {
          */
         getIndentation(): number;
         /**
-         * Prefered relative indentation for child nodes.
+         * Preferred relative indentation for child nodes.
          * Delta is used to carry the indentation info
          * foo(bar({
          *     $

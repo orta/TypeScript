@@ -1849,16 +1849,19 @@ namespace FourSlash {
         public formatDocument() {
             const edits = this.languageService.getFormattingEditsForDocument(this.activeFile.fileName, this.formatCodeSettings);
             this.applyEdits(this.activeFile.fileName, edits, /*isFormattingEdit*/ true);
+            return edits;
         }
 
         public formatSelection(start: number, end: number) {
             const edits = this.languageService.getFormattingEditsForRange(this.activeFile.fileName, start, end, this.formatCodeSettings);
             this.applyEdits(this.activeFile.fileName, edits, /*isFormattingEdit*/ true);
+            return edits;
         }
 
         public formatOnType(pos: number, key: string) {
             const edits = this.languageService.getFormattingEditsAfterKeystroke(this.activeFile.fileName, pos, key, this.formatCodeSettings);
             this.applyEdits(this.activeFile.fileName, edits, /*isFormattingEdit*/ true);
+            return edits;
         }
 
         private editScriptAndUpdateMarkers(fileName: string, editStart: number, editEnd: number, newText: string) {
@@ -4379,7 +4382,7 @@ namespace FourSlashInterface {
         }
 
         public document() {
-            this.state.formatDocument();
+            return this.state.formatDocument();
         }
 
         public copyFormatOptions(): ts.FormatCodeSettings {
@@ -4391,11 +4394,11 @@ namespace FourSlashInterface {
         }
 
         public selection(startMarker: string, endMarker: string) {
-            this.state.formatSelection(this.state.getMarkerByName(startMarker).position, this.state.getMarkerByName(endMarker).position);
+            return this.state.formatSelection(this.state.getMarkerByName(startMarker).position, this.state.getMarkerByName(endMarker).position);
         }
 
         public onType(posMarker: string, key: string) {
-            this.state.formatOnType(this.state.getMarkerByName(posMarker).position, key);
+            return this.state.formatOnType(this.state.getMarkerByName(posMarker).position, key);
         }
 
         public setOption(name: keyof ts.FormatCodeSettings, value: number | string | boolean): void {

@@ -16,8 +16,8 @@ class Carousel<T> extends Vue {
 export function Component(x: Config): any;`
 };
         // Regression test for GH #18245 - bug in single line comment writer caused a debug assertion when attempting
-        //  to write an alias to a module's default export was referrenced across files and had no default export
-        it("should be able to create a language service which can respond to deinition requests without throwing", () => {
+        //  to write an alias to a module's default export was referenced across files and had no default export
+        it("should be able to create a language service which can respond to definition requests without throwing", () => {
             const languageService = createLanguageService({
                 getCompilationSettings() {
                     return {};
