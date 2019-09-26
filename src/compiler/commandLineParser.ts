@@ -688,7 +688,7 @@ namespace ts {
             name: "out",
             type: "string",
             affectsEmit: true,
-            isFilePath: false, // This is intentionally broken to support compatability with existing tsconfig files
+            isFilePath: false, // This is intentionally broken to support compatibility with existing tsconfig files
             // for correct behaviour, please use outFile
             category: Diagnostics.Advanced_Options,
             paramType: Diagnostics.FILE,

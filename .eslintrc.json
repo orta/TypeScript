@@ -3,7 +3,9 @@
     "parserOptions": {
         "warnOnUnsupportedTypeScriptVersion": false,
         "ecmaVersion": 6,
-        "sourceType": "module"
+        "sourceType": "module",
+        "tsconfigRootDir": "src",
+        "project": "./tsconfig-base.json"
     },
     "env": {
         "browser": false,
@@ -29,6 +31,10 @@
         "@typescript-eslint/prefer-for-of": "error",
         "@typescript-eslint/prefer-function-type": "error",
         "@typescript-eslint/prefer-namespace-keyword": "error",
+        
+        // These rules require semantic analysis
+        "@typescript-eslint/no-unnecessary-qualifier": "error",
+        "@typescript-eslint/no-unnecessary-type-assertion": "error",
 
         "quotes": "off",
         "@typescript-eslint/quotes": ["error", "double", { "avoidEscape": true, "allowTemplateLiterals": true }],

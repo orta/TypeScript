@@ -336,25 +336,20 @@ const lintFoldEnd = async () => { if (fold.isTravis()) console.log(fold.end("lin
 
 /** @type { (folder: string) => { (): Promise<any>; displayName?: string } } */
 const eslint = (folder) => async () => {
-    const ESLINTRC_CI = ".eslintrc.ci.json";
-    const isCIEnv = cmdLineOptions.ci || process.env.CI === "true";
-
     const args = [
         "node_modules/eslint/bin/eslint",
         "--format", "autolinkable-stylish",
         "--rulesdir", "scripts/eslint/built/rules",
         "--ext", ".ts",
+        "--cache"
     ];
-
-    if (
-        isCIEnv &&
-        fs.existsSync(path.resolve(folder, ESLINTRC_CI))
-    ) {
-        args.push("--config", path.resolve(folder, ESLINTRC_CI));
-    }
 
     if (cmdLineOptions.fix) {
         args.push("--fix");
+    }
+    
+    if (folder === "scripts"){
+        args.push("--config ./scripts/.eslintrc.json")
     }
 
     args.push(folder);
@@ -380,9 +375,6 @@ const lint = series([buildEslintRules, lintFoldStart, lintScripts, lintCompiler,
 lint.displayName = "lint";
 task("lint", series([buildEslintRules, lintFoldStart, lint, lintFoldEnd]));
 task("lint").description = "Runs eslint on the compiler and scripts sources.";
-task("lint").flags = {
-    "   --ci": "Runs eslint additional rules",
-};
 
 const buildCancellationToken = () => buildProject("src/cancellationToken");
 const cleanCancellationToken = () => cleanProject("src/cancellationToken");

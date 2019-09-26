@@ -10,7 +10,6 @@
         "types": ["node"],
         "lib": ["es6", "scripthost"],
     },
-
     "include": [
         "generateLocalizedDiagnosticMessages.ts",
         "processDiagnosticMessages.ts",

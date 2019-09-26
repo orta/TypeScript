@@ -32,3 +32,4 @@ CONTRIBUTING.md
 TEST-results.xml
 .dockerignore
 Dockerfile
+.eslintcache

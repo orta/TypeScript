@@ -1,4 +1,4 @@
 {
     "extends": "./tsconfig.json",
-    "include": ["*.ts", "types"]
+    "include": ["*.ts", "types", "rules", "eslint/rules/boolean-trivia.ts","eslint/**/*.ts"]
 }
