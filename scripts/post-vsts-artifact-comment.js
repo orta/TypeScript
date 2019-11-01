@@ -48,8 +48,9 @@ and then running \`npm install\`.
 `
     });
 
-    // Send a ping to https://github.com/orta/make-monaco-builds#pull-request-builds
-    await gh.request("POST /repos/orta/make-monaco-builds/dispatches", { event_type: +process.env.SOURCE_ISSUE })
+    // Temporarily disabled until the typescript bot has access to push dispatches
+    // // Send a ping to https://github.com/orta/make-monaco-builds#pull-request-builds
+    // await gh.request("POST /repos/orta/make-monaco-builds/dispatches", { event_type: +process.env.SOURCE_ISSUE })
 }
 
 main().catch(async e => {
