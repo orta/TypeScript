@@ -381,7 +381,7 @@ namespace FourSlash {
         }
 
         private getFileContent(fileName: string): string {
-            return ts.Debug.assertDefined(this.tryGetFileContent(fileName));
+            return ts.Debug.checkDefined(this.tryGetFileContent(fileName));
         }
         private tryGetFileContent(fileName: string): string | undefined {
             const script = this.languageServiceAdapterHost.getScriptInfo(fileName);
@@ -1319,6 +1319,37 @@ namespace FourSlash {
             }
         }
 
+        public baselineRename(marker: string, options: FourSlashInterface.RenameOptions) {
+            const position = this.getMarkerByName(marker).position;
+            const locations = this.languageService.findRenameLocations(
+                this.activeFile.fileName,
+                position,
+                options.findInStrings ?? false,
+                options.findInComments ?? false,
+                options.providePrefixAndSuffixTextForRename);
+
+            if (!locations) {
+                this.raiseError(`baselineRename failed. Could not rename at the provided position.`);
+            }
+
+            const renamesByFile = ts.group(locations, l => l.fileName);
+            const baselineContent = renamesByFile.map(renames => {
+                const { fileName } = renames[0];
+                const sortedRenames = ts.sort(renames, (a, b) => b.textSpan.start - a.textSpan.start);
+                let baselineFileContent = this.getFileContent(fileName);
+                for (const { textSpan } of sortedRenames) {
+                    const isOriginalSpan = fileName === this.activeFile.fileName && ts.textSpanIntersectsWithPosition(textSpan, position);
+                    baselineFileContent =
+                        baselineFileContent.slice(0, textSpan.start) +
+                        (isOriginalSpan ? "[|RENAME|]" : "RENAME") +
+                        baselineFileContent.slice(textSpan.start + textSpan.length);
+                }
+                return `/*====== ${fileName} ======*/\n\n${baselineFileContent}`;
+            }).join("\n\n") + "\n";
+
+            Harness.Baseline.runBaseline(this.getBaselineFileNameForContainingTestFile(), baselineContent);
+        }
+
         public verifyQuickInfoExists(negative: boolean) {
             const actualQuickInfo = this.languageService.getQuickInfoAtPosition(this.activeFile.fileName, this.currentCaretPosition);
             if (negative) {
@@ -1532,7 +1563,7 @@ namespace FourSlash {
             const output: string[] = [];
             for (let lineNumber = contextStart.line; lineNumber <= contextEnd.line; lineNumber++) {
                 const spanLine = contextString.substring(contextLineMap[lineNumber], contextLineMap[lineNumber + 1]);
-                output.push(lineNumbers ? `${`${lineNumber + 1}: `.padStart(lineNumberPrefixLength, " ")}${spanLine}` : spanLine);
+                output.push(lineNumbers ? `${ts.padLeft(`${lineNumber + 1}: `, lineNumberPrefixLength)}${spanLine}` : spanLine);
                 if (selection) {
                     if (lineNumber < selectionStart.line || lineNumber > selectionEnd.line) {
                         continue;
@@ -1685,7 +1716,7 @@ namespace FourSlash {
                 resultString += Harness.IO.newLine();
             }
 
-            Harness.Baseline.runBaseline(ts.Debug.assertDefined(this.testData.globalOptions[MetadataOptionNames.baselineFile]), resultString);
+            Harness.Baseline.runBaseline(ts.Debug.checkDefined(this.testData.globalOptions[MetadataOptionNames.baselineFile]), resultString);
         }
 
         private flattenChainedMessage(diag: ts.DiagnosticMessageChain, indent = " ") {
@@ -2616,7 +2647,7 @@ namespace FourSlash {
             const fixWithId = ts.find(this.getCodeFixes(this.activeFile.fileName), a => a.fixId === fixId);
             ts.Debug.assert(fixWithId !== undefined, "No available code fix has the expected id. Fix All is not available if there is only one potentially fixable diagnostic present.", () =>
                 `Expected '${fixId}'. Available actions:\n${ts.mapDefined(this.getCodeFixes(this.activeFile.fileName), a => `${a.fixName} (${a.fixId || "no fix id"})`).join("\n")}`);
-            ts.Debug.assertEqual(fixWithId!.fixAllDescription, fixAllDescription);
+            ts.Debug.assertEqual(fixWithId.fixAllDescription, fixAllDescription);
 
             const { changes, commands } = this.languageService.getCombinedCodeFix({ type: "file", fileName: this.activeFile.fileName }, fixId, this.formatCodeSettings, ts.emptyOptions);
             assert.deepEqual<readonly {}[] | undefined>(commands, expectedCommands);
@@ -4174,10 +4205,57 @@ namespace FourSlash {
         const actualMsg = "\x1b[1mActual\x1b[0m\x1b[31m";
         const expectedString = quoted ? "\"" + expected + "\"" : expected;
         const actualString = quoted ? "\"" + actual + "\"" : actual;
-        return `\n${expectMsg}:\n${expectedString}\n\n${actualMsg}:\n${actualString}`;
+        return `\n${expectMsg}:\n${expectedString}\n\n${actualMsg}:\n${highlightDifferenceBetweenStrings(expected, actualString)}`;
     }
 
     function templateToRegExp(template: string) {
         return new RegExp(`^${ts.regExpEscape(template).replace(/\\\{\d+\\\}/g, ".*?")}$`);
     }
+
+    function rangesOfDiffBetweenTwoStrings(source: string, target: string) {
+        const ranges = [] as { start: number; length: number }[];
+
+        const addToIndex = (index: number) => {
+            const closestIndex = ranges[ranges.length - 1];
+            if (closestIndex) {
+                const doesAddToIndex = closestIndex.start + closestIndex.length === index - 1;
+                if (doesAddToIndex) {
+                    closestIndex.length = closestIndex.length + 1;
+                }
+            else {
+                ranges.push({ start: index - 1, length: 1 });
+            }
+          }
+          else {
+                ranges.push({ start: index - 1, length: 1 });
+          }
+        };
+
+        for (let index = 0; index < Math.max(source.length, target.length); index++) {
+            const srcChar = source[index];
+            const targetChar = target[index];
+            if (srcChar !== targetChar) addToIndex(index);
+        }
+
+        return ranges;
+      }
+
+      // Adds an _ when the source string and the target string have a whitespace difference
+      function highlightDifferenceBetweenStrings(source: string, target: string) {
+        const ranges = rangesOfDiffBetweenTwoStrings(source, target);
+        let emTarget = target;
+        ranges.forEach((range, index) => {
+            const lhs = `\x1b[4m`;
+            const rhs = `\x1b[0m\x1b[31m`;
+            const additionalOffset = index * lhs.length + index * rhs.length;
+            const before = emTarget.slice(0, range.start + 1 + additionalOffset);
+            const between = emTarget.slice(
+                range.start + 1 + additionalOffset,
+                range.start + range.length + 1 + additionalOffset
+            );
+             const after = emTarget.slice(range.start + range.length + 1 + additionalOffset, emTarget.length);
+            emTarget = before + lhs + between + rhs + after;
+        });
+        return emTarget;
+      }
 }
