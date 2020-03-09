@@ -363,3 +363,4 @@ for (let [...multiRobotAInfo] = ["trimmer", ["trimming", "edging"]], i = 0; i < 
 >log : Symbol(log, Decl(sourceMapValidationDestructuringForArrayBindingPattern.ts, 0, 22))
 >multiRobotAInfo : Symbol(multiRobotAInfo, Decl(sourceMapValidationDestructuringForArrayBindingPattern.ts, 89, 10))
 }
+

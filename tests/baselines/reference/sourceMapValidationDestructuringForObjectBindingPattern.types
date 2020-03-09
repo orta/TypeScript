@@ -362,3 +362,5 @@ for (let {name: nameA, skills: { primary: primaryA, secondary: secondaryA } } =
 >log : (msg: any) => void
 >primaryA : string
 }
+
+

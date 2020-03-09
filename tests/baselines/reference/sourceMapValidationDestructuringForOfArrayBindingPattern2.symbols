@@ -341,3 +341,37 @@ for ([...multiRobotAInfo] of [multiRobotA, multiRobotB]) {
 >log : Symbol(log, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 0, 22))
 >multiRobotAInfo : Symbol(multiRobotAInfo, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 23, 54))
 }
+
+function robodance(f: Function): { a: string } {
+>robodance : Symbol(robodance, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 99, 1))
+>f : Symbol(f, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 101, 19))
+>Function : Symbol(Function, Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --))
+>a : Symbol(a, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 101, 34))
+
+    f();
+>f : Symbol(f, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 101, 19))
+
+    return { a: "test" };
+>a : Symbol(a, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 103, 12))
+}
+
+const { a: result } = robodance(() => {
+>a : Symbol(a, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 101, 34))
+>result : Symbol(result, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 106, 7))
+>robodance : Symbol(robodance, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 99, 1))
+
+    console.log("foo1");
+>console.log : Symbol(log, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 0, 22))
+>console : Symbol(console, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 0, 11))
+>log : Symbol(log, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 0, 22))
+
+    console.log("foo2");
+>console.log : Symbol(log, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 0, 22))
+>console : Symbol(console, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 0, 11))
+>log : Symbol(log, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 0, 22))
+
+});
+
+result
+>result : Symbol(result, Decl(sourceMapValidationDestructuringForOfArrayBindingPattern2.ts, 106, 7))
+

@@ -66,3 +66,4 @@ for (let {name: nameA, skills: { primary: primaryA, secondary: secondaryA } } =
     i = 0; i < 1; i++) {
     console.log(primaryA);
 }
+

@@ -280,3 +280,5 @@ for (let {name: nameA, skills: { primary: primaryA, secondary: secondaryA } } =
 >log : Symbol(log, Decl(sourceMapValidationDestructuringForObjectBindingPattern.ts, 0, 22))
 >primaryA : Symbol(primaryA, Decl(sourceMapValidationDestructuringForObjectBindingPattern.ts, 61, 32))
 }
+
+

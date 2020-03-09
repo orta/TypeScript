@@ -100,3 +100,15 @@ for ([...multiRobotAInfo] of getMultiRobots()) {
 for ([...multiRobotAInfo] of [multiRobotA, multiRobotB]) {
     console.log(multiRobotAInfo);
 }
+
+function robodance(f: Function): { a: string } {
+    f();
+    return { a: "test" };
+}
+
+const { a: result } = robodance(() => {
+    console.log("foo1");
+    console.log("foo2");
+});
+
+result

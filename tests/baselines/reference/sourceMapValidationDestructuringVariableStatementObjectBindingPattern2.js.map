@@ -1,2 +1,2 @@
 //// [sourceMapValidationDestructuringVariableStatementObjectBindingPattern2.js.map]
-{"version":3,"file":"sourceMapValidationDestructuringVariableStatementObjectBindingPattern2.js","sourceRoot":"","sources":["sourceMapValidationDestructuringVariableStatementObjectBindingPattern2.ts"],"names":[],"mappings":"AAAK,IAAA,eAAC,CAAc;AAChB,IAAA,qBAA2B,EAAzB,QAAC,EAAE,QAAsB,CAAC"}
+{"version":3,"file":"sourceMapValidationDestructuringVariableStatementObjectBindingPattern2.js","sourceRoot":"","sources":["sourceMapValidationDestructuringVariableStatementObjectBindingPattern2.ts"],"names":[],"mappings":"AAAK,IAAA,CAAC,GAAI,EAAE,CAAC,EAAE,EAAE,EAAE,EAAb,CAAc;AAChB,IAAA,KAAW,EAAE,CAAC,EAAE,EAAE,EAAE,CAAC,EAAE,EAAE,EAAE,EAAzB,CAAC,OAAA,EAAE,CAAC,OAAqB,CAAC"}

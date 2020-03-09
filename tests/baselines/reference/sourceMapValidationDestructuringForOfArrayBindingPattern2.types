@@ -439,3 +439,45 @@ for ([...multiRobotAInfo] of [multiRobotA, multiRobotB]) {
 >log : (msg: any) => void
 >multiRobotAInfo : (string | [string, string])[]
 }
+
+function robodance(f: Function): { a: string } {
+>robodance : (f: Function) => { a: string; }
+>f : Function
+>a : string
+
+    f();
+>f() : any
+>f : Function
+
+    return { a: "test" };
+>{ a: "test" } : { a: string; }
+>a : string
+>"test" : "test"
+}
+
+const { a: result } = robodance(() => {
+>a : any
+>result : string
+>robodance(() => {    console.log("foo1");    console.log("foo2");}) : { a: string; }
+>robodance : (f: Function) => { a: string; }
+>() => {    console.log("foo1");    console.log("foo2");} : () => void
+
+    console.log("foo1");
+>console.log("foo1") : void
+>console.log : (msg: any) => void
+>console : { log(msg: any): void; }
+>log : (msg: any) => void
+>"foo1" : "foo1"
+
+    console.log("foo2");
+>console.log("foo2") : void
+>console.log : (msg: any) => void
+>console : { log(msg: any): void; }
+>log : (msg: any) => void
+>"foo2" : "foo2"
+
+});
+
+result
+>result : string
+

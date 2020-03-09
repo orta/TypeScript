@@ -100,6 +100,19 @@ for ([...multiRobotAInfo] of [multiRobotA, multiRobotB]) {
     console.log(multiRobotAInfo);
 }
 
+function robodance(f: Function): { a: string } {
+    f();
+    return { a: "test" };
+}
+
+const { a: result } = robodance(() => {
+    console.log("foo1");
+    console.log("foo2");
+});
+
+result
+
+
 //// [sourceMapValidationDestructuringForOfArrayBindingPattern2.js]
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w;
 var robotA = [1, "mower", "mowing"];
@@ -214,4 +227,13 @@ for (var _34 = 0, _35 = [multiRobotA, multiRobotB]; _34 < _35.length; _34++) {
     multiRobotAInfo = _35[_34].slice(0);
     console.log(multiRobotAInfo);
 }
+function robodance(f) {
+    f();
+    return { a: "test" };
+}
+var result = robodance(function () {
+    console.log("foo1");
+    console.log("foo2");
+}).a;
+result;
 //# sourceMappingURL=sourceMapValidationDestructuringForOfArrayBindingPattern2.js.map

@@ -544,3 +544,4 @@ for (let [...multiRobotAInfo] = ["trimmer", ["trimming", "edging"]], i = 0; i < 
 >log : (msg: any) => void
 >multiRobotAInfo : (string | string[])[]
 }
+
