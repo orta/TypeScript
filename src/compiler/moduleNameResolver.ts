@@ -406,14 +406,31 @@ namespace ts {
             return options.types;
         }
 
+        console.log(options);
+        const excluded = options.typesExclude || [];
+
         // Walk the primary type lookup locations
         const result: string[] = [];
+
         if (host.directoryExists && host.getDirectories) {
+            console.log("exists")
             const typeRoots = getEffectiveTypeRoots(options, host);
+            console.log("roots")
+            console.log(typeRoots)
             if (typeRoots) {
                 for (const root of typeRoots) {
+                    console.log("looking at", root)
+
                     if (host.directoryExists(root)) {
+                        console.log("roots", root)
+
                         for (const typeDirectivePath of host.getDirectories(root)) {
+                            console.log(typeDirectivePath);
+                            if (contains(excluded, typeDirectivePath)) {
+                                console.log("skipping", typeDirectivePath);
+                                continue;
+                            };
+
                             const normalized = normalizePath(typeDirectivePath);
                             const packageJsonPath = combinePaths(root, normalized, "package.json");
                             // `types-publisher` sometimes creates packages with `"typings": null` for packages that don't provide their own types.

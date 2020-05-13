@@ -3,7 +3,7 @@ namespace ts {
     export const compileOnSaveCommandLineOption: CommandLineOption = { name: "compileOnSave", type: "boolean" };
 
     // NOTE: The order here is important to default lib ordering as entries will have the same
-    //       order in the generated program (see `getDefaultLibPriority` in program.ts). This
+    //       order in the generated program (see `getDefaultLibFileName` in program.ts). This
     //       order also affects overload resolution when a type declared in one lib is
     //       augmented in another lib.
     const libEntries: [string, string][] = [
@@ -680,6 +680,19 @@ namespace ts {
             transpileOptionValue: undefined
         },
         {
+            name: "typesExclude",
+            type: "list",
+            element: {
+                name: "types",
+                type: "string"
+            },
+            affectsModuleResolution: true,
+            showInSimplifiedHelpView: true,
+            category: Diagnostics.Module_Resolution_Options,
+            description: Diagnostics.Type_declaration_files_to_be_included_in_compilation,
+            transpileOptionValue: undefined
+        },
+        {
             name: "allowSyntheticDefaultImports",
             type: "boolean",
             affectsSemanticDiagnostics: true,
@@ -997,6 +1010,7 @@ namespace ts {
             },
             description: Diagnostics.List_of_language_service_plugins
         },
+
     ];
 
     /* @internal */

@@ -5234,6 +5234,7 @@ namespace ts {
         traceResolution?: boolean;
         resolveJsonModule?: boolean;
         types?: string[];
+        typesExclude?: string[];
         /** Paths used to compute primary types search locations */
         typeRoots?: string[];
         /*@internal*/ version?: boolean;
