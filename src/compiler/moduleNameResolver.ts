@@ -406,6 +406,8 @@ namespace ts {
             return options.types;
         }
 
+        const ignoredTypes = options.typesExclude || []
+
         // Walk the primary type lookup locations
         const result: string[] = [];
         if (host.directoryExists && host.getDirectories) {
@@ -414,6 +416,8 @@ namespace ts {
                 for (const root of typeRoots) {
                     if (host.directoryExists(root)) {
                         for (const typeDirectivePath of host.getDirectories(root)) {
+                            if (contains(ignoredTypes, typeDirectivePath)) continue;
+
                             const normalized = normalizePath(typeDirectivePath);
                             const packageJsonPath = combinePaths(root, normalized, "package.json");
                             // `types-publisher` sometimes creates packages with `"typings": null` for packages that don't provide their own types.

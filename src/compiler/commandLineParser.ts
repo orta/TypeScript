@@ -680,6 +680,19 @@ namespace ts {
             transpileOptionValue: undefined
         },
         {
+            name: "typesExclude",
+            type: "list",
+            element: {
+                name: "types",
+                type: "string"
+            },
+            affectsModuleResolution: true,
+            showInSimplifiedHelpView: true,
+            category: Diagnostics.Module_Resolution_Options,
+            description: Diagnostics.Type_declaration_files_to_be_included_in_compilation,
+            transpileOptionValue: undefined
+        },
+        {
             name: "allowSyntheticDefaultImports",
             type: "boolean",
             affectsSemanticDiagnostics: true,
