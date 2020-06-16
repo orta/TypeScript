@@ -7767,7 +7767,7 @@ namespace ts {
     }
 
     export const enum SemanticClassificationFormat {
-        Original = "orginal",
+        Original = "original",
         TwentyTwenty = "2020"
     }
 
