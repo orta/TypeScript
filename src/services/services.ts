@@ -1825,7 +1825,10 @@ namespace ts {
                 return ts.getEncodedSemanticClassifications(program.getTypeChecker(), cancellationToken, getValidSourceFile(fileName), program.getClassifiableNames(), span);
             }
             else {
-                return classifier.modern.getEncodedSemanticClassifications(program, cancellationToken, getValidSourceFile(fileName), span);
+                return {
+                    endOfLineState: EndOfLineState.None,
+                    spans: classifier.modern.getEncodedSemanticClassifications(program, cancellationToken, getValidSourceFile(fileName), span)
+                };
             }
         }
 

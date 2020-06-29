@@ -1819,7 +1819,7 @@ namespace ts.server {
                 packageJson.dependencies?.forEach((_, dependenyName) => addDependency(dependenyName));
                 packageJson.peerDependencies?.forEach((_, dependencyName) => addDependency(dependencyName));
                 if (dependencySelection === PackageJsonAutoImportPreference.All) {
-                    packageJson.devDependencies?.forEach((_, dependencyName) => addDependency(dependencyName));
+                    packageJson.devDependencies?.forEach((_gulp, dependencyName) => addDependency(dependencyName));
                 }
             }
 
