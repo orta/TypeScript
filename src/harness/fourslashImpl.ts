@@ -2496,15 +2496,15 @@ namespace FourSlash {
                     jsonMismatchString());
             }
 
-            ts.zipWith(expected, actual, (expectedClassification, actualClassification) => {
+            ts.zipWith(expected, actual, (expectedClassification, actualClassification, index) => {
                 const expectedType = expectedClassification.classificationType;
                 const actualType = typeof actualClassification.classificationType === "number"  ? this.classificationToIdentifier(actualClassification.classificationType) : actualClassification.classificationType;
 
                 if (expectedType !== actualType) {
-                    this.raiseError("verifyClassifications failed - expected classifications type to be " +
+                    this.raiseError(`verifyClassifications failed - expected classifications at index ${index} type to be ` +
                         expectedType + ", but was " +
                         actualType +
-                        jsonMismatchString());
+                        displayExpectedAndActualString(JSON.stringify(expectedType, undefined, 4), JSON.stringify(actualType, undefined, 5)));
                 }
 
                 const expectedSpan = expectedClassification.textSpan;
