@@ -28,8 +28,7 @@ var promise = function (obj) {
 
                 try {
                     top.doScroll("left");
-                }
-                catch (e) {
+                } catch (e) {
                     return setTimeout(doScrollCheck, 50);
                 }
 

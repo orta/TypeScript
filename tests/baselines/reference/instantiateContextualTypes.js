@@ -250,9 +250,7 @@ passContentsToFunc(outerBoxOfString, box => box.value);
 
 
 
-class Interesting {
-
-    constructor() {
+class Interesting {constructor() {
         this.compiles = () => {
             return Promise.resolve().then(() => {
                 if (1 < 2) {
@@ -274,7 +272,8 @@ class Interesting {
                 return 'SOMETHING';
             });
         };
-    }}
+    }
+}
 
 
 let xx = invoke(() => 1);
@@ -285,3 +284,4 @@ let obj = {
 };
 
 assignPartial(obj, { foo(...args) { } }); // args has type [string]
+export {};

@@ -2,5 +2,4 @@
 a / finally
 
 //// [parserMissingToken1.js]
-a / ;try { }
-finally { }
+a / ;try { } finally { }

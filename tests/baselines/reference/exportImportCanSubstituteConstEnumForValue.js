@@ -60,10 +60,8 @@ module MsPortalFx.ViewModels {
 
 //// [exportImportCanSubstituteConstEnumForValue.js]
 var MsPortalFx;
-(function (MsPortalFx) {
-    var ViewModels;
-    (function (ViewModels) {
-        var Dialogs;
+(function (MsPortalFx) {var ViewModels;
+    (function (ViewModels) {var Dialogs;
         (function (Dialogs) {
 
 
@@ -73,8 +71,7 @@ var MsPortalFx;
         })(Dialogs = ViewModels.Dialogs || (ViewModels.Dialogs = {}));
     })(ViewModels = MsPortalFx.ViewModels || (MsPortalFx.ViewModels = {}));
 })(MsPortalFx || (MsPortalFx = {}));
-(function (MsPortalFx) {
-    var ViewModels;
+(function (MsPortalFx) {var ViewModels;
     (function (ViewModels) {
 
         var SomeUsagesOfTheseConsts = /** @class */ (function () {

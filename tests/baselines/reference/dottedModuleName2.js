@@ -45,8 +45,7 @@ module M
 
 //// [dottedModuleName2.js]
 var A;
-(function (A) {
-    var B;
+(function (A) {var B;
     (function (B) {
 
         B.x = 1;
@@ -54,8 +53,7 @@ var A;
     })(B = A.B || (A.B = {}));
 })(A || (A = {}));
 var AA;
-(function (AA) {
-    var B;
+(function (AA) {var B;
     (function (B) {
 
         B.x = 1;
@@ -65,10 +63,8 @@ var AA;
 var tmpOK = AA.B.x;
 
 var tmpError = A.B.x;
-(function (A) {
-    var B;
-    (function (B) {
-        var C;
+(function (A) {var B;
+    (function (B) {var C;
         (function (C) {
 
             C.x = 1;

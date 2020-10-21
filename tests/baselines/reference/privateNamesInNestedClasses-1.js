@@ -41,8 +41,7 @@ class A {constructor() {
     }
     method() {
         var _foo_1;
-        class B {
-            constructor() {
+        class B {constructor() {
                 _foo_1.set(this, "B's #foo");
             }
             bar(a) {

@@ -81,4 +81,3 @@ var o = A.Utils.mirror(o);
 var p;
 var p;
 var p = new A.Utils.Plane(o, { x: 1, y: 1 });
-

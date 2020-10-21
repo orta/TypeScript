@@ -24,7 +24,9 @@ var m3b = /** @class */ (function () {
     m3b.prototype.foo = function () { };
     return m3b;
 }());
-(function (m3b) {var y = 2;})(m3b || (m3b = {}));
+(function (m3b) {
+    var y = 2;
+})(m3b || (m3b = {}));
 var m3c = /** @class */ (function () {
     function m3c() {}
     m3c.prototype.foo = function () { };

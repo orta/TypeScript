@@ -62,10 +62,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 function test1() {
-    return __awaiter(this, void 0, void 0, function () {
-        var i, limit;
-        return __generator(this, function (_a) {
-            i = 0;
+    return __awaiter(this, void 0, void 0, function () {var i, limit;
+        return __generator(this, function (_a) {i = 0;
             limit = 10;
             for (; i < limit; ++i) {
             }
@@ -75,10 +73,8 @@ function test1() {
 }
 
 function test2() {
-    return __awaiter(this, void 0, void 0, function () {
-        var i, limit;
-        return __generator(this, function (_a) {
-            i = 0;
+    return __awaiter(this, void 0, void 0, function () {var i, limit;
+        return __generator(this, function (_a) {i = 0;
             limit = 10;
             for (i = 1; i < limit; ++i) {
             }
@@ -88,10 +84,8 @@ function test2() {
 }
 
 function test3() {
-    return __awaiter(this, void 0, void 0, function () {
-        var i;
-        return __generator(this, function (_a) {
-            i = 0;
+    return __awaiter(this, void 0, void 0, function () {var i;
+        return __generator(this, function (_a) {i = 0;
             for (;; ++i) {
             }
             return [2 /*return*/];
@@ -100,8 +94,7 @@ function test3() {
 }
 
 function test4() {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
+    return __awaiter(this, void 0, void 0, function () {return __generator(this, function (_a) {
             for (;;) {
             }
             return [2 /*return*/];

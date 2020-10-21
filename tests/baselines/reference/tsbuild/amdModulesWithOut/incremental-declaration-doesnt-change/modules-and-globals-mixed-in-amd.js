@@ -1,4 +1,10 @@
-//// [/lib/incremental-declaration-doesnt-changeOutput.txt]
+Input::
+//// [/src/lib/file1.ts]
+export const x = 10;console.log(x);
+
+
+
+Output::
 /lib/tsc --b /src/app --verbose
 [[90m12:04:00 AM[0m] Projects in this build: 
     * src/lib/tsconfig.json
@@ -20,21 +26,18 @@ exitCode:: ExitStatus.Success
 //// [/src/app/module.js]
 var myGlob = 20;
 define("file1", ["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.x = void 0;
     exports.x = 10;console.log(exports.x);
 });
 define("file2", ["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.y = void 0;
     exports.y = 20;
 });
 var globalConst = 10;
 define("file3", ["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.z = void 0;
     exports.z = 30;
 });
@@ -42,7 +45,7 @@ var myVar = 30;
 //# sourceMappingURL=module.js.map
 
 //// [/src/app/module.js.map]
-{"version":3,"file":"module.js","sourceRoot":"","sources":["../lib/file0.ts","../lib/file1.ts","../lib/file2.ts","../lib/global.ts","file3.ts","file4.ts"],"names":[],"mappings":"AAAA,IAAM,MAAM,GAAG,EAAE,CAAC;;;;;ICAL,QAAA,CAAC,GAAG,EAAE,CAAC,OAAO,CAAC,GAAG,CAAC,SAAC,CAAC,CAAC;;;;;;ICAtB,QAAA,CAAC,GAAG,EAAE,CAAC;;ACApB,IAAM,WAAW,GAAG,EAAE,CAAC;;;;;ICAV,QAAA,CAAC,GAAG,EAAE,CAAC;;ACApB,IAAM,KAAK,GAAG,EAAE,CAAC"}
+{"version":3,"file":"module.js","sourceRoot":"","sources":["../lib/file0.ts","../lib/file1.ts","../lib/file2.ts","../lib/global.ts","file3.ts","file4.ts"],"names":[],"mappings":"AAAA,IAAM,MAAM,GAAG,EAAE,CAAC;;;;ICAL,QAAA,CAAC,GAAG,EAAE,CAAC,OAAO,CAAC,GAAG,CAAC,SAAC,CAAC,CAAC;;;;;ICAtB,QAAA,CAAC,GAAG,EAAE,CAAC;;ACApB,IAAM,WAAW,GAAG,EAAE,CAAC;;;;ICAV,QAAA,CAAC,GAAG,EAAE,CAAC;;ACApB,IAAM,KAAK,GAAG,EAAE,CAAC"}
 
 //// [/src/app/module.js.map.baseline.txt]
 ===================================================================
@@ -81,8 +84,7 @@ emittedFile:/src/app/module.js
 sourceFile:../lib/file1.ts
 -------------------------------------------------------------------
 >>>define("file1", ["require", "exports"], function (require, exports) {
->>>    "use strict";
->>>    Object.defineProperty(exports, "__esModule", { value: true });
+>>>    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
 >>>    exports.x = void 0;
 >>>    exports.x = 10;console.log(exports.x);
 1->^^^^
@@ -111,19 +113,19 @@ sourceFile:../lib/file1.ts
 11>                               x
 12>                                        )
 13>                                         ;
-1->Emitted(6, 5) Source(1, 14) + SourceIndex(1)
-2 >Emitted(6, 13) Source(1, 14) + SourceIndex(1)
-3 >Emitted(6, 14) Source(1, 15) + SourceIndex(1)
-4 >Emitted(6, 17) Source(1, 18) + SourceIndex(1)
-5 >Emitted(6, 19) Source(1, 20) + SourceIndex(1)
-6 >Emitted(6, 20) Source(1, 21) + SourceIndex(1)
-7 >Emitted(6, 27) Source(1, 28) + SourceIndex(1)
-8 >Emitted(6, 28) Source(1, 29) + SourceIndex(1)
-9 >Emitted(6, 31) Source(1, 32) + SourceIndex(1)
-10>Emitted(6, 32) Source(1, 33) + SourceIndex(1)
-11>Emitted(6, 41) Source(1, 34) + SourceIndex(1)
-12>Emitted(6, 42) Source(1, 35) + SourceIndex(1)
-13>Emitted(6, 43) Source(1, 36) + SourceIndex(1)
+1->Emitted(5, 5) Source(1, 14) + SourceIndex(1)
+2 >Emitted(5, 13) Source(1, 14) + SourceIndex(1)
+3 >Emitted(5, 14) Source(1, 15) + SourceIndex(1)
+4 >Emitted(5, 17) Source(1, 18) + SourceIndex(1)
+5 >Emitted(5, 19) Source(1, 20) + SourceIndex(1)
+6 >Emitted(5, 20) Source(1, 21) + SourceIndex(1)
+7 >Emitted(5, 27) Source(1, 28) + SourceIndex(1)
+8 >Emitted(5, 28) Source(1, 29) + SourceIndex(1)
+9 >Emitted(5, 31) Source(1, 32) + SourceIndex(1)
+10>Emitted(5, 32) Source(1, 33) + SourceIndex(1)
+11>Emitted(5, 41) Source(1, 34) + SourceIndex(1)
+12>Emitted(5, 42) Source(1, 35) + SourceIndex(1)
+13>Emitted(5, 43) Source(1, 36) + SourceIndex(1)
 ---
 -------------------------------------------------------------------
 emittedFile:/src/app/module.js
@@ -131,8 +133,7 @@ sourceFile:../lib/file2.ts
 -------------------------------------------------------------------
 >>>});
 >>>define("file2", ["require", "exports"], function (require, exports) {
->>>    "use strict";
->>>    Object.defineProperty(exports, "__esModule", { value: true });
+>>>    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
 >>>    exports.y = void 0;
 >>>    exports.y = 20;
 1 >^^^^
@@ -147,12 +148,12 @@ sourceFile:../lib/file2.ts
 4 >              = 
 5 >                20
 6 >                  ;
-1 >Emitted(12, 5) Source(1, 14) + SourceIndex(2)
-2 >Emitted(12, 13) Source(1, 14) + SourceIndex(2)
-3 >Emitted(12, 14) Source(1, 15) + SourceIndex(2)
-4 >Emitted(12, 17) Source(1, 18) + SourceIndex(2)
-5 >Emitted(12, 19) Source(1, 20) + SourceIndex(2)
-6 >Emitted(12, 20) Source(1, 21) + SourceIndex(2)
+1 >Emitted(10, 5) Source(1, 14) + SourceIndex(2)
+2 >Emitted(10, 13) Source(1, 14) + SourceIndex(2)
+3 >Emitted(10, 14) Source(1, 15) + SourceIndex(2)
+4 >Emitted(10, 17) Source(1, 18) + SourceIndex(2)
+5 >Emitted(10, 19) Source(1, 20) + SourceIndex(2)
+6 >Emitted(10, 20) Source(1, 21) + SourceIndex(2)
 ---
 -------------------------------------------------------------------
 emittedFile:/src/app/module.js
@@ -173,20 +174,19 @@ sourceFile:../lib/global.ts
 4 >                = 
 5 >                  10
 6 >                    ;
-1 >Emitted(14, 1) Source(1, 1) + SourceIndex(3)
-2 >Emitted(14, 5) Source(1, 7) + SourceIndex(3)
-3 >Emitted(14, 16) Source(1, 18) + SourceIndex(3)
-4 >Emitted(14, 19) Source(1, 21) + SourceIndex(3)
-5 >Emitted(14, 21) Source(1, 23) + SourceIndex(3)
-6 >Emitted(14, 22) Source(1, 24) + SourceIndex(3)
+1 >Emitted(12, 1) Source(1, 1) + SourceIndex(3)
+2 >Emitted(12, 5) Source(1, 7) + SourceIndex(3)
+3 >Emitted(12, 16) Source(1, 18) + SourceIndex(3)
+4 >Emitted(12, 19) Source(1, 21) + SourceIndex(3)
+5 >Emitted(12, 21) Source(1, 23) + SourceIndex(3)
+6 >Emitted(12, 22) Source(1, 24) + SourceIndex(3)
 ---
 -------------------------------------------------------------------
 emittedFile:/src/app/module.js
 sourceFile:file3.ts
 -------------------------------------------------------------------
 >>>define("file3", ["require", "exports"], function (require, exports) {
->>>    "use strict";
->>>    Object.defineProperty(exports, "__esModule", { value: true });
+>>>    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
 >>>    exports.z = void 0;
 >>>    exports.z = 30;
 1->^^^^
@@ -201,12 +201,12 @@ sourceFile:file3.ts
 4 >              = 
 5 >                30
 6 >                  ;
-1->Emitted(19, 5) Source(1, 14) + SourceIndex(4)
-2 >Emitted(19, 13) Source(1, 14) + SourceIndex(4)
-3 >Emitted(19, 14) Source(1, 15) + SourceIndex(4)
-4 >Emitted(19, 17) Source(1, 18) + SourceIndex(4)
-5 >Emitted(19, 19) Source(1, 20) + SourceIndex(4)
-6 >Emitted(19, 20) Source(1, 21) + SourceIndex(4)
+1->Emitted(16, 5) Source(1, 14) + SourceIndex(4)
+2 >Emitted(16, 13) Source(1, 14) + SourceIndex(4)
+3 >Emitted(16, 14) Source(1, 15) + SourceIndex(4)
+4 >Emitted(16, 17) Source(1, 18) + SourceIndex(4)
+5 >Emitted(16, 19) Source(1, 20) + SourceIndex(4)
+6 >Emitted(16, 20) Source(1, 21) + SourceIndex(4)
 ---
 -------------------------------------------------------------------
 emittedFile:/src/app/module.js
@@ -227,12 +227,12 @@ sourceFile:file4.ts
 4 >          = 
 5 >            30
 6 >              ;
-1 >Emitted(21, 1) Source(1, 1) + SourceIndex(5)
-2 >Emitted(21, 5) Source(1, 7) + SourceIndex(5)
-3 >Emitted(21, 10) Source(1, 12) + SourceIndex(5)
-4 >Emitted(21, 13) Source(1, 15) + SourceIndex(5)
-5 >Emitted(21, 15) Source(1, 17) + SourceIndex(5)
-6 >Emitted(21, 16) Source(1, 18) + SourceIndex(5)
+1 >Emitted(18, 1) Source(1, 1) + SourceIndex(5)
+2 >Emitted(18, 5) Source(1, 7) + SourceIndex(5)
+3 >Emitted(18, 10) Source(1, 12) + SourceIndex(5)
+4 >Emitted(18, 13) Source(1, 15) + SourceIndex(5)
+5 >Emitted(18, 15) Source(1, 17) + SourceIndex(5)
+6 >Emitted(18, 16) Source(1, 18) + SourceIndex(5)
 ---
 >>>//# sourceMappingURL=module.js.map
 
@@ -248,20 +248,20 @@ sourceFile:file4.ts
       "sections": [
         {
           "pos": 0,
-          "end": 480,
+          "end": 468,
           "kind": "prepend",
           "data": "../lib/module.js",
           "texts": [
             {
               "pos": 0,
-              "end": 480,
+              "end": 468,
               "kind": "text"
             }
           ]
         },
         {
-          "pos": 482,
-          "end": 706,
+          "pos": 470,
+          "end": 688,
           "kind": "text"
         }
       ]
@@ -296,28 +296,25 @@ sourceFile:file4.ts
 ======================================================================
 File:: /src/app/module.js
 ----------------------------------------------------------------------
-prepend: (0-480):: ../lib/module.js texts:: 1
+prepend: (0-468):: ../lib/module.js texts:: 1
 >>--------------------------------------------------------------------
-text: (0-480)
+text: (0-468)
 var myGlob = 20;
 define("file1", ["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.x = void 0;
     exports.x = 10;console.log(exports.x);
 });
 define("file2", ["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.y = void 0;
     exports.y = 20;
 });
 var globalConst = 10;
 ----------------------------------------------------------------------
-text: (482-706)
+text: (470-688)
 define("file3", ["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.z = void 0;
     exports.z = 30;
 });
@@ -347,23 +344,18 @@ declare const myVar = 30;
 
 ======================================================================
 
-//// [/src/lib/file1.ts]
-export const x = 10;console.log(x);
-
 //// [/src/lib/module.d.ts] file written with same contents
 //// [/src/lib/module.d.ts.map] file written with same contents
 //// [/src/lib/module.d.ts.map.baseline.txt] file written with same contents
 //// [/src/lib/module.js]
 var myGlob = 20;
 define("file1", ["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.x = void 0;
     exports.x = 10;console.log(exports.x);
 });
 define("file2", ["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.y = void 0;
     exports.y = 20;
 });
@@ -371,7 +363,7 @@ var globalConst = 10;
 //# sourceMappingURL=module.js.map
 
 //// [/src/lib/module.js.map]
-{"version":3,"file":"module.js","sourceRoot":"","sources":["file0.ts","file1.ts","file2.ts","global.ts"],"names":[],"mappings":"AAAA,IAAM,MAAM,GAAG,EAAE,CAAC;;;;;ICAL,QAAA,CAAC,GAAG,EAAE,CAAC,OAAO,CAAC,GAAG,CAAC,SAAC,CAAC,CAAC;;;;;;ICAtB,QAAA,CAAC,GAAG,EAAE,CAAC;;ACApB,IAAM,WAAW,GAAG,EAAE,CAAC"}
+{"version":3,"file":"module.js","sourceRoot":"","sources":["file0.ts","file1.ts","file2.ts","global.ts"],"names":[],"mappings":"AAAA,IAAM,MAAM,GAAG,EAAE,CAAC;;;;ICAL,QAAA,CAAC,GAAG,EAAE,CAAC,OAAO,CAAC,GAAG,CAAC,SAAC,CAAC,CAAC;;;;;ICAtB,QAAA,CAAC,GAAG,EAAE,CAAC;;ACApB,IAAM,WAAW,GAAG,EAAE,CAAC"}
 
 //// [/src/lib/module.js.map.baseline.txt]
 ===================================================================
@@ -410,8 +402,7 @@ emittedFile:/src/lib/module.js
 sourceFile:file1.ts
 -------------------------------------------------------------------
 >>>define("file1", ["require", "exports"], function (require, exports) {
->>>    "use strict";
->>>    Object.defineProperty(exports, "__esModule", { value: true });
+>>>    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
 >>>    exports.x = void 0;
 >>>    exports.x = 10;console.log(exports.x);
 1->^^^^
@@ -440,19 +431,19 @@ sourceFile:file1.ts
 11>                               x
 12>                                        )
 13>                                         ;
-1->Emitted(6, 5) Source(1, 14) + SourceIndex(1)
-2 >Emitted(6, 13) Source(1, 14) + SourceIndex(1)
-3 >Emitted(6, 14) Source(1, 15) + SourceIndex(1)
-4 >Emitted(6, 17) Source(1, 18) + SourceIndex(1)
-5 >Emitted(6, 19) Source(1, 20) + SourceIndex(1)
-6 >Emitted(6, 20) Source(1, 21) + SourceIndex(1)
-7 >Emitted(6, 27) Source(1, 28) + SourceIndex(1)
-8 >Emitted(6, 28) Source(1, 29) + SourceIndex(1)
-9 >Emitted(6, 31) Source(1, 32) + SourceIndex(1)
-10>Emitted(6, 32) Source(1, 33) + SourceIndex(1)
-11>Emitted(6, 41) Source(1, 34) + SourceIndex(1)
-12>Emitted(6, 42) Source(1, 35) + SourceIndex(1)
-13>Emitted(6, 43) Source(1, 36) + SourceIndex(1)
+1->Emitted(5, 5) Source(1, 14) + SourceIndex(1)
+2 >Emitted(5, 13) Source(1, 14) + SourceIndex(1)
+3 >Emitted(5, 14) Source(1, 15) + SourceIndex(1)
+4 >Emitted(5, 17) Source(1, 18) + SourceIndex(1)
+5 >Emitted(5, 19) Source(1, 20) + SourceIndex(1)
+6 >Emitted(5, 20) Source(1, 21) + SourceIndex(1)
+7 >Emitted(5, 27) Source(1, 28) + SourceIndex(1)
+8 >Emitted(5, 28) Source(1, 29) + SourceIndex(1)
+9 >Emitted(5, 31) Source(1, 32) + SourceIndex(1)
+10>Emitted(5, 32) Source(1, 33) + SourceIndex(1)
+11>Emitted(5, 41) Source(1, 34) + SourceIndex(1)
+12>Emitted(5, 42) Source(1, 35) + SourceIndex(1)
+13>Emitted(5, 43) Source(1, 36) + SourceIndex(1)
 ---
 -------------------------------------------------------------------
 emittedFile:/src/lib/module.js
@@ -460,8 +451,7 @@ sourceFile:file2.ts
 -------------------------------------------------------------------
 >>>});
 >>>define("file2", ["require", "exports"], function (require, exports) {
->>>    "use strict";
->>>    Object.defineProperty(exports, "__esModule", { value: true });
+>>>    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
 >>>    exports.y = void 0;
 >>>    exports.y = 20;
 1 >^^^^
@@ -476,12 +466,12 @@ sourceFile:file2.ts
 4 >              = 
 5 >                20
 6 >                  ;
-1 >Emitted(12, 5) Source(1, 14) + SourceIndex(2)
-2 >Emitted(12, 13) Source(1, 14) + SourceIndex(2)
-3 >Emitted(12, 14) Source(1, 15) + SourceIndex(2)
-4 >Emitted(12, 17) Source(1, 18) + SourceIndex(2)
-5 >Emitted(12, 19) Source(1, 20) + SourceIndex(2)
-6 >Emitted(12, 20) Source(1, 21) + SourceIndex(2)
+1 >Emitted(10, 5) Source(1, 14) + SourceIndex(2)
+2 >Emitted(10, 13) Source(1, 14) + SourceIndex(2)
+3 >Emitted(10, 14) Source(1, 15) + SourceIndex(2)
+4 >Emitted(10, 17) Source(1, 18) + SourceIndex(2)
+5 >Emitted(10, 19) Source(1, 20) + SourceIndex(2)
+6 >Emitted(10, 20) Source(1, 21) + SourceIndex(2)
 ---
 -------------------------------------------------------------------
 emittedFile:/src/lib/module.js
@@ -502,12 +492,12 @@ sourceFile:global.ts
 4 >                = 
 5 >                  10
 6 >                    ;
-1 >Emitted(14, 1) Source(1, 1) + SourceIndex(3)
-2 >Emitted(14, 5) Source(1, 7) + SourceIndex(3)
-3 >Emitted(14, 16) Source(1, 18) + SourceIndex(3)
-4 >Emitted(14, 19) Source(1, 21) + SourceIndex(3)
-5 >Emitted(14, 21) Source(1, 23) + SourceIndex(3)
-6 >Emitted(14, 22) Source(1, 24) + SourceIndex(3)
+1 >Emitted(12, 1) Source(1, 1) + SourceIndex(3)
+2 >Emitted(12, 5) Source(1, 7) + SourceIndex(3)
+3 >Emitted(12, 16) Source(1, 18) + SourceIndex(3)
+4 >Emitted(12, 19) Source(1, 21) + SourceIndex(3)
+5 >Emitted(12, 21) Source(1, 23) + SourceIndex(3)
+6 >Emitted(12, 22) Source(1, 24) + SourceIndex(3)
 ---
 >>>//# sourceMappingURL=module.js.map
 
@@ -525,7 +515,7 @@ sourceFile:global.ts
       "sections": [
         {
           "pos": 0,
-          "end": 480,
+          "end": 468,
           "kind": "text"
         }
       ]
@@ -547,17 +537,15 @@ sourceFile:global.ts
 ======================================================================
 File:: /src/lib/module.js
 ----------------------------------------------------------------------
-text: (0-480)
+text: (0-468)
 var myGlob = 20;
 define("file1", ["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.x = void 0;
     exports.x = 10;console.log(exports.x);
 });
 define("file2", ["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.y = void 0;
     exports.y = 20;
 });

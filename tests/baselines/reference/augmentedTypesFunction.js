@@ -73,7 +73,9 @@ function y4() { } // error
 function y5() { }
 
 function y5a() { }
-(function (y5a) {var y = 2;})(y5a || (y5a = {})); // should be an error
+(function (y5a) {
+    var y = 2;
+})(y5a || (y5a = {})); // should be an error
 function y5b() { }
 (function (y5b) {y5b.y = 3;})(y5b || (y5b = {})); // should be an error
 function y5c() { }

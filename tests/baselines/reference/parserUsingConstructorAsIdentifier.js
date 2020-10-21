@@ -66,8 +66,7 @@ function derive(baseClass, constructor, instanceMembers, staticMembers) {
             initializeProperties(constructor, staticMembers);
         }
         return constructor;
-    }
-    else {
+    } else {
         return define(constructor, instanceMembers, staticMembers);
     }
 }

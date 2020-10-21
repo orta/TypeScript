@@ -33,4 +33,3 @@ var lambda8 = function () { return undefined; };
 // this shouldn't be an error
 var lambda9 = function () { return 5; };
 var lambda10 = function temp1() { return 5; };
-

@@ -131,3 +131,4 @@ withRouter(MyComponent);
 
 
 let z = foo(ab); // [AB<string>, string]
+export {};

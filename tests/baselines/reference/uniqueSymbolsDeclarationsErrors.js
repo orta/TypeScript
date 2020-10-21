@@ -74,14 +74,14 @@ exports.obj = {
     }
 };
 
-exports.classExpression = class {
+const classExpression = class {
     method1(p) {
         return p;
     }
     method2(p) {
         return p;
     }
-};
+};exports.classExpression = classExpression;
 
 function funcInferredReturnType(obj) {
     return obj;

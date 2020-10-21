@@ -36,7 +36,8 @@ exports.__esModule = true;
 var React = require("react");
 
 var myHoc = function (
-ComposedComponent) {
+ComposedComponent
+) {
     var WrapperComponent = null;
 
     var props = null;

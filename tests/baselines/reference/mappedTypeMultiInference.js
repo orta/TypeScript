@@ -35,4 +35,5 @@ var x = mergeStyleSets(
     },
     {
         b: { flashy: true }
-    });
+    }
+);

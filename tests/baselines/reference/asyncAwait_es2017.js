@@ -48,7 +48,6 @@ async function f14() {
 
 //// [asyncAwait_es2017.js]
 
-
 async function f0() { }
 async function f1() { }
 async function f3() { }
@@ -84,7 +83,6 @@ var M;
     async function f1() { }
     M.f1 = f1;
 })(M || (M = {}));
-
 async function f14() {
     block: {
         await 1;

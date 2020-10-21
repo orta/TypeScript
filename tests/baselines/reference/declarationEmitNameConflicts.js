@@ -84,8 +84,7 @@ var M;
     M.c = N;
     M.d = im;
 })(M = exports.M || (exports.M = {}));
-(function (M) {
-    var P;
+(function (M) {var P;
     (function (P) {
         function f() { }
         P.f = f;
@@ -108,8 +107,7 @@ var M;
         P.d = M.d; // emitted incorrectly as typeof im
     })(P = M.P || (M.P = {}));
 })(M = exports.M || (exports.M = {}));
-(function (M) {
-    var Q;
+(function (M) {var Q;
     (function (Q) {
         function f() { }
         Q.f = f;

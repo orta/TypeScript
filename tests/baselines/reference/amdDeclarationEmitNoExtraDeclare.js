@@ -26,7 +26,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -36,8 +36,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 define("Configurable", ["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     exports.Configurable = void 0;
     function Configurable(base) {
         return /** @class */ (function (_super) {
@@ -54,8 +53,7 @@ define("Configurable", ["require", "exports"], function (require, exports) {
     exports.Configurable = Configurable;
 });
 define("Class", ["require", "exports", "Configurable"], function (require, exports, Configurable_1) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     exports.ActualClass = exports.HiddenClass = void 0;
     var HiddenClass = /** @class */ (function () {
         function HiddenClass() {}

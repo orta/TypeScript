@@ -44,5 +44,6 @@ declare class Obj {
 //// [index.d.ts]
 export = Container;
 declare class Container {
-    usage: import("./obj");
+    usage: Obj;
 }
+import Obj = require("./obj");

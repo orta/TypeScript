@@ -25,7 +25,6 @@ function createElement(element, props) {var children = [];
     }
 }
 exports.createElement = createElement;
-
 //// [index.js]
 "use strict";
 exports.__esModule = true;

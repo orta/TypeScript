@@ -22,4 +22,3 @@ var p2 = p.then(function (x) {
 });
 
 var x = p2.data; // number
-

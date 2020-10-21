@@ -60,8 +60,7 @@ function hoisting() {
             var b0, b1 = 1;
         }
         var a0, a1, c0, c1, a, b, _i, y_1, c;
-        return __generator(this, function (_a) {
-            a1 = 1;
+        return __generator(this, function (_a) {a1 = 1;
             if (true) {
                 c1 = 1;
             }
@@ -81,15 +80,11 @@ function hoisting() {
 
 function hoistingWithAwait() {
     return __awaiter(this, void 0, void 0, function () {
-
         function z() {
             var b0, b1 = 1;
         }
         var a0, a1, c0, c1, a, b, _i, y_2, c;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    a1 = 1;
+        return __generator(this, function (_a) {switch (_a.label) {case 0:a1 = 1;
                     return [4 /*yield*/, 0];
                 case 1:
                     _a.sent();

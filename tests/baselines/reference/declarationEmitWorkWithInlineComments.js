@@ -60,7 +60,8 @@ var Foo = /** @class */ (function () {
         /* not work */
         // @internal
         /* not work */
-        notInternal3) {
+        notInternal3
+    ) {
         this.isInternal1 = isInternal1;
         this.isInternal2 = isInternal2;
         this.isInternal3 = isInternal3;

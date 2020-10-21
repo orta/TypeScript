@@ -38,8 +38,7 @@ var C = /** @class */ (function () {
         var _newTarget = void 0;
         return _newTarget;};
     Object.defineProperty(C.prototype, "d", {
-        get: function () {
-            var _newTarget = void 0;
+        get: function () {var _newTarget = void 0;
             return _newTarget;},
         enumerable: false,
         configurable: true
@@ -56,8 +55,7 @@ var C = /** @class */ (function () {
         var _newTarget = void 0;
         return _newTarget;};
     Object.defineProperty(C, "h", {
-        get: function () {
-            var _newTarget = void 0;
+        get: function () {var _newTarget = void 0;
             return _newTarget;},
         enumerable: false,
         configurable: true
@@ -78,8 +76,7 @@ var O = (_a = {},
         var _newTarget = void 0;
         return _newTarget;},
     Object.defineProperty(_a, "l", {
-        get: function () {
-            var _newTarget = void 0;
+        get: function () {var _newTarget = void 0;
             return _newTarget;},
         enumerable: false,
         configurable: true

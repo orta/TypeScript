@@ -52,4 +52,3 @@ var f3;
 var n3 = f3(42); // number
 var s3 = f3("abc"); // string | boolean | number
 var a3 = f3([true, false]); // boolean[]
-

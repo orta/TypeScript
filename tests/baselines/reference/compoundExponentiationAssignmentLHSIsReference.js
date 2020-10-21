@@ -40,15 +40,9 @@ function fn1(x2) {
 
 // property accesses
 var x3;
-(
-    _a = x3).a = Math.pow(
-_a.a, value);
+(_a = x3).a = Math.pow(_a.a, value);
 
-(
-
-    _b = x3)[_c = 'a'] = Math.pow(
-
-_b[_c], value);
+(_b = x3)[_c = 'a'] = Math.pow(_b[_c], value);
 
 // parentheses, the contained expression is reference
 (x1) = Math.pow((x1), value);

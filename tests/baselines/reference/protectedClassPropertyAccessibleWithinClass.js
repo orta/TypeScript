@@ -59,8 +59,7 @@ var C2 = /** @class */ (function () {
     function C2() {
     }
     Object.defineProperty(C2.prototype, "y", {
-        get: function () {
-            var _this = this;
+        get: function () {var _this = this;
             (function () { return _this.x; });return null;
         },
         set: function (x) {
@@ -73,14 +72,12 @@ var C2 = /** @class */ (function () {
         var _this = this;
         (function () { return _this.foo; });};
     Object.defineProperty(C2, "y", {
-        get: function () {
-            var _this = this;
+        get: function () {var _this = this;
             (function () { return _this.x; });return null;
         },
         set: function (x) {
             var _this = this;
-            (
-                function () { _this.y = _this.x; });
+            (function () { _this.y = _this.x; });
         },
         enumerable: false,
         configurable: true

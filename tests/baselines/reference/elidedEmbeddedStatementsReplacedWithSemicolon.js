@@ -27,6 +27,7 @@ with (window)
 //// [elidedEmbeddedStatementsReplacedWithSemicolon.js]
 if (1)
     ;
+
 else
     ;
 

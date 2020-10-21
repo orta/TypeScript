@@ -31,7 +31,8 @@ function sequence() {var sequences = [];
 function callback(clb) {
 }
 
-sequence(function bar() {
+sequence(
+function bar() {
 },
     function foo() {
         var _this = this;

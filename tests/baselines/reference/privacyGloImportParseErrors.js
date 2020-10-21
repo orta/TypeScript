@@ -154,8 +154,7 @@ module m2 {
 
 //// [privacyGloImportParseErrors.js]
 var m1;
-(function (m1) {
-    var m1_M1_public;
+(function (m1) {var m1_M1_public;
     (function (m1_M1_public) {
         var c1 = /** @class */ (function () {
             function c1() {
@@ -243,8 +242,7 @@ var glo_M1_public;
     glo_M1_public.v1 = c1;
 })(glo_M1_public || (glo_M1_public = {}));
 var m2;
-(function (m2_1) {
-    var m4;
+(function (m2_1) {var m4;
     (function (m4) {
         var a = 10;
     })(m4 || (m4 = {}));

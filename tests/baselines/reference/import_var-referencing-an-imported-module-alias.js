@@ -11,8 +11,7 @@ var v = new hostVar.Host();
 
 //// [host.js]
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     exports.Host = void 0;
     var Host = /** @class */ (function () {
         function Host() {}
@@ -22,8 +21,7 @@ define(["require", "exports"], function (require, exports) {
 });
 //// [consumer.js]
 define(["require", "exports", "host"], function (require, exports, host) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     var hostVar = host;
     var v = new hostVar.Host();
 });

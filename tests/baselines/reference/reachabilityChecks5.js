@@ -185,6 +185,7 @@ function f6(x) {
         if (x) {
             return 1;
         }
+
         else {
             throw new Error();
         }

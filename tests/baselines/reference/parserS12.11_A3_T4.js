@@ -54,4 +54,3 @@ function SwitchTest(value) {
 }
 
 var x = SwitchTest(0);
-

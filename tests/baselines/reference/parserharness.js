@@ -2100,7 +2100,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -2130,12 +2130,10 @@ var typescriptServiceFileName = filePath(IO.getExecutingFilePath()) + "typescrip
 var typescriptServiceFile = IO.readFile(typescriptServiceFileName);
 if (typeof ActiveXObject === "function") {
     eval(typescriptServiceFile);
-}
-else if (typeof require === "function") {
+} else if (typeof require === "function") {
     var vm = require('vm');
     vm.runInThisContext(typescriptServiceFile, 'typescriptServices.js');
-}
-else {
+} else {
     throw new Error('Unknown context');
 }
 
@@ -2279,6 +2277,7 @@ var Harness;
     Harness.splitContentByNewlines = splitContentByNewlines;
     /** Reads a file under /tests */
     function readFile(path) {
+
         if (path.indexOf('tests') < 0) {
             path = "tests/" + path;
         }
@@ -2373,8 +2372,7 @@ var Harness;
                     done();
 
                     return false;
-                }
-                else {
+                } else {
                     // Possibly async
                     Runnable.pushGlobalErrorHandler(done);
 
@@ -2387,8 +2385,7 @@ var Harness;
                     return isAsync;
                 }
 
-            }
-            catch (e) {
+            } catch (e) {
                 done(e);
 
                 return false;
@@ -2421,8 +2418,7 @@ var Harness;
         Runnable.handleError = function (e) {
             if (errorHandlerStack.length === 0) {
                 IO.printLine('Global error: ' + e);
-            }
-            else {
+            } else {
                 errorHandlerStack[errorHandlerStack.length - 1](e);
             }
         };
@@ -2459,8 +2455,7 @@ var Harness;
                         that.passed = false;
                         that.error = e;
                         emitLog('error', { desc: this.description, pass: false }, e);
-                    }
-                    else {
+                    } else {
                         that.passed = true;
 
                         emitLog('pass', { desc: this.description, pass: true });
@@ -2503,8 +2498,7 @@ var Harness;
                     assert.bugIds.forEach(function (desc) { return emitLog('bug', metadata, desc); });
                     emitLog('scenarioEnd', metadata, e);
                     done();
-                }
-                else {
+                } else {
                     that.passed = true; // so far so good.
                     that.runChildren(done);
                 }
@@ -2579,8 +2573,7 @@ var Harness;
     Harness.Run = Run;
     // Performance test
     var Perf;
-    (function (Perf) {
-        var Clock;
+    (function (Perf) {var Clock;
         (function (Clock) {
 
 
@@ -2593,8 +2586,7 @@ var Harness;
                 };
 
                 Clock.resolution = TestUtilities.QueryPerformanceFrequency();
-            }
-            else {
+            } else {
                 Clock.now = function () {
                     return Date.now();
                 };
@@ -3227,8 +3219,7 @@ var Harness;
                 if (!verifyNoDeclFile) {
                     throw new Error('Compilation did not produce .d.ts files');
                 }
-            }
-            finally {
+            } finally {
                 compiler.settings.generateDeclarationFiles = false;
                 compiler.settings.outputOption = oldOutputOption;
                 compiler.parseEmitOption(oldEmitterIOHost);
@@ -3259,8 +3250,7 @@ var Harness;
                     if (Harness.usePull) {
                         var err = errorLines[i]; // TypeScript.PullError
                         this.errors.push(new CompilerError(err.filename, 0, 0, err.message));
-                    }
-                    else {
+                    } else {
                         var match = errorLines[i].match(/([^\(]*)\((\d+),(\d+)\):\s+((.*[\s\r\n]*.*)+)\s*$/);
                         if (match) {
                             this.errors.push(new CompilerError(match[1], parseFloat(match[2]), parseFloat(match[3]), match[4]));
@@ -3354,8 +3344,7 @@ var Harness;
         function updateUnit(code, unitName, setRecovery) {
             if (Harness.usePull) {
                 compiler.pullUpdateUnit(new TypeScript.StringSourceText(code), unitName, setRecovery);
-            }
-            else {
+            } else {
                 compiler.updateUnit(code, unitName, setRecovery);
             }
         }
@@ -3389,8 +3378,7 @@ var Harness;
             }
             try {
                 compileString(code, filename, callback, context, references);
-            }
-            finally {
+            } finally {
                 // If settingsCallback exists, assume that it modified the global compiler instance's settings in some way.
                 // So that a test doesn't have side effects for tests run after it, restore the compiler settings to their previous state.
                 if (settingsCallback) {
@@ -3461,8 +3449,7 @@ var Harness;
             // if the given file has no dependencies, there is no context to return, it can be compiled without additional work
             if (dependencies.length == 0) {
                 return null;
-            }
-            else {
+            } else {
                 var addedFiles = [];
                 var precompile = function () {
                     // REVIEW: if any dependency has a triple slash reference then does postCompile potentially have to do a recreate since we can't update references with updateUnit?
@@ -3547,18 +3534,15 @@ var Harness;
 
                         refs.push(ref);
                     }
-                }
-                else if (testMetaData) {
+                } else if (testMetaData) {
                     // Comment line, check for global/file @options and record them
                     optionRegex.lastIndex = 0;
                     var fileNameIndex = fileMetadataNames.indexOf(testMetaData[1].toLowerCase());
                     if (fileNameIndex == -1) {
                         throw new Error('Unrecognized metadata name "' + testMetaData[1] + '". Available file metadata names are: ' + fileMetadataNames.join(', '));
-                    }
-                    else if (fileNameIndex == 0) {
+                    } else if (fileNameIndex == 0) {
                         currentFileOptions[testMetaData[1]] = testMetaData[2];
-                    }
-                    else {
+                    } else {
                         continue;
                     }
 
@@ -3579,19 +3563,16 @@ var Harness;
                         currentFileOptions = {};
                         currentFileName = testMetaData[2];
                         refs = [];
-                    }
-                    else {
+                    } else {
                         // First metadata marker in the file
                         currentFileName = testMetaData[2];
                     }
-                }
-                else {
+                } else {
                     // Subfile content line
                     // Append to the current subfile content, inserting a newline needed
                     if (currentFileContent === null) {
                         currentFileContent = '';
-                    }
-                    else {
+                    } else {
                         // End-of-line
                         currentFileContent = currentFileContent + '\n';
                     }
@@ -3968,8 +3949,7 @@ var Harness;
                 }
 
                 callback(null, res);
-            }
-            catch (e) {
+            } catch (e) {
                 for (n in dangerNames) {
                     global[dangerNames[n]] = globalBackup[dangerNames[n]];
                 }
@@ -4035,8 +4015,7 @@ var Harness;
             if (IO.fileExists(reportFilename)) {
                 reportContent = IO.readFile(reportFilename);
                 reportContent = reportContent.replace(htmlTrailer, '');
-            }
-            else {
+            } else {
                 reportContent = htmlLeader;
             }
             return reportContent;
@@ -4131,8 +4110,7 @@ var Harness;
                 var actual = generateActual(actualFilename, generateContent);
                 var comparison = compareToBaseline(actual, relativeFilename, opts);
                 writeComparison(comparison.expected, comparison.actual, relativeFilename, actualFilename, descriptionForDescribe);
-            }
-            else {
+            } else {
                 describe(descriptionForDescribe, function () {
                     var actual;
 

@@ -28,7 +28,8 @@ var M;
 (function (M_1) {
     M_1.x = 3;
     var c = /** @class */ (function () {
-        function c(M, p) {if (p === void 0) { p = M_1.x; }}
+        function c(M, p) {if (p === void 0) { p = M_1.x; }
+        }
         return c;
     }());
 })(M || (M = {}));

@@ -22,12 +22,10 @@ var a;
 try {
     if (x) {
         a = 1;
-    }
-    else {
+    } else {
         a = 2;
     }
-}
-finally {
+} finally {
     console.log(x);
 }
 

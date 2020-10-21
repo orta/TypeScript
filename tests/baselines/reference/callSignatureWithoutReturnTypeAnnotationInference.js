@@ -146,8 +146,7 @@ var r4 = foo4(1);
 function foo5(x) {
     if (true) {
         return 1;
-    }
-    else {
+    } else {
         return 2;
     }
 }

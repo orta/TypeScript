@@ -129,8 +129,7 @@ function foo_c() {
 //// [capturedLetConstInLoop8.js]
 function foo() {
     l0: for (var z = 0; z < 1; ++z) {
-        var _loop_1 = function (x) {
-            var _loop_2 = function (y) {
+        var _loop_1 = function (x) {var _loop_2 = function (y) {
                 (function () { return x + y; });
                 (function () { return x + y; });
                 if (y == 1) {
@@ -168,8 +167,7 @@ function foo() {
                     return state_2;
                 if (state_2 === "break")
                     break;
-                switch (state_2) {
-                    case "break-l1": return state_2;
+                switch (state_2) {case "break-l1": return state_2;
                     case "break-ll1": break ll1;
                     case "continue-l0": return state_2;
                     case "continue-l1": return state_2;
@@ -204,8 +202,7 @@ function foo() {
                 return state_1.value;
             if (state_1 === "break")
                 break;
-            switch (state_1) {
-                case "break-l1": break l1;
+            switch (state_1) {case "break-l1": break l1;
                 case "continue-l0": continue l0;
                 case "continue-l1": continue l1;
             }
@@ -215,8 +212,7 @@ function foo() {
 
 function foo_c() {
     l0: for (var z = 0; z < 1;) {
-        var _loop_3 = function (x) {
-            var _loop_4 = function (y) {
+        var _loop_3 = function (x) {var _loop_4 = function (y) {
                 (function () { return x + y; });
                 (function () { return x + y; });
                 if (y == 1) {
@@ -254,8 +250,7 @@ function foo_c() {
                     return state_4;
                 if (state_4 === "break")
                     break;
-                switch (state_4) {
-                    case "break-l1": return state_4;
+                switch (state_4) {case "break-l1": return state_4;
                     case "break-ll1": break ll1;
                     case "continue-l0": return state_4;
                     case "continue-l1": return state_4;
@@ -290,8 +285,7 @@ function foo_c() {
                 return state_3.value;
             if (state_3 === "break")
                 break;
-            switch (state_3) {
-                case "break-l1": break l1;
+            switch (state_3) {case "break-l1": break l1;
                 case "continue-l0": continue l0;
                 case "continue-l1": continue l1;
             }

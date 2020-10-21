@@ -31,7 +31,9 @@ module m2g { export class C { foo() { } } }
 //// [augmentedTypesModules2.js]
 function m2() { }; // ok since the module is not instantiated
 var m2a;
-(function (m2a) {var y = 2;})(m2a || (m2a = {}));
+(function (m2a) {
+    var y = 2;
+})(m2a || (m2a = {}));
 function m2a() { }; // error since the module is instantiated
 var m2b;
 (function (m2b) {m2b.y = 2;})(m2b || (m2b = {}));

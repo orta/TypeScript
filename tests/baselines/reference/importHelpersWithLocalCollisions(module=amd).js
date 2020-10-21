@@ -19,17 +19,13 @@ export declare function __awaiter(thisArg: any, _arguments: any, P: Function, ge
 
 //// [a.js]
 define(["require", "exports", "tslib"], function (require, exports, tslib_1) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.A = void 0;
-    let A = /** @class */ (() => {
-        let A = class A {
-        };
-        A = tslib_1.__decorate([
-            dec
-        ], A);
-        return A;
-    })();
+    let A = class A {
+    };
+    A = tslib_1.__decorate([
+        dec
+    ], A);
     exports.A = A;
     const o = { a: 1 };
     const y = Object.assign({}, o);

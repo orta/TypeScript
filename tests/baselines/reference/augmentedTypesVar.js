@@ -72,7 +72,9 @@ var x6 = 1;
 
 var x6a = 1; // error
 var x6a;
-(function (x6a) {var y = 2;})(x6a || (x6a = {})); // error since instantiated
+(function (x6a) {
+    var y = 2;
+})(x6a || (x6a = {})); // error since instantiated
 var x6b = 1; // error
 var x6b;
 (function (x6b) {x6b.y = 2;})(x6b || (x6b = {})); // error

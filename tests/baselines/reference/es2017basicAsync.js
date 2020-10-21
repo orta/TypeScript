@@ -51,7 +51,6 @@ async () => {
     await 0;
 };
 
-
 async function asyncFunc() {
     await 0;
 }
@@ -76,9 +75,7 @@ async function asyncIIFE() {
     })();
 }
 
-class AsyncClass {
-
-    constructor() {
+class AsyncClass {constructor() {
         this.asyncPropFunc = async function () {
             await 2;
         };

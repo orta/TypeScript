@@ -216,11 +216,9 @@ function tryCatchFn() {
     var _this = this;
     try {
         var x = function () { return _this; };
-    }
-    catch (e) {
+    } catch (e) {
         var t = function () { return e + _this; };
-    }
-    finally {
+    } finally {
         var m = function () { return _this + ''; };
     }
 }

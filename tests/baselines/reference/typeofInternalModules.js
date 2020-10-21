@@ -26,8 +26,7 @@ x7 = importInst;
 
 //// [typeofInternalModules.js]
 var Outer;
-(function (Outer) {
-    var instantiated;
+(function (Outer) {var instantiated;
     (function (instantiated) {
         var C = /** @class */ (function () {
             function C() {}

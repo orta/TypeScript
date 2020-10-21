@@ -12,14 +12,12 @@ export default function foo() { new Foo(); }
 
 //// [output.js]
 define("b", ["require", "exports", "a"], function (require, exports, a_1) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     function foo() { new a_1.default(); }
     exports.default = foo;
 });
 define("a", ["require", "exports", "b"], function (require, exports, b_1) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     class Foo {}
     exports.default = Foo;
     b_1.default();

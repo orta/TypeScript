@@ -134,81 +134,55 @@ foo(
 //// [fatarrowfunctionsOptionalArgs.js]
 // valid
 // no params
-(
-    function () { return 1; });
+(function () { return 1; });
 
 // one param, no type
-(
-
-    function (arg) { return 2; });
+(function (arg) { return 2; });
 
 // one param, no type
-(
-
-    function (arg) { return 2; });
+(function (arg) { return 2; });
 
 // one param, no type with default value
-(
-
-    function (arg) {if (arg === void 0) { arg = 1; }
-        return 3;});
+(function (arg) {if (arg === void 0) { arg = 1; }
+    return 3;});
 
 // one param, no type, optional
-(
-
-    function (arg) { return 4; });
+(function (arg) { return 4; });
 
 // typed param
-(
-
-    function (arg) { return 5; });
+(function (arg) { return 5; });
 
 // typed param with default value
-(
-
-    function (arg) {if (arg === void 0) { arg = 0; }
-        return 6;});
+(function (arg) {if (arg === void 0) { arg = 0; }
+    return 6;});
 
 // optional param
-(
-
-    function (arg) { return 7; });
+(function (arg) { return 7; });
 
 // var arg param
-(
-
-    function () {var arg = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            arg[_i] = arguments[_i];
-        }
-        return 8;});
+(function () {var arg = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        arg[_i] = arguments[_i];
+    }
+    return 8;});
 
 // multiple arguments
-(
-
-    function (arg1, arg2) { return 12; });
-(
-    function (arg1, arg2) {if (arg1 === void 0) { arg1 = 1; }
-        if (arg2 === void 0) { arg2 = 3; }
-        return 13;});
-(
-    function (arg1, arg2) { return 14; });
-(
-    function (arg1, arg2) { return 15; });
-(
-    function (arg1, arg2) {if (arg1 === void 0) { arg1 = 0; }
-        if (arg2 === void 0) { arg2 = 1; }
-        return 16;});
-(
-    function (arg1, arg2) { return 17; });
-(
-    function (arg1) {var arg2 = [];
-        for (var _i = 1; _i < arguments.length; _i++) {
-            arg2[_i - 1] = arguments[_i];
-        }
-        return 18;});
-(
-    function (arg1, arg2) { return 19; });
+(function (arg1, arg2) { return 12; });
+(function (arg1, arg2) {if (arg1 === void 0) { arg1 = 1; }
+    if (arg2 === void 0) { arg2 = 3; }
+    return 13;});
+(function (arg1, arg2) { return 14; });
+(function (arg1, arg2) { return 15; });
+(function (arg1, arg2) {if (arg1 === void 0) { arg1 = 0; }
+    if (arg2 === void 0) { arg2 = 1; }
+    return 16;});
+(function (arg1, arg2) { return 17; });
+(function (arg1) {var arg2 = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        arg2[_i - 1] = arguments[_i];
+    }
+    return 18;});
+(function (arg1, arg2) { return 19; });
 
 // in paren
 (function () { return 21; });
@@ -282,9 +256,7 @@ false ? null : function () {var arg = [];
 (function (a) { return a; }) ? function (b) { return b; } : function (c) { return c; };
 
 //multiple levels
-(
-
-    function (a) { return a; });(function (b) { return function (c) { return 81; }; });(function (c) { return function (d) { return 82; }; });
+(function (a) { return a; });(function (b) { return function (c) { return 81; }; });(function (c) { return function (d) { return 82; }; });
 
 
 // In Expressions

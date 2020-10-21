@@ -11,9 +11,7 @@ const c: C = a;
 var _something;
 class A1 {}
 
-class C {
-
-    constructor() {
+class C {constructor() {
         _something.set(this, void 0);
     }}
 _something = new WeakMap();

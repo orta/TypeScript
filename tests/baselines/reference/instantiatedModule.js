@@ -104,8 +104,7 @@ var p2;
 var p2 = new m2.Point();
 var p2 = new M2.Point();
 var M3;
-(function (M3) {
-    var Color;
+(function (M3) {var Color;
     (function (Color) {
         Color[Color["Blue"] = 0] = "Blue";
         Color[Color["Red"] = 1] = "Red";

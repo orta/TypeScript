@@ -15,12 +15,14 @@ function foo(): boolean {
 //// [ifElseWithStatements1.js]
 if (true)
     f();
+
 else
     f();
 
 function foo() {
     if (true)
         return true;
+
     else
         return false;
 }

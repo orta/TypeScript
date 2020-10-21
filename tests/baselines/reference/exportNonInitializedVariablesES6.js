@@ -38,7 +38,6 @@ var ;
 let;
 const ;
 
-
 export var a;
 export let b;
 export var c;
@@ -55,7 +54,6 @@ var C;
     C.a = 1, C.c = 2;
 })(C || (C = {}));
 // Shouldn't be filtered
-
 export var a1 = 1;
 export let b1 = 1;
 export var c1 = 'a';

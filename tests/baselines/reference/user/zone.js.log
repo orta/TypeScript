@@ -1,6 +1,6 @@
-Exit Code: 1
+Exit Code: 2
 Standard output:
-node_modules/zone.js/dist/zone.js.d.ts(600,21): error TS2503: Cannot find namespace 'NodeJS'.
+error TS6053: File '../../../tests/cases/user/zone.js/node_modules/zone.js/dist/zone.js.d.ts' not found.
 
 
 

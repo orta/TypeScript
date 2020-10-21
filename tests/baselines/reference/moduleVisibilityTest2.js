@@ -79,8 +79,7 @@ var OuterMod;
 })(OuterMod || (OuterMod = {}));
 var OuterInnerAlias = OuterMod.OuterInnerMod;
 var M;
-(function (M) {
-    var InnerMod;
+(function (M) {var InnerMod;
     (function (InnerMod) {
         function someExportedInnerFunc() { return -2; }
         InnerMod.someExportedInnerFunc = someExportedInnerFunc;

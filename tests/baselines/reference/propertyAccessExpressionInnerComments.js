@@ -33,7 +33,7 @@
 
 
 //// [propertyAccessExpressionInnerComments.js]
-/*1*/ Array /*2*/. /*3*/toString; /*4*/
+/*1*/ /*1*/ Array /*2*/. /*3*/toString; /*4*/
 
 /*1*/ Array
     /*2*/ . /*3*/

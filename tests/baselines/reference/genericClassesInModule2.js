@@ -22,8 +22,7 @@ export class B<T2> {
 
 //// [genericClassesInModule2.js]
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     exports.B = exports.A = void 0;
     var A = /** @class */ (function () {
         function A(callback) {

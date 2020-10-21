@@ -38,4 +38,3 @@ var C = /** @class */ (function () {
 }());
 var z = new C().g(); // error void fn
 var N = new f(); // ok with void fn
-

@@ -82,45 +82,36 @@ var missing_1 = require("missing");
 
 
 function f0() {
-    return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
-        return [2 /*return*/];
+    return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
     }); });
 }
 function f1() {
-    return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
-        return [2 /*return*/];
+    return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
     }); });
 }
 function f3() {
-    return __awaiter(this, void 0, missing_1.MyPromise, function () { return __generator(this, function (_a) {
-        return [2 /*return*/];
+    return __awaiter(this, void 0, missing_1.MyPromise, function () { return __generator(this, function (_a) {return [2 /*return*/];
     }); });
 }
 
 var f4 = function () {
-    return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
-        return [2 /*return*/];
+    return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
     }); });
 };
 var f5 = function () {
-    return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
-        return [2 /*return*/];
+    return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
     }); });
 };
 var f6 = function () {
-    return __awaiter(this, void 0, missing_1.MyPromise, function () { return __generator(this, function (_a) {
-        return [2 /*return*/];
+    return __awaiter(this, void 0, missing_1.MyPromise, function () { return __generator(this, function (_a) {return [2 /*return*/];
     }); });
 };
 
-var f7 = function () { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {
-    return [2 /*return*/];
+var f7 = function () { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
 }); }); };
-var f8 = function () { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {
-    return [2 /*return*/];
+var f8 = function () { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
 }); }); };
-var f9 = function () { return __awaiter(void 0, void 0, missing_1.MyPromise, function () { return __generator(this, function (_a) {
-    return [2 /*return*/];
+var f9 = function () { return __awaiter(void 0, void 0, missing_1.MyPromise, function () { return __generator(this, function (_a) {return [2 /*return*/];
 }); }); };
 var f10 = function () { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {
     return [2 /*return*/, p];
@@ -137,18 +128,15 @@ var f13 = function () { return __awaiter(void 0, void 0, missing_1.MyPromise, fu
 
 var o = {
     m1: function () {
-        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
-            return [2 /*return*/];
+        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
         }); });
     },
     m2: function () {
-        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
-            return [2 /*return*/];
+        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
         }); });
     },
     m3: function () {
-        return __awaiter(this, void 0, missing_1.MyPromise, function () { return __generator(this, function (_a) {
-            return [2 /*return*/];
+        return __awaiter(this, void 0, missing_1.MyPromise, function () { return __generator(this, function (_a) {return [2 /*return*/];
         }); });
     }
 };
@@ -157,33 +145,27 @@ var C = /** @class */ (function () {
     function C() {
     }
     C.prototype.m1 = function () {
-        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
-            return [2 /*return*/];
+        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
         }); });
     };
     C.prototype.m2 = function () {
-        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
-            return [2 /*return*/];
+        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
         }); });
     };
     C.prototype.m3 = function () {
-        return __awaiter(this, void 0, missing_1.MyPromise, function () { return __generator(this, function (_a) {
-            return [2 /*return*/];
+        return __awaiter(this, void 0, missing_1.MyPromise, function () { return __generator(this, function (_a) {return [2 /*return*/];
         }); });
     };
     C.m4 = function () {
-        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
-            return [2 /*return*/];
+        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
         }); });
     };
     C.m5 = function () {
-        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
-            return [2 /*return*/];
+        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
         }); });
     };
     C.m6 = function () {
-        return __awaiter(this, void 0, missing_1.MyPromise, function () { return __generator(this, function (_a) {
-            return [2 /*return*/];
+        return __awaiter(this, void 0, missing_1.MyPromise, function () { return __generator(this, function (_a) {return [2 /*return*/];
         }); });
     };
     return C;
@@ -191,8 +173,7 @@ var C = /** @class */ (function () {
 var M;
 (function (M) {
     function f1() {
-        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
-            return [2 /*return*/];
+        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
         }); });
     }
     M.f1 = f1;

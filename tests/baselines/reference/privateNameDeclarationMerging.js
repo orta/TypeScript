@@ -25,9 +25,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
 var _x;
 class D {};
 
-class C {
-
-    constructor() {
+class C {constructor() {
         _x.set(this, void 0);
     }
     foo() {

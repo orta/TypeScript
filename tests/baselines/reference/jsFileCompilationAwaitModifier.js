@@ -50,10 +50,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 var Foo = /** @class */ (function () {
     function Foo() {
         var _this = this;
-        this.b = function () { return __awaiter(_this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, Promise.resolve(1)];
+        this.b = function () { return __awaiter(_this, void 0, void 0, function () {return __generator(this, function (_a) {switch (_a.label) {case 0: return [4 /*yield*/, Promise.resolve(1)];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];
@@ -62,10 +59,7 @@ var Foo = /** @class */ (function () {
         }); };
     }
     Foo.prototype.a = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, Promise.resolve(1)];
+        return __awaiter(this, void 0, void 0, function () {return __generator(this, function (_a) {switch (_a.label) {case 0: return [4 /*yield*/, Promise.resolve(1)];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];

@@ -100,7 +100,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -139,8 +139,7 @@ var arr = [function (n) { return ''; }];
 var arr; // Incorrect error here (bug 829597)
 // Arrow function as enum value
 var E;
-(function (E) {
-    var _this = this;
+(function (E) {var _this = this;
     E[E["x"] = function () { return 4; }] = "x";
     E[E["y"] = (function () { return _this; }).length] = "y"; // error, can't use this in enum
 })(E || (E = {}));
@@ -152,8 +151,7 @@ var M;
 })(M || (M = {}));
 // Repeat above for module members that are functions? (necessary to redo all of them?)
 var M2;
-(function (M2) {
-    var _this = this;
+(function (M2) {var _this = this;
     // Arrow function used in with statement
     with (window) {
         var p = function () { return _this; };
@@ -183,8 +181,7 @@ var M2;
     var arr; // Incorrect error here (bug 829597)
     // Arrow function as enum value
     var E;
-    (function (E) {
-        var _this = this;
+    (function (E) {var _this = this;
         E[E["x"] = function () { return 4; }] = "x";
         E[E["y"] = (function () { return _this; }).length] = "y";
     })(E || (E = {}));

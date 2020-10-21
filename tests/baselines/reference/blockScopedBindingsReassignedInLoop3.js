@@ -97,8 +97,7 @@ var _loop_1 = function (x, y) {
     if (x == 1) {
         return out_x_1 = x, out_y_1 = y, "break";
     }
-    else {
-        var _loop_5 = function (a_1) {
+    else {var _loop_5 = function (a_1) {
             var f = function () { return a_1; };
             if (a_1) {
                 a_1 = x;
@@ -135,8 +134,7 @@ var _loop_2 = function (x, y) {
     if (x == 1) {
         return out_x_2 = x, out_y_2 = y, "continue";
     }
-    else {
-        var _loop_6 = function (a_2) {
+    else {var _loop_6 = function (a_2) {
             var f = function () { return a_2; };
             if (a_2) {
                 a_2 = x;
@@ -169,8 +167,7 @@ var _loop_3 = function (x, y) {
     if (x == 1) {
         return out_x_3 = x, out_y_3 = y, "break-loop2";
     }
-    else {
-        var _loop_7 = function (a_3) {
+    else {var _loop_7 = function (a_3) {
             var f = function () { return a_3; };
             if (a_3) {
                 a_3 = x;
@@ -186,8 +183,7 @@ var _loop_3 = function (x, y) {
         loop1: for (var a_3 = 1; a_3 < 5; --a_3) {
             var state_5 = _loop_7(a_3);
             a_3 = out_a_3;
-            switch (state_5) {
-                case "break-loop1": break loop1;
+            switch (state_5) {case "break-loop1": break loop1;
                 case "break-loop2": return state_5;
             }
         }
@@ -202,8 +198,7 @@ loop2: for (var x = 1, y = 2; x < y; ++x, --y) {
     var state_2 = _loop_3(x, y);
     x = out_x_3;
     y = out_y_3;
-    switch (state_2) {
-        case "break-loop2": break loop2;
+    switch (state_2) {case "break-loop2": break loop2;
     }
 }
 var _loop_4 = function (x, y) {
@@ -211,8 +206,7 @@ var _loop_4 = function (x, y) {
     if (x == 1) {
         return out_x_4 = x, out_y_4 = y, "continue-loop2";
     }
-    else {
-        var _loop_8 = function (a_4) {
+    else {var _loop_8 = function (a_4) {
             var f = function () { return a_4; };
             if (a_4) {
                 a_4 = x;
@@ -228,8 +222,7 @@ var _loop_4 = function (x, y) {
         loop1: for (var a_4 = 1; a_4 < 5; --a_4) {
             var state_6 = _loop_8(a_4);
             a_4 = out_a_4;
-            switch (state_6) {
-                case "continue-loop1": continue loop1;
+            switch (state_6) {case "continue-loop1": continue loop1;
                 case "continue-loop2": return state_6;
             }
         }
@@ -244,7 +237,6 @@ loop2: for (var x = 1, y = 2; x < y; ++x, --y) {
     var state_3 = _loop_4(x, y);
     x = out_x_4;
     y = out_y_4;
-    switch (state_3) {
-        case "continue-loop2": continue loop2;
+    switch (state_3) {case "continue-loop2": continue loop2;
     }
 }

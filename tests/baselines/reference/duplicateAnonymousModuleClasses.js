@@ -94,8 +94,7 @@ var Foo;
     }());
 })(Foo || (Foo = {}));
 var Gar;
-(function (Gar) {
-    var Foo;
+(function (Gar) {var Foo;
     (function (Foo) {
 
         var Helper = /** @class */ (function () {

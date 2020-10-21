@@ -60,8 +60,7 @@ var a1 = M.a;
 var a2;
 var a2 = m.a;
 var M2;
-(function (M2) {
-    var Point;
+(function (M2) {var Point;
     (function (Point) {
         function Origin() {
             return { x: 0, y: 0 };

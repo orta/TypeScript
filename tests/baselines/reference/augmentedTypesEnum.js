@@ -87,7 +87,9 @@ var e6a;
 (function (e6a) {
     e6a[e6a["One"] = 0] = "One";
 })(e6a || (e6a = {}));
-(function (e6a) {var y = 2;})(e6a || (e6a = {})); // should be error
+(function (e6a) {
+    var y = 2;
+})(e6a || (e6a = {})); // should be error
 var e6b;
 (function (e6b) {
     e6b[e6b["One"] = 0] = "One";

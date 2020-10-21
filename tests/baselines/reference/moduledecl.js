@@ -246,7 +246,6 @@ var m0;
         }
         return c1;
     }());
-
 })(m0 || (m0 = {}));
 var m1;
 (function (m1) {
@@ -268,11 +267,9 @@ var m1;
         return c1;
     }());
     m1.c1 = c1;
-
 })(m1 || (m1 = {}));
 var m;
-(function (m) {
-    var m2;
+(function (m) {var m2;
     (function (m2) {
         var a = 10;
     })(m2 = m.m2 || (m.m2 = {}));
@@ -280,21 +277,16 @@ var m;
     (function (m3) {
     })(m3 = m.m3 || (m.m3 = {}));
 })(m || (m = {}));
-(function (m) {
-    var m25;
-    (function (m25) {
-        var m5;
+(function (m) {var m25;
+    (function (m25) {var m5;
         (function (m5) {
         })(m5 = m25.m5 || (m25.m5 = {}));
     })(m25 = m.m25 || (m.m25 = {}));
 })(m || (m = {}));
 var m13;
-(function (m13) {
-    var m4;
-    (function (m4) {
-        var m2;
-        (function (m2) {
-            var m3;
+(function (m13) {var m4;
+    (function (m4) {var m2;
+        (function (m2) {var m3;
             (function (m3) {
             })(m3 = m2.m3 || (m2.m3 = {}));
         })(m2 = m4.m2 || (m4.m2 = {}));

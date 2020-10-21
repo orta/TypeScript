@@ -39,8 +39,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.l = exports.cl2 = exports.obj = exports.cl1 = exports.fn = void 0;
     function fn() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -62,17 +61,16 @@ define(["require", "exports"], function (require, exports) {
         })
     };
 
-    class cl2 {
-
-        constructor() {
+    class cl2 {constructor() {
             this.p = {
                 m: () => __awaiter(this, void 0, void 0, function* () {
                     const req = yield new Promise((resolve_4, reject_4) => { require(['./test'], resolve_4, reject_4); }); // FOUR
                 })
             };
-        }}
+        }
+    }
     exports.cl2 = cl2;
-    exports.l = () => __awaiter(void 0, void 0, void 0, function* () {
+    const l = () => __awaiter(void 0, void 0, void 0, function* () {
         const req = yield new Promise((resolve_5, reject_5) => { require(['./test'], resolve_5, reject_5); }); // FIVE
-    });
+    });exports.l = l;
 });

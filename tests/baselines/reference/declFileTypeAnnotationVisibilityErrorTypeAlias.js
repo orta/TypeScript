@@ -42,8 +42,7 @@ module M2 {
 
 //// [declFileTypeAnnotationVisibilityErrorTypeAlias.js]
 var M;
-(function (M) {
-    var N;
+(function (M) {var N;
     (function (N) {
         var Window = /** @class */ (function () {
             function Window() {}
@@ -53,8 +52,7 @@ var M;
     })(N = M.N || (M.N = {}));
 })(M || (M = {}));
 var M1;
-(function (M1) {
-    var N;
+(function (M1) {var N;
     (function (N) {
         var Window = /** @class */ (function () {
             function Window() {}

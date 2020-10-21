@@ -1,4 +1,21 @@
-//// [/lib/incremental-headers-change-without-dts-changesOutput.txt]
+Input::
+//// [/src/first/first_PART1.ts]
+interface TheFirst {
+    none: any;
+}
+
+const s = "Hello, world";
+
+interface NoJsForHereEither {
+    none: any;
+}
+
+console.log(s);
+
+
+
+
+Output::
 /lib/tsc --b /src/third --verbose
 [[90m12:08:00 AM[0m] Projects in this build: 
     * src/first/tsconfig.json
@@ -365,20 +382,6 @@ declare function f(): string;
 
 ======================================================================
 
-//// [/src/first/first_PART1.ts]
-interface TheFirst {
-    none: any;
-}
-
-const s = "Hello, world";
-
-interface NoJsForHereEither {
-    none: any;
-}
-
-console.log(s);
-
-
 //// [/src/third/thirdjs/output/third-output.d.ts]
 interface TheFirst {
     none: any;
@@ -726,20 +729,20 @@ sourceFile:../../third_part1.ts
         },
         {
           "pos": 116,
-          "end": 3059,
+          "end": 3043,
           "kind": "prepend",
           "data": "../../../2/second-output.js",
           "texts": [
             {
               "pos": 116,
-              "end": 3059,
+              "end": 3043,
               "kind": "text"
             }
           ]
         },
         {
-          "pos": 3059,
-          "end": 3095,
+          "pos": 3043,
+          "end": 3079,
           "kind": "text"
         }
       ]
@@ -801,9 +804,9 @@ function f() {
 }
 
 ----------------------------------------------------------------------
-prepend: (116-3059):: ../../../2/second-output.js texts:: 1
+prepend: (116-3043):: ../../../2/second-output.js texts:: 1
 >>--------------------------------------------------------------------
-text: (116-3059)
+text: (116-3043)
 var N;
 (function (N) {
     function f() {
@@ -841,8 +844,7 @@ var normalN;
         someNamespace.C = C;
     })(someNamespace = normalN.someNamespace || (normalN.someNamespace = {}));
     var someOther;
-    (function (someOther) {
-        var something;
+    (function (someOther) {var something;
         (function (something) {var someClass = (function () {
                 function someClass() {}
                 return someClass;
@@ -873,8 +875,7 @@ var internalNamespace;
     internalNamespace.someClass = someClass;
 })(internalNamespace || (internalNamespace = {}));
 var internalOther;
-(function (internalOther) {
-    var something;
+(function (internalOther) {var something;
     (function (something) {var someClass = (function () {
             function someClass() {}
             return someClass;
@@ -901,7 +902,7 @@ var C = (function () {
 }());
 
 ----------------------------------------------------------------------
-text: (3059-3095)
+text: (3043-3079)
 var c = new C();
 c.doSomething();
 

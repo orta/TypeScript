@@ -42,7 +42,6 @@ module M {
 //// [asyncAwaitIsolatedModules_es2017.js]
 
 
-
 async function f0() { }
 async function f1() { }
 async function f3() { }
@@ -78,3 +77,4 @@ var M;
     async function f1() { }
     M.f1 = f1;
 })(M || (M = {}));
+export {};

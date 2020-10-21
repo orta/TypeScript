@@ -26,7 +26,6 @@ p1.then(zero => {
     return zero.foo();
 });
 
-
 export var p2 = import("./0");
 
 function foo() {

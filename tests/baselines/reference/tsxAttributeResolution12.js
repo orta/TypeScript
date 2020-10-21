@@ -53,4 +53,3 @@ var t1 = <T />;
 
 // Should error
 var t2 = <TestMod.Test />;
-

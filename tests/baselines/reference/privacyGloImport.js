@@ -154,8 +154,7 @@ module m2 {
 
 //// [privacyGloImport.js]
 var m1;
-(function (m1) {
-    var m1_M1_public;
+(function (m1) {var m1_M1_public;
     (function (m1_M1_public) {
         var c1 = /** @class */ (function () {
             function c1() {

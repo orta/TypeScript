@@ -286,6 +286,7 @@ function f(e) {
 function g(e) {
     if (!true)
         return -1;
+
     else
         switch (e) {
             case E.A: return 0;

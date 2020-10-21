@@ -40,8 +40,7 @@ object,
     var array = object[key];
     if (array) {
         array.push(value);
-    }
-    else {
+    } else {
         object[key] = [value];
     }
 }

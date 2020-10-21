@@ -52,12 +52,10 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 label: function fn() { }
-label: function gen() { return __generator(this, function (_a) {
-    return [2 /*return*/];
+label: function gen() { return __generator(this, function (_a) {return [2 /*return*/];
 }); }
 label: function gen1() {
-    return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
-        return [2 /*return*/];
+    return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
     }); });
 }
 label: {

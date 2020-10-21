@@ -53,7 +53,8 @@ function fetchMsg(protoCtor) {
 
 var DataProvider = /** @class */ (function () {
     function DataProvider(message,
-        messageList) {
+        messageList
+    ) {
         this.message = message;
         this.messageList = messageList;
     }

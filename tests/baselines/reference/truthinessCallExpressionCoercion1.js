@@ -63,6 +63,11 @@ class Foo {
 
         // ok
         this.maybeIsUser ? console.log('this.maybeIsUser') : undefined;
+
+        // ok
+        if (this.isUser) {
+            this.isUser();
+        }
     }
 }
 
@@ -132,6 +137,11 @@ var Foo = /** @class */ (function () {
 
         // ok
         this.maybeIsUser ? console.log('this.maybeIsUser') : undefined;
+
+        // ok
+        if (this.isUser) {
+            this.isUser();
+        }
     };
     return Foo;
 }());

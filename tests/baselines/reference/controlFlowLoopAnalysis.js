@@ -90,8 +90,7 @@ values,
         var value = values[index];
         if (canTake(value, index)) {
             result.push(mapping(value, index));
-        }
-        else {
+        } else {
             return result;
         }
     }

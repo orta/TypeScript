@@ -35,8 +35,7 @@ func,
 ) {
     if (func) {
         return func(arg1);
-    }
-    else {
+    } else {
         return undefined;
     }
 }

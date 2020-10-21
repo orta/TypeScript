@@ -32,7 +32,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -54,20 +54,18 @@ var RegisteredUser = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     RegisteredUser.prototype.f = function () {
-        (
-            function () {
-                function inner() {
-                    _super.sayHello.call(this);
-                }
-            });
+        (function () {
+            function inner() {
+                _super.sayHello.call(this);
+            }
+        });
     };
     RegisteredUser.prototype.g = function () {
         function inner() {
             var _this = this;
-            (
-                function () {
-                    _super.sayHello.call(_this);
-                });
+            (function () {
+                _super.sayHello.call(_this);
+            });
         }
     };
     RegisteredUser.prototype.h = function () {

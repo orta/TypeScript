@@ -39,23 +39,20 @@ export class cl1 {
     }
 }
 
-
 export const obj = {
     m: async () => {
         const req = await import('./test'); // THREE
     }
 };
 
-export class cl2 {
-
-    constructor() {
+export class cl2 {constructor() {
         this.p = {
             m: async () => {
                 const req = await import('./test'); // FOUR
             }
         };
-    }}
-
+    }
+}
 
 export const l = async () => {
     const req = await import('./test'); // FIVE

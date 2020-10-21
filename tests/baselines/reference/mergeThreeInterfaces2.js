@@ -85,8 +85,7 @@ var M2;
     var r3 = a.baz;
 })(M2 || (M2 = {}));
 // same as above but with an additional level of nesting and third module declaration
-(function (M2) {
-    var M3;
+(function (M2) {var M3;
     (function (M3) {
 
         var a;
@@ -94,8 +93,7 @@ var M2;
         var r2 = a.bar;
     })(M3 = M2.M3 || (M2.M3 = {}));
 })(M2 || (M2 = {}));
-(function (M2) {
-    var M3;
+(function (M2) {var M3;
     (function (M3) {
 
         var a;
@@ -105,8 +103,7 @@ var M2;
         var r3 = a.baz;
     })(M3 = M2.M3 || (M2.M3 = {}));
 })(M2 || (M2 = {}));
-(function (M2) {
-    var M3;
+(function (M2) {var M3;
     (function (M3) {
 
         var a;

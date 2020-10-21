@@ -18,8 +18,7 @@ function ifelse() {
         /*comment1*/
         commentedParameters(3, 4);
         /*comment2*/
-    }
-    else {
+    } else {
         commentedParameters(5, 6);
     }
 }

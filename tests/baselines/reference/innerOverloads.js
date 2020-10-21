@@ -19,4 +19,3 @@ function outer() {
 }
 
 var x = outer(); // should work
-

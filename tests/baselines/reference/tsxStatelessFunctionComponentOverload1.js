@@ -44,8 +44,7 @@ const e2 = <TestingOptional y1 y3 extra-prop/>
 
 //// [file.jsx]
 define(["require", "exports", "react"], function (require, exports, React) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
 
     // OK
     var c1 = <OneThing yxx='ok'/>;

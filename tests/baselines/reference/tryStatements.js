@@ -20,31 +20,20 @@ function fn() {
 
 //// [tryStatements.js]
 function fn() {
-    try { }
-    catch (_a) { }
+    try { } catch (_a) { }
 
-    try { }
-    catch (_b) {
-        try { }
-        catch (_c) {
-            try { }
-            catch (_d) { }
+    try { } catch (_b) {
+        try { } catch (_c) {
+            try { } catch (_d) { }
         }
-        try { }
-        catch (_e) { }
+        try { } catch (_e) { }
     }
 
-    try { }
-    catch (x) {var x;}
+    try { } catch (x) {var x;}
 
-    try { }
-    finally { }
+    try { } finally { }
 
-    try { }
-    catch (_f) { }
-    finally { }
+    try { } catch (_f) { } finally { }
 
-    try { }
-    catch (z) { }
-    finally { }
+    try { } catch (z) { } finally { }
 }

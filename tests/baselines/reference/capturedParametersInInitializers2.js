@@ -19,7 +19,9 @@ function foo(
 y,
     x,
     z
-) {if (y === void 0) { y = (_a = /** @class */ (function () {
+) {
+    var _a;
+    if (y === void 0) { y = (_a = /** @class */ (function () {
             function class_1() {
                 x;
             }
@@ -35,10 +37,11 @@ y,
         _a); }
     if (x === void 0) { x = 1; }
     if (z === void 0) { z = 2; }
-    var _a;
     y.c;
 }
-function foo2(y, x) {if (y === void 0) { y = (_b = /** @class */ (function () {
+function foo2(y, x) {
+    var _a, _b;
+    if (y === void 0) { y = (_b = /** @class */ (function () {
             function class_2() {
                 this[_a] = x;
             }
@@ -47,5 +50,4 @@ function foo2(y, x) {if (y === void 0) { y = (_b = /** @class */ (function () {
         _a = x,
         _b); }
     if (x === void 0) { x = 1; }
-    var _a, _b;
 }

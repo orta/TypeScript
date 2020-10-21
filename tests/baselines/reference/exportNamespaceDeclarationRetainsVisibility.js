@@ -18,7 +18,6 @@ export = X;
 exports.__esModule = true;
 
 
-
 //// [exportNamespaceDeclarationRetainsVisibility.d.ts]
 declare namespace X {
     interface A {

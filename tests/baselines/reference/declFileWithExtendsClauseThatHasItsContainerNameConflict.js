@@ -22,7 +22,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -32,8 +32,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 var A;
-(function (A) {
-    var B;
+(function (A) {var B;
     (function (B) {
         var EventManager = /** @class */ (function () {
             function EventManager() {
@@ -43,10 +42,8 @@ var A;
         B.EventManager = EventManager;
     })(B = A.B || (A.B = {}));
 })(A || (A = {}));
-(function (A) {
-    var B;
-    (function (B) {
-        var C;
+(function (A) {var B;
+    (function (B) {var C;
         (function (C) {
             var ContextMenu = /** @class */ (function (_super) {
                 __extends(ContextMenu, _super);

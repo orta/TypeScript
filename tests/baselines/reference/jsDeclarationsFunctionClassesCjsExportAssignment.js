@@ -87,6 +87,7 @@ module.exports = Timer;
  * @typedef {import("./hook")} Hook
  * @typedef {import("./hook").HookHandler} HookHandler
  */
+
 /**
  * Input type definition
  *
@@ -263,7 +264,7 @@ declare class Hook {
      * @param {HookHandler} handle
      */
     constructor(handle: HookHandler);
-    handle: (arg: import("./context")) => void;
+    handle: HookHandler;
 }
 declare namespace Hook {
     export { HookHandler };

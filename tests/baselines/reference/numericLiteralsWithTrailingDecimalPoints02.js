@@ -66,4 +66,3 @@ var test16 = 3
     .toString();
 var test17 = 3.
     .toString();
-

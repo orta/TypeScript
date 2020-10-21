@@ -143,7 +143,6 @@ function acceptMappedArray(arr) {
 }
 
 
-
 //// [mappedTypesArraysTuples.d.ts]
 declare type Box<T> = {
     value: T;

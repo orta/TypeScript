@@ -157,8 +157,7 @@ symbol,
         var name = doc.name, text = doc.text;
         if (_this.userValidationKeywords[name]) {
             definition[name] = _this.parseValue(text);
-        }
-        else {
+        } else {
             // special annotations
             otherAnnotations[doc.name] = true;
         }

@@ -26,5 +26,3 @@ function Point(x, y) {
 var o = new Point(3, 4);
 
 var xx = o.x;
-
-

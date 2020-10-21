@@ -37,8 +37,7 @@ import M3 from "M3";
 
 //// [es5ModuleInternalNamedImports.js]
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.M = void 0;
     var M;
     (function (M) {
@@ -52,7 +51,9 @@ define(["require", "exports"], function (require, exports) {
         M.M_C = M_C;
         // instantiated module
         var M_M;
-        (function (M_M) {var x;})(M_M = M.M_M || (M.M_M = {}));
+        (function (M_M) {
+            var x;
+        })(M_M = M.M_M || (M.M_M = {}));
         // function
         function M_F() { }
         M.M_F = M_F;
@@ -61,6 +62,5 @@ define(["require", "exports"], function (require, exports) {
         (function (M_E) {})(M_E = M.M_E || (M.M_E = {}));
         // alias
         M.M_A = M_M;
-
     })(M = exports.M || (exports.M = {}));
 });

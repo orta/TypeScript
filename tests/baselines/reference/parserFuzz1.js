@@ -4,5 +4,4 @@ cla <ss {
 
 //// [parserFuzz1.js]
 cla < ss;{
-    _;try { }
-    finally { }}
+    _;try { } finally { }}

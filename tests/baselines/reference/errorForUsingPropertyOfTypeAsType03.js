@@ -28,8 +28,7 @@ namespace Test1 {
 
 //// [errorForUsingPropertyOfTypeAsType03.js]
 var Test1;
-(function (Test1) {
-    var Color;
+(function (Test1) {var Color;
     (function (Color) {
         Color[Color["Red"] = 0] = "Red";
         Color[Color["Green"] = 1] = "Green";

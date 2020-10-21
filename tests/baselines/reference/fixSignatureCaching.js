@@ -1482,21 +1482,17 @@ define(function () {
                 if (phoneSized === undefined) {
                     cache.mobile = impl.FALLBACK_MOBILE;
                     cache.tablet = cache.phone = null;
-                }
-                else if (phoneSized) {
+                } else if (phoneSized) {
                     cache.mobile = cache.phone = impl.FALLBACK_PHONE;
                     cache.tablet = null;
-                }
-                else {
+                } else {
                     cache.mobile = cache.tablet = impl.FALLBACK_TABLET;
                     cache.phone = null;
                 }
-            }
-            else if (impl.isTabletFallback(userAgent)) {
+            } else if (impl.isTabletFallback(userAgent)) {
                 cache.mobile = cache.tablet = impl.FALLBACK_TABLET;
                 cache.phone = null;
-            }
-            else {
+            } else {
                 // not mobile at all!
                 cache.mobile = cache.tablet = cache.phone = null;
             }
@@ -1952,8 +1948,7 @@ define(function () {
             MobileDetect.isPhoneSized = function (maxPhoneWidth) {
                 return maxPhoneWidth < 0 ? undefined : impl.getDeviceSmallerSide() <= maxPhoneWidth;
             };
-        }
-        else {
+        } else {
             MobileDetect.isPhoneSized = function () { };
         }
 
@@ -1967,14 +1962,11 @@ define(function () {
 })((function (undefined) {
     if (typeof module !== 'undefined' && module.exports) {
         return function (factory) { module.exports = factory(); };
-    }
-    else if (typeof define === 'function' && define.amd) {
+    } else if (typeof define === 'function' && define.amd) {
         return define;
-    }
-    else if (typeof window !== 'undefined') {
+    } else if (typeof window !== 'undefined') {
         return function (factory) { window.MobileDetect = factory(); };
-    }
-    else {
+    } else {
         // please file a bug if you get this error!
         throw new Error('unknown environment');
     }

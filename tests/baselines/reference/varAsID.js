@@ -35,6 +35,3 @@ var Foo2 = /** @class */ (function () {
     return Foo2;
 }());
 var f2 = new Foo2();
-
-
-

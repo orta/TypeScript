@@ -28,4 +28,5 @@ class Kasizz extends Mup {
     constructor() {
         super(...arguments);
         this.size = -1;
-    }}
+    }
+}

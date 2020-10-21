@@ -34,7 +34,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -50,8 +50,7 @@ var Foo = /** @class */ (function () {
     return Foo;
 }());
 define("ref/a", ["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.A = void 0;
     /// <reference path="./b.ts" />
     var A = /** @class */ (function () {
@@ -62,8 +61,7 @@ define("ref/a", ["require", "exports"], function (require, exports) {
     exports.A = A;
 });
 define("b", ["require", "exports", "ref/a"], function (require, exports, a_1) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.B = void 0;
     var B = /** @class */ (function (_super) {
         __extends(B, _super);

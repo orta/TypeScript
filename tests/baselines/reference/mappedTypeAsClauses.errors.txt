@@ -1,0 +1,140 @@
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(3,19): error TS7039: Mapped object type implicitly has an 'any' template type.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(3,53): error TS2304: Cannot find name 'capitalize'.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(3,53): error TS4081: Exported type alias 'Getters' has or is using private name 'capitalize'.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(3,64): error TS1005: '}' expected.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(3,64): error TS2304: Cannot find name 'P'.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(3,65): error TS1128: Declaration or statement expected.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(26,51): error TS1005: ';' expected.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(26,51): error TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(26,52): error TS1005: ';' expected.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(26,53): error TS2304: Cannot find name 'P'.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(26,55): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(26,61): error TS1005: ';' expected.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(26,61): error TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(26,62): error TS1005: ';' expected.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(26,63): error TS2304: Cannot find name 'P'.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(26,65): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,41): error TS1005: ';' expected.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,41): error TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,42): error TS1005: ';' expected.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,43): error TS2304: Cannot find name 'keyof'.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,49): error TS1005: ';' expected.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,49): error TS2304: Cannot find name 'U'.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,53): error TS2693: 'string' only refers to a type, but is being used as a value here.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,60): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,66): error TS1005: ';' expected.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,66): error TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,67): error TS1005: ';' expected.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,68): error TS2304: Cannot find name 'keyof'.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,74): error TS1005: ';' expected.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,74): error TS2304: Cannot find name 'U'.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,78): error TS2693: 'string' only refers to a type, but is being used as a value here.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(29,85): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts(30,1): error TS1160: Unterminated template literal.
+
+
+==== tests/cases/conformance/types/mapped/mappedTypeAsClauses.ts (33 errors) ====
+    // Mapped type 'as N' clauses
+    
+    type Getters<T> = { [P in keyof T & string as `get${capitalize P}`]: () => T[P] };
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!!! error TS7039: Mapped object type implicitly has an 'any' template type.
+                                                        ~~~~~~~~~~
+!!! error TS2304: Cannot find name 'capitalize'.
+                                                        ~~~~~~~~~~
+!!! error TS4081: Exported type alias 'Getters' has or is using private name 'capitalize'.
+                                                                   ~
+!!! error TS1005: '}' expected.
+                                                                   ~
+!!! error TS2304: Cannot find name 'P'.
+                                                                    ~
+!!! error TS1128: Declaration or statement expected.
+    type TG1 = Getters<{ foo: string, bar: number, baz: { z: boolean } }>;
+    
+    // Mapped type with 'as N' clause has no constraint on 'in T' clause
+    
+    type PropDef<K extends keyof any, T> = { name: K, type: T };
+    
+    type TypeFromDefs<T extends PropDef<keyof any, any>> = { [P in T as P['name']]: P['type'] };
+    
+    type TP1 = TypeFromDefs<{ name: 'a', type: string } | { name: 'b', type: number } | { name: 'a', type: boolean }>;
+    
+    // No array or tuple type mapping when 'as N' clause present
+    
+    type TA1 = Getters<string[]>;
+    type TA2 = Getters<[number, boolean]>;
+    
+    // Filtering using 'as N' clause
+    
+    type Methods<T> = { [P in keyof T as T[P] extends Function ? P : never]: T[P] };
+    type TM1 = Methods<{ foo(): number, bar(x: string): boolean, baz: string | number }>;
+    
+    // Mapping to multiple names using 'as N' clause
+    
+    type DoubleProp<T> = { [P in keyof T & string as `${P}1` | `${P}2`]: T[P] }
+                                                      ~
+!!! error TS1005: ';' expected.
+                                                      ~
+!!! error TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+                                                       ~
+!!! error TS1005: ';' expected.
+                                                        ~
+!!! error TS2304: Cannot find name 'P'.
+                                                          ~
+!!! error TS2349: This expression is not callable.
+!!! error TS2349:   Type 'Number' has no call signatures.
+                                                                ~
+!!! error TS1005: ';' expected.
+                                                                ~
+!!! error TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+                                                                 ~
+!!! error TS1005: ';' expected.
+                                                                  ~
+!!! error TS2304: Cannot find name 'P'.
+                                                                    ~
+!!! error TS2349: This expression is not callable.
+!!! error TS2349:   Type 'Number' has no call signatures.
+    type TD1 = DoubleProp<{ a: string, b: number }>;  // { a1: string, a2: string, b1: number, b2: number }
+    type TD2 = keyof TD1;  // 'a1' | 'a2' | 'b1' | 'b2'
+    type TD3<U> = keyof DoubleProp<U>;  // `${keyof U & string}1` | `${keyof U & string}2`
+                                            ~
+!!! error TS1005: ';' expected.
+                                            ~
+!!! error TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+                                             ~
+!!! error TS1005: ';' expected.
+                                              ~~~~~
+!!! error TS2304: Cannot find name 'keyof'.
+                                                    ~
+!!! error TS1005: ';' expected.
+                                                    ~
+!!! error TS2304: Cannot find name 'U'.
+                                                        ~~~~~~
+!!! error TS2693: 'string' only refers to a type, but is being used as a value here.
+                                                               ~
+!!! error TS2349: This expression is not callable.
+!!! error TS2349:   Type 'Number' has no call signatures.
+                                                                     ~
+!!! error TS1005: ';' expected.
+                                                                     ~
+!!! error TS2581: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery`.
+                                                                      ~
+!!! error TS1005: ';' expected.
+                                                                       ~~~~~
+!!! error TS2304: Cannot find name 'keyof'.
+                                                                             ~
+!!! error TS1005: ';' expected.
+                                                                             ~
+!!! error TS2304: Cannot find name 'U'.
+                                                                                 ~~~~~~
+!!! error TS2693: 'string' only refers to a type, but is being used as a value here.
+                                                                                        ~
+!!! error TS2349: This expression is not callable.
+!!! error TS2349:   Type 'Number' has no call signatures.
+    
+    
+!!! error TS1160: Unterminated template literal.

@@ -35,6 +35,5 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 
-call(function (a) { return __generator(this, function (_a) {
-    return [2 /*return*/];
+call(function (a) { return __generator(this, function (_a) {return [2 /*return*/];
 }); }); // error, 2nd argument required

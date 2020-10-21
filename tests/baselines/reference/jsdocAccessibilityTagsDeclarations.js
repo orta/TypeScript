@@ -31,6 +31,11 @@ class Private {
     set p(value) { this.c = value }
 }
 
+// https://github.com/microsoft/TypeScript/issues/38401
+class C {
+    constructor(/** @public */ x, /** @protected */ y, /** @private */ z) {
+    }
+}
 
 //// [foo.js]
 class Protected {
@@ -65,6 +70,12 @@ class Private {
     set p(value) { this.c = value; }
 }
 
+// https://github.com/microsoft/TypeScript/issues/38401
+class C {
+    constructor(/** @public */ x, /** @protected */ y, /** @private */ z) {
+    }
+}
+
 
 //// [foo.d.ts]
 declare class Protected {
@@ -90,4 +101,7 @@ declare class Private {
     private set p(arg);
     /** @private */
     private get p();
+}
+declare class C {
+    constructor(x: any, y: any, z: any);
 }

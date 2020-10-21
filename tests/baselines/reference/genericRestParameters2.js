@@ -136,7 +136,6 @@ f20.apply(void 0, __spreadArrays([42, "hello"], t3));
 f20.apply(void 0, __spreadArrays([42, "hello"], t2, [true]));
 
 
-
 //// [genericRestParameters2.d.ts]
 declare const t1: [number, string, ...boolean[]];
 declare const t2: [string, ...boolean[]];

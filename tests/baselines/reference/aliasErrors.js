@@ -40,8 +40,7 @@ var foo;
     }());
     foo.Provide = Provide;
     var bar;
-    (function (bar) {
-        var baz;
+    (function (bar) {var baz;
         (function (baz) {var boo = /** @class */ (function () {
                 function boo() {}
                 return boo;
@@ -65,6 +64,7 @@ var r = undefined;
 var p = new provide.Provide();
 
 function use() {
+
     beez.baz.boo;
     var p1;
     var p2;

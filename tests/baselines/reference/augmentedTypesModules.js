@@ -100,7 +100,9 @@ module m6 { export var y = 2; }
 //// [augmentedTypesModules.js]
 var m1 = 1; // Should be allowed
 var m1a;
-(function (m1a) {var y = 2;})(m1a || (m1a = {})); // error
+(function (m1a) {
+    var y = 2;
+})(m1a || (m1a = {})); // error
 var m1a = 1; // error
 var m1b;
 (function (m1b) {m1b.y = 2;})(m1b || (m1b = {})); // error
@@ -121,7 +123,9 @@ var m1d = 1; // error
 
 function m2() { }; // ok since the module is not instantiated
 var m2a;
-(function (m2a) {var y = 2;})(m2a || (m2a = {}));
+(function (m2a) {
+    var y = 2;
+})(m2a || (m2a = {}));
 function m2a() { }; // error since the module is instantiated
 var m2b;
 (function (m2b) {m2b.y = 2;})(m2b || (m2b = {}));
@@ -147,7 +151,9 @@ var m3 = /** @class */ (function () {
     return m3;
 }()); // ok since the module is not instantiated
 var m3a;
-(function (m3a) {var y = 2;})(m3a || (m3a = {}));
+(function (m3a) {
+    var y = 2;
+})(m3a || (m3a = {}));
 var m3a = /** @class */ (function () {
     function m3a() {}
     m3a.prototype.foo = function () { };
@@ -158,7 +164,9 @@ var m3b = /** @class */ (function () {
     m3b.prototype.foo = function () { };
     return m3b;
 }());
-(function (m3b) {var y = 2;})(m3b || (m3b = {}));
+(function (m3b) {
+    var y = 2;
+})(m3b || (m3b = {}));
 var m3c = /** @class */ (function () {
     function m3c() {}
     m3c.prototype.foo = function () { };
@@ -180,7 +188,9 @@ var m3g;
 var m4;
 (function (m4) {})(m4 || (m4 = {}));
 var m4a;
-(function (m4a) {var y = 2;})(m4a || (m4a = {}));
+(function (m4a) {
+    var y = 2;
+})(m4a || (m4a = {}));
 (function (m4a) {
     m4a[m4a["One"] = 0] = "One";
 })(m4a || (m4a = {}));

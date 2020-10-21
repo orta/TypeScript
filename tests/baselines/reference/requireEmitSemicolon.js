@@ -21,8 +21,7 @@ export module Database {
 
 //// [requireEmitSemicolon_0.js]
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     exports.Models = void 0;
     var Models;
     (function (Models) {
@@ -35,8 +34,7 @@ define(["require", "exports"], function (require, exports) {
 });
 //// [requireEmitSemicolon_1.js]
 define(["require", "exports", "requireEmitSemicolon_0"], function (require, exports, P) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     exports.Database = void 0;
     var Database;
     (function (Database) {

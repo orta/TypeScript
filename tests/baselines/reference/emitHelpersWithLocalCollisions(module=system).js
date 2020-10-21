@@ -15,20 +15,16 @@ System.register([], function (exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
-    };
-    var A, o, y;
+    };var A, o, y;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [],
         execute: function () {
-            A = /** @class */ (() => {
-                let A = class A {
-                };
-                A = __decorate([
-                    dec
-                ], A);
-                return A;
-            })();
+            A = class A {
+            };
+            A = __decorate([
+                dec
+            ], A);
             exports_1("A", A);
             o = { a: 1 };
             y = Object.assign({}, o);

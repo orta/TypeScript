@@ -158,4 +158,3 @@ var doNotPropagate = [
 var doPropagate = [
     E9.A, E9.B, E6.B, E6.C, E6.A, E5.A, E5.B, E5.C
 ];
-

@@ -90,4 +90,3 @@ var m = {
 var mResult1 = m[MyEmusEnum.emu];
 var mResult2 = m[MyEmusEnum[MyEmusEnum.emu]];
 var mResult3 = m[hi];
-

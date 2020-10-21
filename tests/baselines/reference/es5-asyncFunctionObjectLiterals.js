@@ -53,12 +53,8 @@ async function objectLiteral6() {
 //// [es5-asyncFunctionObjectLiterals.js]
 
 function objectLiteral0() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    _a = {};
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:_a = {};
                     return [4 /*yield*/, y];
                 case 1:
                     x = (_a.a = _b.sent(),
@@ -71,12 +67,8 @@ function objectLiteral0() {
 }
 
 function objectLiteral1() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    _a = {
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:_a = {
                         a: y
                     };
                     return [4 /*yield*/, z];
@@ -90,12 +82,8 @@ function objectLiteral1() {
 }
 
 function objectLiteral2() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    _a = {};
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:_a = {};
                     return [4 /*yield*/, a];
                 case 1:
                     x = (_a[_b.sent()] = y,
@@ -108,13 +96,9 @@ function objectLiteral2() {
 }
 
 function objectLiteral3() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
+    return __awaiter(this, void 0, void 0, function () {var _a;
         var _b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0:
-                    _b = {};
+        return __generator(this, function (_c) {switch (_c.label) {case 0:_b = {};
                     _a = a;
                     return [4 /*yield*/, y];
                 case 1:
@@ -128,12 +112,8 @@ function objectLiteral3() {
 }
 
 function objectLiteral4() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    _a = {};
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:_a = {};
                     return [4 /*yield*/, y];
                 case 1:
                     x = (_a.a = _b.sent(),
@@ -146,14 +126,10 @@ function objectLiteral4() {
 }
 
 function objectLiteral5() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    _a = {
-                            a: y
-                        };
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:_a = {
+                        a: y
+                    };
                     return [4 /*yield*/, b];
                 case 1:
                     x = (_a[_b.sent()] = z,
@@ -165,15 +141,11 @@ function objectLiteral5() {
 }
 
 function objectLiteral6() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
+    return __awaiter(this, void 0, void 0, function () {var _a;
         var _b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0:
-                    _b = {
-                            a: y
-                        };
+        return __generator(this, function (_c) {switch (_c.label) {case 0:_b = {
+                        a: y
+                    };
                     _a = b;
                     return [4 /*yield*/, z];
                 case 1:

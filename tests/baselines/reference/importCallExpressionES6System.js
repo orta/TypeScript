@@ -30,8 +30,7 @@ export class D {
 
 //// [0.js]
 System.register([], function (exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
+    "use strict";var __moduleName = context_1 && context_1.id;
     function foo() { return "foo"; }
     exports_1("foo", foo);
     return {
@@ -41,8 +40,7 @@ System.register([], function (exports_1, context_1) {
 });
 //// [1.js]
 System.register([], function (exports_1, context_1) {
-    "use strict";
-    var p1, p2, C, D;
+    "use strict";var p1, p2, C, D;
     var __moduleName = context_1 && context_1.id;
     function foo() {
         const p2 = context_1.import("./0");

@@ -46,7 +46,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -57,10 +57,8 @@ var __extends = (this && this.__extends) || (function () {
 })();
 // Module
 var templa;
-(function (templa) {
-    var dom;
-    (function (dom) {
-        var mvc;
+(function (templa) {var dom;
+    (function (dom) {var mvc;
         (function (mvc) {
 
             var AbstractElementController = /** @class */ (function (_super) {
@@ -75,12 +73,9 @@ var templa;
     })(dom = templa.dom || (templa.dom = {}));
 })(templa || (templa = {}));
 // Module
-(function (templa) {
-    var dom;
-    (function (dom) {
-        var mvc;
-        (function (mvc) {
-            var composite;
+(function (templa) {var dom;
+    (function (dom) {var mvc;
+        (function (mvc) {var composite;
             (function (composite) {
                 var AbstractCompositeElementController = /** @class */ (function (_super) {
                     __extends(AbstractCompositeElementController, _super);

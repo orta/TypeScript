@@ -84,7 +84,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -123,8 +123,7 @@ var Y2;
     }(AA));
 })(Y2 || (Y2 = {}));
 var Y3;
-(function (Y3) {
-    var Module;
+(function (Y3) {var Module;
     (function (Module) {
         var A = /** @class */ (function () {
             function A() {}
@@ -133,8 +132,7 @@ var Y3;
     })(Module || (Module = {}));
 })(Y3 || (Y3 = {}));
 var Y4;
-(function (Y4) {
-    var Color;
+(function (Y4) {var Color;
     (function (Color) {
         Color[Color["Blue"] = 0] = "Blue";
         Color[Color["Red"] = 1] = "Red";
@@ -170,8 +168,7 @@ var YY2;
     }(AA));
 })(YY2 || (YY2 = {}));
 var YY3;
-(function (YY3) {
-    var Module;
+(function (YY3) {var Module;
     (function (Module) {
         var A = /** @class */ (function () {
             function A() {}
@@ -180,8 +177,7 @@ var YY3;
     })(Module || (Module = {}));
 })(YY3 || (YY3 = {}));
 var YY4;
-(function (YY4) {
-    var Color;
+(function (YY4) {var Color;
     (function (Color) {
         Color[Color["Blue"] = 0] = "Blue";
         Color[Color["Red"] = 1] = "Red";
@@ -217,8 +213,7 @@ var YYY2;
     }(AA));
 })(YYY2 || (YYY2 = {}));
 var YYY3;
-(function (YYY3) {
-    var Module;
+(function (YYY3) {var Module;
     (function (Module) {
         var A = /** @class */ (function () {
             function A() {}
@@ -227,8 +222,7 @@ var YYY3;
     })(Module || (Module = {}));
 })(YYY3 || (YYY3 = {}));
 var YYY4;
-(function (YYY4) {
-    var Color;
+(function (YYY4) {var Color;
     (function (Color) {
         Color[Color["Blue"] = 0] = "Blue";
         Color[Color["Red"] = 1] = "Red";

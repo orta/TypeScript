@@ -40,17 +40,11 @@ var temp: any;
 //// [emitExponentiationOperator4.js]
 var temp;
 
-Math.pow(
-
-temp, 3);
-Math.pow(
---temp, 3);
-Math.pow(
-++temp, 3);
-Math.pow(
-temp--, 3);
-Math.pow(
-temp++, 3);
+Math.pow(temp, 3);
+Math.pow(--temp, 3);
+Math.pow(++temp, 3);
+Math.pow(temp--, 3);
+Math.pow(temp++, 3);
 
 Math.pow(1, Math.pow(--temp, 3));
 Math.pow(1, Math.pow(++temp, 3));

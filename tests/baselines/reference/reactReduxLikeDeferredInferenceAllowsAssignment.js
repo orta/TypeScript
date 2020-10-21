@@ -153,7 +153,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -209,8 +209,7 @@ dispatch,
     _a
 ) {
     var foo = _a.foo;
-    return __awaiter(void 0, void 0, void 0, function () {
-        return __generator(this, function (_b) {
+    return __awaiter(void 0, void 0, void 0, function () {return __generator(this, function (_b) {
             return [2 /*return*/, foo];
         });
     });
@@ -230,4 +229,3 @@ var Test1 = connect(
 null,
     mapDispatchToProps
 )(TestComponent);
-

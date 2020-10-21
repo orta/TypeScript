@@ -13,11 +13,8 @@ var A = /** @class */ (function () {
     function A() {}
     return A;
 }());
-(
-
-    {}.toString());
+({}.toString());
 
 (function () {
-    (
-        {}.toString());
+    ({}.toString());
 })();

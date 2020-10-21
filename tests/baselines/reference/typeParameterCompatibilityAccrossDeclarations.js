@@ -24,8 +24,7 @@ i2 = a2; // no error
 
 //// [typeParameterCompatibilityAccrossDeclarations.js]
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     var a = {
         x: function (y) { return null; }
     };

@@ -22,16 +22,14 @@ export const build = (): DatastoreResult.T<string> => {
 
 //// [datastore.bundle.js]
 define("datastore_result", ["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
 });
 define("conditional_directive_field", ["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     exports.build = void 0;
-    exports.build = function () {
+    var build = function () {
         return null;
-    };
+    };exports.build = build;
 });
 
 

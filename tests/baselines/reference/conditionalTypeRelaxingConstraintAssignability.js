@@ -45,7 +45,8 @@ exports.Elem = void 0;
 
 
 var Elem = /** @class */ (function () {
-    function Elem(children_) {
+    function Elem(children_
+    ) {
         this.children_ = children_;
     }
     return Elem;

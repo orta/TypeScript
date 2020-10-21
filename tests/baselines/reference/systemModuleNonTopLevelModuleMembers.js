@@ -13,20 +13,20 @@ export module TopLevelModule2 {
 
 //// [systemModuleNonTopLevelModuleMembers.js]
 System.register([], function (exports_1, context_1) {
-    "use strict";
-    var TopLevelClass, TopLevelModule, TopLevelEnum, TopLevelModule2;
+    "use strict";var TopLevelClass, TopLevelModule, TopLevelEnum, TopLevelModule2;
     var __moduleName = context_1 && context_1.id;
     function TopLevelFunction() { }
     exports_1("TopLevelFunction", TopLevelFunction);
     return {
         setters: [],
         execute: function () {
-            TopLevelClass = /** @class */ (function () {
-                function TopLevelClass() {}
+            TopLevelClass = /** @class */ (function () {function TopLevelClass() {}
                 return TopLevelClass;
             }());
             exports_1("TopLevelClass", TopLevelClass);
-            (function (TopLevelModule) {var v;})(TopLevelModule || (TopLevelModule = {}));
+            (function (TopLevelModule) {
+                var v;
+            })(TopLevelModule || (TopLevelModule = {}));
             exports_1("TopLevelModule", TopLevelModule);
             (function (TopLevelEnum) {
                 TopLevelEnum[TopLevelEnum["E"] = 0] = "E";
@@ -39,7 +39,9 @@ System.register([], function (exports_1, context_1) {
                 }());
                 TopLevelModule2.NonTopLevelClass = NonTopLevelClass;
                 var NonTopLevelModule;
-                (function (NonTopLevelModule) {var v;})(NonTopLevelModule = TopLevelModule2.NonTopLevelModule || (TopLevelModule2.NonTopLevelModule = {}));
+                (function (NonTopLevelModule) {
+                    var v;
+                })(NonTopLevelModule = TopLevelModule2.NonTopLevelModule || (TopLevelModule2.NonTopLevelModule = {}));
                 function NonTopLevelFunction() { }
                 TopLevelModule2.NonTopLevelFunction = NonTopLevelFunction;
                 var NonTopLevelEnum;

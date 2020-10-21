@@ -30,4 +30,3 @@ var a = /** @class */ (function () {
     return a;
 }());
 var xx = new a(null, 7, new B());
-

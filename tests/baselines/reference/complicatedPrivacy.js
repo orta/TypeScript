@@ -106,8 +106,7 @@ module mglo5 {
 
 //// [complicatedPrivacy.js]
 var m1;
-(function (m1) {
-    var m2;
+(function (m1) {var m2;
     (function (m2) {
 
 
@@ -174,8 +173,7 @@ var C2 = /** @class */ (function () {
     return C2;
 }());
 var m2;
-(function (m2) {
-    var m3;
+(function (m2) {var m3;
     (function (m3) {
 
         var c_pr = /** @class */ (function () {
@@ -195,8 +193,7 @@ var m2;
                 return C;
             }());
             var m5;
-            (function (m5) {
-                var m6;
+            (function (m5) {var m6;
                 (function (m6) {
                     function f1() {
                         return new C();

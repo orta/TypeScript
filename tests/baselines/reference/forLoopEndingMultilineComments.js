@@ -32,8 +32,7 @@ function consoleTestResultHandler(testResult) {
 
         /* eslint-disable no-console */
         if (a) {
-        }
-        else {
+        } else {
         }
         /* eslint-enable no-console */
     }

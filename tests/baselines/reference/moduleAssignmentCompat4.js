@@ -18,8 +18,7 @@ b = a; // error
 
 //// [moduleAssignmentCompat4.js]
 var A;
-(function (A) {
-    var M;
+(function (A) {var M;
     (function (M) {
         var C = /** @class */ (function () {
             function C() {}
@@ -28,8 +27,7 @@ var A;
     })(M = A.M || (A.M = {}));
 })(A || (A = {}));
 var B;
-(function (B) {
-    var M;
+(function (B) {var M;
     (function (M) {
         var D = /** @class */ (function () {
             function D() {}

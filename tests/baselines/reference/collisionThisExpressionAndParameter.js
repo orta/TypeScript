@@ -146,8 +146,7 @@ var Foo1 = /** @class */ (function () {
 
 function f1(_this) {
     var _this_1 = this;
-    (
-        function (x) { console.log(_this_1.x); });
+    (function (x) { console.log(_this_1.x); });
 }
 
 
@@ -172,7 +171,6 @@ var Foo3 = /** @class */ (function () {
 }());
 function f3(_this) {
     var _this_1 = this;
-    (
-        function (x) { console.log(_this_1.x); });
+    (function (x) { console.log(_this_1.x); });
 }
 

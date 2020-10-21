@@ -62,8 +62,7 @@ function assertNever(x) {
 function IfWithString(val) {
     if (val['kind'] === 'B') {
         return val.b;
-    }
-    else {
+    } else {
         return val.a;
     }
 }
@@ -82,8 +81,7 @@ function SwitchWithString(val) {
 function IfWithTemplate(val) {
     if (val["kind"] === 'B') {
         return val.b;
-    }
-    else {
+    } else {
         return val.a;
     }
 }

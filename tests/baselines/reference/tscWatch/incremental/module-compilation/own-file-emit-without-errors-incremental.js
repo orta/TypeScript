@@ -1,4 +1,4 @@
-/a/lib/tsc.js -i
+Input::
 //// [/a/lib/lib.d.ts]
 /// <reference no-default-lib="true"/>
 interface Boolean {}
@@ -21,10 +21,35 @@ export const y = 20;
 //// [/users/username/projects/project/tsconfig.json]
 {"compilerOptions":{"incremental":true,"module":"amd"}}
 
+
+/a/lib/tsc.js -i
+Output::
+
+
+Program root files: ["/users/username/projects/project/file1.ts","/users/username/projects/project/file2.ts"]
+Program options: {"incremental":true,"module":2,"configFilePath":"/users/username/projects/project/tsconfig.json"}
+Program structureReused: Not
+Program files::
+/a/lib/lib.d.ts
+/users/username/projects/project/file1.ts
+/users/username/projects/project/file2.ts
+
+Semantic diagnostics in builder refreshed for::
+/a/lib/lib.d.ts
+/users/username/projects/project/file1.ts
+/users/username/projects/project/file2.ts
+
+WatchedFiles::
+
+FsWatches::
+
+FsWatchesRecursive::
+
+exitCode:: ExitStatus.Success
+
 //// [/users/username/projects/project/file1.js]
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     exports.x = void 0;
     exports.x = 10;
 });
@@ -32,8 +57,7 @@ define(["require", "exports"], function (require, exports) {
 
 //// [/users/username/projects/project/file2.js]
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     exports.y = void 0;
     exports.y = 20;
 });
@@ -76,19 +100,25 @@ define(["require", "exports"], function (require, exports) {
 }
 
 
+Change::
+
+Input::
+//// [/users/username/projects/project/file2.ts]
+export const z = 10;
+
+
 Output::
 
 
 Program root files: ["/users/username/projects/project/file1.ts","/users/username/projects/project/file2.ts"]
 Program options: {"incremental":true,"module":2,"configFilePath":"/users/username/projects/project/tsconfig.json"}
+Program structureReused: Not
 Program files::
 /a/lib/lib.d.ts
 /users/username/projects/project/file1.ts
 /users/username/projects/project/file2.ts
 
 Semantic diagnostics in builder refreshed for::
-/a/lib/lib.d.ts
-/users/username/projects/project/file1.ts
 /users/username/projects/project/file2.ts
 
 WatchedFiles::
@@ -99,15 +129,9 @@ FsWatchesRecursive::
 
 exitCode:: ExitStatus.Success
 
-Change::
-
-//// [/users/username/projects/project/file2.ts]
-export const z = 10;
-
 //// [/users/username/projects/project/file2.js]
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     exports.z = void 0;
     exports.z = 10;
 });
@@ -149,24 +173,3 @@ define(["require", "exports"], function (require, exports) {
   "version": "FakeTSVersion"
 }
 
-
-Output::
-
-
-Program root files: ["/users/username/projects/project/file1.ts","/users/username/projects/project/file2.ts"]
-Program options: {"incremental":true,"module":2,"configFilePath":"/users/username/projects/project/tsconfig.json"}
-Program files::
-/a/lib/lib.d.ts
-/users/username/projects/project/file1.ts
-/users/username/projects/project/file2.ts
-
-Semantic diagnostics in builder refreshed for::
-/users/username/projects/project/file2.ts
-
-WatchedFiles::
-
-FsWatches::
-
-FsWatchesRecursive::
-
-exitCode:: ExitStatus.Success

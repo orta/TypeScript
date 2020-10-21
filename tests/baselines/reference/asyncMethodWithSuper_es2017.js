@@ -82,7 +82,6 @@ class B extends A {
     }
 
     // async method with assignment/destructuring on 'super' requires a binding
-
     async advanced() {
         const f = () => { };
 

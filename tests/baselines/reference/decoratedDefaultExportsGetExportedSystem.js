@@ -20,19 +20,15 @@ System.register([], function (exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
-    };
-    var decorator, Foo;
+    };var decorator, Foo;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [],
         execute: function () {
-            Foo = /** @class */ (() => {
-                let Foo = class Foo {};
-                Foo = __decorate([
-                    decorator
-                ], Foo);
-                return Foo;
-            })();
+            Foo = class Foo {};
+            Foo = __decorate([
+                decorator
+            ], Foo);
             exports_1("default", Foo);
         }
     };
@@ -45,19 +41,15 @@ System.register([], function (exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
-    };
-    var decorator, default_1;
+    };var decorator, default_1;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [],
         execute: function () {
-            default_1 = /** @class */ (() => {
-                let default_1 = class {};
-                default_1 = __decorate([
-                    decorator
-                ], default_1);
-                return default_1;
-            })();
+            default_1 = class {};
+            default_1 = __decorate([
+                decorator
+            ], default_1);
             exports_1("default", default_1);
         }
     };

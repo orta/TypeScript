@@ -11,9 +11,9 @@ function test() {
 function test() {
     var _x;
     let WeakMap;
-    class C {
-        constructor() {
+    class C {constructor() {
             _x.set(this, void 0);
-        }}
+        }
+    }
     _x = new WeakMap();
 }

@@ -374,7 +374,8 @@ const flipped = flip(of2);
 
 const enhance = pipe(
 myHoc1,
-    myHoc2);
+    myHoc2
+);
 
 const MyComponent2 = enhance(MyComponent1);
 
@@ -386,35 +387,42 @@ const fn20 = pipe((_a) => 1);
 
 const fn30 = pipe(
 x => x + 1,
-    x => x * 2);
+    x => x * 2
+);
 
 const promise = Promise.resolve(1);
 promise.then(
 pipe(
 x => x + 1,
-    x => x * 2));
+    x => x * 2
+)
+);
 
 
 const fn40 = pipe(
 getString,
     string => orUndefined(string),
-    identity);
+    identity
+);
 
 
 const fn60 = pipe(
 getArray,
     x => x,
-    first);
+    first
+);
 
 const fn61 = pipe(
 getArray,
     identity,
-    first);
+    first
+);
 
 const fn62 = pipe(
 getArray,
     x => x,
-    x => first(x));
+    x => first(x)
+);
 
 
 foo2(() => { });

@@ -363,6 +363,7 @@ var TypeScript;
                 }
                 switch (symbol.kind()) {
                     case SymbolKind.Type:
+
                         if (symbol.flags & SymbolFlags.Bound) {
                             break;
                         }

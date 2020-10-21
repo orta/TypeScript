@@ -66,3 +66,4 @@ class SomeDerived extends SomeBase {
         super. `hello world`;
     }
 }
+export {};

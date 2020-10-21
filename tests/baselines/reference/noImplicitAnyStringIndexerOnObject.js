@@ -93,6 +93,12 @@ let rover: Dog = { bark() {} };
 declare let map: MyMap<Dog, string>;
 map[rover] = "Rover";
 
+interface I {
+  prop: MyMap<string, string>
+}
+declare const m: I;
+m.prop['a'];
+
 
 //// [noImplicitAnyStringIndexerOnObject.js]
 var a = {}["hello"];
@@ -183,3 +189,5 @@ o[strEnumKey];
 var rover = { bark: function () { } };
 
 map[rover] = "Rover";
+
+m.prop['a'];

@@ -32,8 +32,7 @@ let i = <InferParamComponent values={[1, 2, 3, 4]} selectHandler={(val) => { }} 
 
 //// [file.jsx]
 define(["require", "exports", "react"], function (require, exports, React) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
 
     // OK
     function Baz(key1, value) {

@@ -19,5 +19,6 @@ class A {constructor() {
         _foo.set(this, __classPrivateFieldGet(this, _bar));
         _bar.set(this, __classPrivateFieldGet(this, _foo));
         this["#baz"] = this["#baz"]; // Error (should *not* be private name error)
-    }}
+    }
+}
 _foo = new WeakMap(), _bar = new WeakMap();

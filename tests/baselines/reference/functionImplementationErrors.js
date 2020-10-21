@@ -78,7 +78,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -105,8 +105,7 @@ var f3 = function () {
 var f4 = function () {
     if (true) {
         return [''];
-    }
-    else {
+    } else {
         return [1];
     }
 };
@@ -122,7 +121,8 @@ function f6(n) {if (n === void 0) { n = m; }
 }
 
 // Function signature with initializer referencing other parameter to the right
-function f7(n, m) {if (n === void 0) { n = m; }}
+function f7(n, m) {if (n === void 0) { n = m; }
+}
 
 // FunctionExpression with non -void return type annotation with a throw, no return, and other code
 // Should be error but isn't

@@ -56,5 +56,4 @@ import { async } from 'asyncawait';
 
 export default async;
 
-
 export function foo() { }

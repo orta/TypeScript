@@ -79,8 +79,7 @@ var missingArrowsWithCurly;
     var e = function (x, y) { };
 })(missingArrowsWithCurly || (missingArrowsWithCurly = {}));
 var missingCurliesWithArrow;
-(function (missingCurliesWithArrow) {
-    var withStatement;
+(function (missingCurliesWithArrow) {var withStatement;
     (function (withStatement) {
         var a = function () { var k = 10; };
 

@@ -29,8 +29,7 @@ let c = x.B.b;
 
 //// [file1.js]
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    var foo = /** @class */ (function () {
+    "use strict";var foo = /** @class */ (function () {
         function foo() {}
         return foo;
     }());
@@ -47,15 +46,13 @@ define(["require", "exports"], function (require, exports) {
 });
 //// [file2.js]
 define(["require", "exports", "./file1"], function (require, exports, x) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     x.B.b = 1;
 
 });
 //// [file3.js]
 define(["require", "exports", "./file1", "./file2"], function (require, exports, x) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     var a;
     var b = a.a;
     var c = x.B.b;

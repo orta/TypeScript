@@ -29,5 +29,6 @@ class B {constructor() {
             },
             _b.otherClass = 123,
             _b));
-    }}
+    }
+}
 _foo = new WeakMap(), _foo2 = new WeakMap();

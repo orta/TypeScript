@@ -911,7 +911,6 @@ var TypeScript;
             sig.returnType.type = child.instanceType;
             child.construct.addSignature(sig);
         }
-
     }
     TypeScript.cloneParentConstructGroupForChildType = cloneParentConstructGroupForChildType;
     TypeScript.globalId = "__GLO";
@@ -1622,6 +1621,8 @@ var TypeScript;
         else if (ast.nodeType == NodeType.InterfaceDeclaration) {
             go = preCollectInterfaceTypes(ast, parent, context);
         }
+
+
         // This will be a constructor arg because this pass only traverses
         // constructor arg lists
         else if (ast.nodeType == NodeType.ArgDecl) {

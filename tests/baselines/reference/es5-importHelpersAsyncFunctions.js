@@ -23,9 +23,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.foo = void 0;
 var tslib_1 = require("tslib");
 function foo() {
-    return tslib_1.__awaiter(this, void 0, void 0, function () {
-        return tslib_1.__generator(this, function (_a) {
-            return [2 /*return*/];
+    return tslib_1.__awaiter(this, void 0, void 0, function () {return tslib_1.__generator(this, function (_a) {return [2 /*return*/];
         });
     });
 }
@@ -68,9 +66,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 function foo() {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            return [2 /*return*/];
+    return __awaiter(this, void 0, void 0, function () {return __generator(this, function (_a) {return [2 /*return*/];
         });
     });
 }

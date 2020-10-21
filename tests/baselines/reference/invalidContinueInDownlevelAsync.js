@@ -46,11 +46,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 function func() {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    if (!true) return [3 /*break*/, 1];
+    return __awaiter(this, void 0, void 0, function () {return __generator(this, function (_a) {switch (_a.label) {case 0:if (!true) return [3 /*break*/, 1];
                     continue;
                     return [3 /*break*/, 3];
                 case 1: return [4 /*yield*/, 1];

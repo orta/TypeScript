@@ -34,7 +34,6 @@ export const INDEX_FIELD = '__INDEX';
 import * as _ from './dash';
 import { INDEX_FIELD } from './Consts';
 
-
 export class Test {
     /**
      * @param {object} obj
@@ -44,6 +43,7 @@ export class Test {
         let index = 0;
         vm.objects = _.mapValues(
         obj,
-            object => ({ ...object, [INDEX_FIELD]: index++ }));
+            object => ({ ...object, [INDEX_FIELD]: index++ })
+        );
     }
 }

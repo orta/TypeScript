@@ -26,7 +26,9 @@ var c5a = /** @class */ (function () {
     c5a.prototype.foo = function () { };
     return c5a;
 }());
-(function (c5a) {var y = 2;})(c5a || (c5a = {})); // should be ok
+(function (c5a) {
+    var y = 2;
+})(c5a || (c5a = {})); // should be ok
 var c5b = /** @class */ (function () {
     function c5b() {}
     c5b.prototype.foo = function () { };

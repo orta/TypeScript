@@ -29,8 +29,7 @@ var foo;
     }());
     foo.Provide = Provide;
     var bar;
-    (function (bar) {
-        var baz;
+    (function (bar) {var baz;
         (function (baz) {var boo = /** @class */ (function () {
                 function boo() {}
                 return boo;

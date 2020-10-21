@@ -36,6 +36,7 @@ while (false)
 // Errors, let must be defined inside a block
 if (true)
     let l1 = 0;
+
 else
     let l2 = 0;
 

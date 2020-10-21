@@ -26,8 +26,7 @@ var Foo = /** @class */ (function () {
 }());
 try {bar = someInitThatMightFail();
 
-}
-catch (e) { }
+} catch (e) { }
 
 
 

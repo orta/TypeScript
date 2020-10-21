@@ -67,4 +67,3 @@ function f4(x) {
 function f5(x) {
     var y = x;
 }
-

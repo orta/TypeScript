@@ -35,8 +35,7 @@ for (; false;) {
 var _loop_1 = function () {
     {
         var x_1;
-        (
-            function () { return x_1; });
+        (function () { return x_1; });
     }
 };
 for (; false;) {
@@ -53,8 +52,7 @@ var _loop_2 = function () {
     switch (1) {
         case 1:
             var z0_1;
-            (
-                function () { return z0_1; });
+            (function () { return z0_1; });
             break;
     }
 };

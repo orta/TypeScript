@@ -23,8 +23,7 @@ declare namespace A {
 //// [out.js]
 // #15734 failed when test.ts comes before typings.d.ts
 var C;
-(function (C) {
-    var Name = /** @class */ (function () {
+(function (C) {var Name = /** @class */ (function () {
         function Name(parameters) {}
         Name.funcData = A.AA.func();
         Name.someConst = A.AA.foo;

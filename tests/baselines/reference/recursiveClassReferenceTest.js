@@ -109,7 +109,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -122,12 +122,9 @@ var __extends = (this && this.__extends) || (function () {
 
 
 var Sample;
-(function (Sample) {
-    var Actions;
-    (function (Actions) {
-        var Thing;
-        (function (Thing_1) {
-            var Find;
+(function (Sample) {var Actions;
+    (function (Actions) {var Thing;
+        (function (Thing_1) {var Find;
             (function (Find) {
                 var StartFindAction = /** @class */ (function () {
                     function StartFindAction() {
@@ -145,10 +142,8 @@ var Sample;
         })(Thing = Actions.Thing || (Actions.Thing = {}));
     })(Actions = Sample.Actions || (Sample.Actions = {}));
 })(Sample || (Sample = {}));
-(function (Sample) {
-    var Thing;
-    (function (Thing) {
-        var Widgets;
+(function (Sample) {var Thing;
+    (function (Thing) {var Widgets;
         (function (Widgets) {
             var FindWidget = /** @class */ (function () {
                 function FindWidget(codeThing) {
@@ -181,12 +176,9 @@ var AbstractMode = /** @class */ (function () {
     AbstractMode.prototype.getInitialState = function () { return null; };
     return AbstractMode;
 }());
-(function (Sample) {
-    var Thing;
-    (function (Thing) {
-        var Languages;
-        (function (Languages) {
-            var PlainText;
+(function (Sample) {var Thing;
+    (function (Thing) {var Languages;
+        (function (Languages) {var PlainText;
             (function (PlainText) {
 
                 var State = /** @class */ (function () {

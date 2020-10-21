@@ -1,6 +1,5 @@
 define(["require", "exports", "m1", "m4"], function (require, exports, m1, m4) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     m1.f1("test");
     m1.f2.a = 10;
 

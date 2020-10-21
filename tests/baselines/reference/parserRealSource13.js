@@ -151,8 +151,7 @@ module TypeScript.AstWalkerWithDetailCallback {
 // See LICENSE.txt in the project root for complete license information.
 ///<reference path='typescript.ts' />
 var TypeScript;
-(function (TypeScript) {
-    var AstWalkerWithDetailCallback;
+(function (TypeScript) {var AstWalkerWithDetailCallback;
     (function (AstWalkerWithDetailCallback) {
 
         function walk(script, callback) {

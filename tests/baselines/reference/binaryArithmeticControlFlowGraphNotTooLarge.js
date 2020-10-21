@@ -1311,8 +1311,7 @@ var foo = function () {
         c = (c << 11) | (c >>> 21);
         b = ((c & d) | (~c & a)) + blocks[3] - 271733879;
         b = (b << 19) | (b >>> 13);
-    }
-    else {
+    } else {
         a = this.h0;
         b = this.h1;
         c = this.h2;
@@ -2587,8 +2586,7 @@ var foo = function () {
         this.h2 = c - 1732584194 << 0;
         this.h3 = d + 271733878 << 0;
         this.first = false;
-    }
-    else {
+    } else {
         this.h0 = this.h0 + a << 0;
         this.h1 = this.h1 + b << 0;
         this.h2 = this.h2 + c << 0;

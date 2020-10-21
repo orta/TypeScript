@@ -62,4 +62,3 @@ var b1 = <MyClass reqd={true}/>;
 //  Types of property 'y' are incompatible.
 //    Type 'string' is not assignable to type 'number'.
 var b2 = <MyClass pt={{ x: 4, y: 'oops' }}/>;
-

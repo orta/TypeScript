@@ -215,7 +215,6 @@ for (let y = 0; y < 1; ++y) {
 }
 
 //======const
-
 export function exportedFoo2() {
     return v0_c + v00_c + v1_c + v2_c + v3_c + v4_c + v5_c + v6_c + v7_c + v8_c;
 }

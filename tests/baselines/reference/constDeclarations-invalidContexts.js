@@ -36,6 +36,7 @@ while (false)
 // Errors, const must be defined inside a block
 if (true)
     const c1 = 0;
+
 else
     const c2 = 0;
 

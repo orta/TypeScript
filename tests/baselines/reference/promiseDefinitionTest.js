@@ -46,8 +46,7 @@ var Promise = /** @class */ (function () {
     return Promise;
 }());
 function foo() {
-    return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
-        return [2 /*return*/];
+    return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {return [2 /*return*/];
     }); });
 }
 var x = foo();

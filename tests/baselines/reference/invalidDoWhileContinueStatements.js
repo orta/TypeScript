@@ -45,8 +45,7 @@ continue;
 
 // non-existent label
 ONE: do
-    continue TWO;
-while (true);
+    continue TWO; while (true);
 
 // continue from inside function
 TWO: do {

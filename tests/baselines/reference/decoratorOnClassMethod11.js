@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var M;
-(function (M) {
-    var C = /** @class */ (function () {
+(function (M) {var C = /** @class */ (function () {
         function C() {
         }
         C.prototype.decorator = function (target, key) { };

@@ -40,11 +40,9 @@ var parser = /** @class */ (function () {
 
             if (aName > bName) {
                 return 1;
-            }
-            else if (aName < bName) {
+            } else if (aName < bName) {
                 return -1;
-            }
-            else {
+            } else {
                 return 0;
             }
         });

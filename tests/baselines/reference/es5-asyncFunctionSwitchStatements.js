@@ -70,8 +70,7 @@ async function switchStatement8() {
 //// [es5-asyncFunctionSwitchStatements.js]
 
 function switchStatement0() {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
+    return __awaiter(this, void 0, void 0, function () {return __generator(this, function (_a) {
             switch (x) {
                 case y:a;break;
                 default:b;break;
@@ -82,10 +81,7 @@ function switchStatement0() {
 }
 
 function switchStatement1() {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, x];
+    return __awaiter(this, void 0, void 0, function () {return __generator(this, function (_a) {switch (_a.label) {case 0: return [4 /*yield*/, x];
                 case 1:
                     switch (_a.sent()) {
                         case y:a;break;
@@ -98,16 +94,11 @@ function switchStatement1() {
 }
 
 function switchStatement2() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:
                     _a = x;
                     return [4 /*yield*/, y];
-                case 1:
-                    switch (_a) {
-                        case _b.sent(): return [3 /*break*/, 2];
+                case 1:switch (_a) {case _b.sent(): return [3 /*break*/, 2];
                     }
                     return [3 /*break*/, 3];
                 case 2:
@@ -123,14 +114,10 @@ function switchStatement2() {
 }
 
 function switchStatement3() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:
                     _a = x;
-                    switch (_a) {
-                        case y: return [3 /*break*/, 1];
+                    switch (_a) {case y: return [3 /*break*/, 1];
                     }
                     return [3 /*break*/, 3];
                 case 1: return [4 /*yield*/, a];
@@ -147,14 +134,10 @@ function switchStatement3() {
 }
 
 function switchStatement4() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:
                     _a = x;
-                    switch (_a) {
-                        case y: return [3 /*break*/, 1];
+                    switch (_a) {case y: return [3 /*break*/, 1];
                     }
                     return [3 /*break*/, 2];
                 case 1:
@@ -171,19 +154,13 @@ function switchStatement4() {
 }
 
 function switchStatement5() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:
                     _a = x;
-                    switch (_a) {
-                        case y: return [3 /*break*/, 2];
+                    switch (_a) {case y: return [3 /*break*/, 2];
                     }
                     return [4 /*yield*/, z];
-                case 1:
-                    switch (_a) {
-                        case _b.sent(): return [3 /*break*/, 3];
+                case 1:switch (_a) {case _b.sent(): return [3 /*break*/, 3];
                     }
                     return [3 /*break*/, 4];
                 case 2:
@@ -199,16 +176,11 @@ function switchStatement5() {
 }
 
 function switchStatement6() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:
                     _a = x;
                     return [4 /*yield*/, y];
-                case 1:
-                    switch (_a) {
-                        case _b.sent(): return [3 /*break*/, 3];
+                case 1:switch (_a) {case _b.sent(): return [3 /*break*/, 3];
                         case z: return [3 /*break*/, 4];
                     }
                     return [3 /*break*/, 2];
@@ -228,19 +200,13 @@ function switchStatement6() {
 }
 
 function switchStatement7() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:
                     _a = x;
-                    switch (_a) {
-                        case y: return [3 /*break*/, 3];
+                    switch (_a) {case y: return [3 /*break*/, 3];
                     }
                     return [4 /*yield*/, z];
-                case 1:
-                    switch (_a) {
-                        case _b.sent(): return [3 /*break*/, 4];
+                case 1:switch (_a) {case _b.sent(): return [3 /*break*/, 4];
                     }
                     return [3 /*break*/, 2];
                 case 2:
@@ -259,19 +225,13 @@ function switchStatement7() {
 }
 
 function switchStatement8() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:
                     _a = x;
-                    switch (_a) {
-                        case y: return [3 /*break*/, 3];
+                    switch (_a) {case y: return [3 /*break*/, 3];
                     }
                     return [4 /*yield*/, z];
-                case 1:
-                    switch (_a) {
-                        case _b.sent(): return [3 /*break*/, 4];
+                case 1:switch (_a) {case _b.sent(): return [3 /*break*/, 4];
                     }
                     return [3 /*break*/, 2];
                 case 2:

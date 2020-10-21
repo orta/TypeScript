@@ -90,7 +90,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -153,31 +153,24 @@ var Derived = /** @class */ (function (_super) {
     function Derived() {
         var _a;
         var _this = _super.call(this) || this;
-        (
-            _a = _super.prototype). = Math.pow(
-        _a., value);
+        (_a = _super.prototype). = Math.pow(_a., value);
         return _this;
     }
 
     Derived.prototype.foo = function () {
         var _a;
-        (
-            _a = _super.prototype). = Math.pow(
-        _a., value);
+        (_a = _super.prototype). = Math.pow(_a., value);
     };
 
     Derived.sfoo = function () {
         var _a;
-        (
-            _a = _super). = Math.pow(
-        _a., value);
+        (_a = _super). = Math.pow(_a., value);
     };
     return Derived;
 }(C));
 // function expression
 function bar1() { }value;
-(
-    function () { });value;
+(function () { });value;
 
 // function calls
 foo() = Math.pow(foo(), value);

@@ -27,10 +27,8 @@ module MsPortal.Util.TemplateEngine {
 
 //// [crashRegressionTest.js]
 var MsPortal;
-(function (MsPortal) {
-    var Util;
-    (function (Util) {
-        var TemplateEngine;
+(function (MsPortal) {var Util;
+    (function (Util) {var TemplateEngine;
         (function (TemplateEngine) {
             "use strict";
 

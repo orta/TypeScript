@@ -284,7 +284,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -315,6 +315,7 @@ var TypeScriptAllInOne;
                         "return": 1
                     };
             }
+
             finally {
             }};
 
@@ -422,6 +423,7 @@ var BasicFeatures = /** @class */ (function () {
         var retVal = 0;
         if (i == 1)
             retVal = 1;
+
         else
             retVal = 0;
         switch (i) {
@@ -441,7 +443,8 @@ var BasicFeatures = /** @class */ (function () {
             try {
                 throw null;
             }
-            catch (Exception) { }}
+            catch (Exception) { }
+        }
         try {
         }
         finally {
@@ -460,8 +463,7 @@ var BasicFeatures = /** @class */ (function () {
         var retVal = 0;
         var c = new CLASS();
         var xx = c;
-        retVal += ;try { }
-        catch (_a) { }Property;
+        retVal += ;try { } catch (_a) { }Property;
         retVal += c.Member();
         retVal += xx.Foo() ? 0 : 1;
 
@@ -533,6 +535,7 @@ var CLASS = /** @class */ (function () {
             return true ?
                 :
             ;
+
         else
             return false;
     };

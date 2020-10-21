@@ -7,5 +7,6 @@ class C {
 var _a;
 class C {constructor() {
         this[_a] = 1;
-    }}
+    }
+}
 _a = e;

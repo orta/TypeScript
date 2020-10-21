@@ -202,8 +202,7 @@ function f20(carrier) {
     if (carrier.error === null) {
         var error = carrier.error;
         var data = carrier.data;
-    }
-    else {
+    } else {
         var error = carrier.error;
         var data = carrier.data;
     }

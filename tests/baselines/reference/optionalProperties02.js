@@ -8,9 +8,7 @@ interface Foo {
 
 //// [optionalProperties02.js]
 
-(
-
-    { a: undefined });
+({ a: undefined });
 
 
 //// [optionalProperties02.d.ts]

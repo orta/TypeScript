@@ -127,8 +127,7 @@ function isNonVoid(value) {
 function foo1(value) {
     if (isVoid(value)) {
         value; // value is void
-    }
-    else {
+    } else {
         value; // value is a
     }
 }
@@ -136,8 +135,7 @@ function foo1(value) {
 function baz1(value) {
     if (isNonVoid(value)) {
         value; // value is a
-    }
-    else {
+    } else {
         value; // value is void
     }
 }

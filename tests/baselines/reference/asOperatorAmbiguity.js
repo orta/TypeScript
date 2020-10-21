@@ -15,4 +15,3 @@ var z = y[0].m; // z should be string
 var x;
 var y = x;
 var z = y[0].m; // z should be string
-

@@ -8,7 +8,7 @@
 }
 
 //// [switchCaseInternalComments.js]
-/*-1*/ foo /*0*/: /*1*/ switch /*2*/ ( /*3*/false /*4*/) /*5*/ {
+/*-1*/ /*-1*/ foo /*0*/: /*1*/ switch /*2*/ ( /*3*/false /*4*/) /*5*/ {
     /*6*/ case /*7*/ false /*8*/: /*9*//*9*/ 
         /*10*/ break /*11*/ foo /*12*/;
     /*13*/ default /*14*/: /*15*/

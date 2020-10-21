@@ -36,10 +36,7 @@ async function arrayLiteral7() {
 //// [es5-asyncFunctionArrayLiterals.js]
 
 function arrayLiteral0() {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, y];
+    return __awaiter(this, void 0, void 0, function () {return __generator(this, function (_a) {switch (_a.label) {case 0: return [4 /*yield*/, y];
                 case 1:
                     x = [_a.sent(), z];
                     return [2 /*return*/];
@@ -49,12 +46,8 @@ function arrayLiteral0() {
 }
 
 function arrayLiteral1() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    _a = [y];
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:_a = [y];
                     return [4 /*yield*/, z];
                 case 1:
                     x = _a.concat([_b.sent()]);
@@ -65,10 +58,7 @@ function arrayLiteral1() {
 }
 
 function arrayLiteral2() {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, y];
+    return __awaiter(this, void 0, void 0, function () {return __generator(this, function (_a) {switch (_a.label) {case 0: return [4 /*yield*/, y];
                 case 1:
                     x = __spreadArrays.apply(void 0, [(_a.sent()), [z]]);
                     return [2 /*return*/];
@@ -78,12 +68,8 @@ function arrayLiteral2() {
 }
 
 function arrayLiteral3() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    _a = [y];
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:_a = [y];
                     return [4 /*yield*/, z];
                 case 1:
                     x = __spreadArrays.apply(void 0, _a.concat([[_b.sent()]]));
@@ -94,10 +80,7 @@ function arrayLiteral3() {
 }
 
 function arrayLiteral4() {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, y];
+    return __awaiter(this, void 0, void 0, function () {return __generator(this, function (_a) {switch (_a.label) {case 0: return [4 /*yield*/, y];
                 case 1:
                     x = __spreadArrays.apply(void 0, [[_a.sent()], z]);
                     return [2 /*return*/];
@@ -107,12 +90,8 @@ function arrayLiteral4() {
 }
 
 function arrayLiteral5() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    _a = [[y]];
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:_a = [[y]];
                     return [4 /*yield*/, z];
                 case 1:
                     x = __spreadArrays.apply(void 0, _a.concat([(_b.sent())]));
@@ -123,12 +102,8 @@ function arrayLiteral5() {
 }
 
 function arrayLiteral6() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    _a = [y];
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0:_a = [y];
                     return [4 /*yield*/, z];
                 case 1:
                     x = _a.concat([_b.sent(), a]);
@@ -139,13 +114,9 @@ function arrayLiteral6() {
 }
 
 function arrayLiteral7() {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0: return [4 /*yield*/, y];
-                case 1:
-                    _a = [_b.sent(), z];
+    return __awaiter(this, void 0, void 0, function () {var _a;
+        return __generator(this, function (_b) {switch (_b.label) {case 0: return [4 /*yield*/, y];
+                case 1:_a = [_b.sent(), z];
                     return [4 /*yield*/, a];
                 case 2:
                     x = _a.concat([_b.sent()]);

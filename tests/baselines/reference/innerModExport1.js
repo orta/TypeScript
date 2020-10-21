@@ -31,7 +31,6 @@ var Outer;
 
         function NonExportFunc() { return 0; }
 
-
         export function ExportFunc() { return 0; }
     }
 

@@ -20,16 +20,10 @@ interface IFoo {
 
 
 // Expr type not assignable to target type
-(
-
-    { a: null });
+({ a: null });
 
 // Expr type assignable to target type
-(
-
-    { a: 2, b: undefined });
+({ a: 2, b: undefined });
 
 // Neither types is assignable to each other
-(
-
-    { c: null });
+({ c: null });

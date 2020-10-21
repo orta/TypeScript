@@ -271,8 +271,7 @@ var HTMLtoJSX = /** @class */ (function () {
                     .replace(/( {2,}|\n|\t|\{|\})/g, function (whitespace) {
                     return '{' + JSON.stringify(whitespace) + '}';
                 });
-            }
-            else {
+            } else {
                 // If there's a newline in the text, adjust the indent level
                 if (text.indexOf('\n') > -1) {
                 }

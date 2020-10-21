@@ -24,7 +24,6 @@ export class B {
     print() { return "I am B"; }
 }
 
-
 export function foo() { return "foo"; }
 //// [1.js]
 export function backup() { return "backup"; }

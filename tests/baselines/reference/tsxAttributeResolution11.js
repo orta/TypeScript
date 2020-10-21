@@ -38,4 +38,3 @@ var MyComponent = /** @class */ (function () {
 }());
 // Should be an OK
 var x = <MyComponent bar='world'/>;
-

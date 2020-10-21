@@ -35,13 +35,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 function gen() {
     var x, _a;
-    return __generator(this, function (_b) {
-        switch (_b.label) {
-            case 0:
-                _a = "abc";
+    return __generator(this, function (_b) {switch (_b.label) {case 0:_a = "abc";
                 return [4 /*yield*/, 10];
-            case 1:
-                x = _a + (_b.sent()) + "def";
+            case 1:x = _a + (_b.sent()) + "def";
                 return [2 /*return*/];
         }
     });

@@ -30,6 +30,7 @@ var __createBinding = (this && this.__createBinding) || (Object.create ? (functi
     o[k2] = m[k];
 }));
 exports.__esModule = true;
+exports.from = exports.x = void 0;
 var t1_1 = require("./t1");
 __createBinding(exports, t1_1, "x");__createBinding(exports, t1_1, "from");
 //// [t3.js]
@@ -42,6 +43,7 @@ var __createBinding = (this && this.__createBinding) || (Object.create ? (functi
     o[k2] = m[k];
 }));
 exports.__esModule = true;
+exports.from = void 0;
 var t1_1 = require("./t1");
 __createBinding(exports, t1_1, "from");
 //// [t4.js]
@@ -54,6 +56,7 @@ var __createBinding = (this && this.__createBinding) || (Object.create ? (functi
     o[k2] = m[k];
 }));
 exports.__esModule = true;
+exports.from = exports.a = void 0;
 var t1_1 = require("./t1");
 __createBinding(exports, t1_1, "x", "a");__createBinding(exports, t1_1, "from");
 //// [t5.js]
@@ -66,5 +69,6 @@ var __createBinding = (this && this.__createBinding) || (Object.create ? (functi
     o[k2] = m[k];
 }));
 exports.__esModule = true;
+exports.from = exports.a = void 0;
 var t1_1 = require("./t1");
 __createBinding(exports, t1_1, "x", "a");__createBinding(exports, t1_1, "from");

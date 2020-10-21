@@ -106,20 +106,15 @@ function f(dim, offsets, arr, acommon, centerAnchorLimit, g, has, lin) {
         default:
             if (rotation < (90 - centerAnchorLimit)) {
                 labelOffset.y = leftBottom ? size : 0;
-            }
-            else if (rotation < (90 + centerAnchorLimit)) {
+            } else if (rotation < (90 + centerAnchorLimit)) {
                 labelOffset.x = -size * 0.4;
-            }
-            else if (rotation < 180) {
+            } else if (rotation < 180) {
                 labelOffset.y = leftBottom ? 0 : -size;
-            }
-            else if (rotation < (270 - centerAnchorLimit)) {
+            } else if (rotation < (270 - centerAnchorLimit)) {
                 labelOffset.y = leftBottom ? 0 : -size;
-            }
-            else if (rotation < (270 + centerAnchorLimit)) {
+            } else if (rotation < (270 + centerAnchorLimit)) {
                 labelOffset.y = leftBottom ? size * 0.4 : 0;
-            }
-            else {
+            } else {
                 labelOffset.y = leftBottom ? size : 0;
             }
     }

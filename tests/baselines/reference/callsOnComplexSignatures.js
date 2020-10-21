@@ -143,7 +143,8 @@ arg1,
     arg3,
     arg4,
     arg5,
-    arg6) {
+    arg6
+) {
     arg1();
     arg1({ x: 0, y: 0 });
     arg1({ x: 0, y: 0 }, { x: 1, y: 1 });

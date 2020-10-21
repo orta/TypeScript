@@ -182,8 +182,7 @@ for (var x = 0; x < 1; ++x) {
 
 
 function foo() {
-    var _loop_3 = function (a) {
-        var _a;
+    var _loop_3 = function (a) {var _a;
         if (a === 1) {
             return "break";
         }
@@ -208,8 +207,7 @@ function foo() {
             }
             return { value: 50 };
         }
-        var _loop_4 = function (b) {
-            var _a;
+        var _loop_4 = function (b) {var _a;
             _a = [{ x1: 1, y: arguments_1.length }][0], x1 = _a.x1, z1 = _a.y;
             if (b === 1) {
                 return "break";
@@ -219,9 +217,7 @@ function foo() {
                 return "break-l0";
             }
 
-            (
-
-                function () { return b; });
+            (function () { return b; });
             return { value: 100 };
         };
         for (var _c = 0, _d = []; _c < _d.length; _c++) {
@@ -231,14 +227,10 @@ function foo() {
                 return state_2;
             if (state_2 === "break")
                 break;
-            switch (state_2) {
-                case "break-l0": return state_2;
+            switch (state_2) {case "break-l0": return state_2;
             }
         }
-        (
-
-
-            function () { return a; });
+        (function () { return a; });
     };
     var arguments_1 = arguments, x, z, x1, z1;
     l0: for (var _i = 0, _a = []; _i < _a.length; _i++) {
@@ -248,8 +240,7 @@ function foo() {
             return state_1.value;
         if (state_1 === "break")
             break;
-        switch (state_1) {
-            case "break-l0": break l0;
+        switch (state_1) {case "break-l0": break l0;
         }
     }
 

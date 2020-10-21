@@ -126,8 +126,7 @@ var D = /** @class */ (function () {
 function namedClasses(x) {
     if ("a" in x) {
         x.a = "1";
-    }
-    else {
+    } else {
         x.b = 1;
     }
 }
@@ -135,8 +134,7 @@ function namedClasses(x) {
 function multipleClasses(x) {
     if ("a" in x) {
         var y = x.a;
-    }
-    else {
+    } else {
         var z = x.b;
     }
 }
@@ -144,8 +142,7 @@ function multipleClasses(x) {
 function anonymousClasses(x) {
     if ("a" in x) {
         var y = x.a;
-    }
-    else {
+    } else {
         var z = x.b;
     }
 }
@@ -161,8 +158,7 @@ var BWithOptionalProp = /** @class */ (function () {
 function positiveTestClassesWithOptionalProperties(x) {
     if ("a" in x) {
         x.a = "1";
-    }
-    else {
+    } else {
         var y = x instanceof AWithOptionalProp
             ? x.a
             : x.b;
@@ -172,8 +168,7 @@ function positiveTestClassesWithOptionalProperties(x) {
 function inParenthesizedExpression(x) {
     if ("a" in (x)) {
         var y = x.a;
-    }
-    else {
+    } else {
         var z = x.b;
     }
 }
@@ -185,8 +180,7 @@ var ClassWithUnionProp = /** @class */ (function () {
 function inProperty(x) {
     if ("a" in x.prop) {
         var y = x.prop.a;
-    }
-    else {
+    } else {
         var z = x.prop.b;
     }
 }
@@ -198,8 +192,7 @@ var NestedClassWithProp = /** @class */ (function () {
 function innestedProperty(x) {
     if ("a" in x.outer.prop) {
         var y = x.outer.prop.a;
-    }
-    else {
+    } else {
         var z = x.outer.prop.b;
     }
 }
@@ -210,8 +203,7 @@ var InMemberOfClass = /** @class */ (function () {
     InMemberOfClass.prototype.inThis = function () {
         if ("a" in this.prop) {
             var y = this.prop.a;
-        }
-        else {
+        } else {
             var z = this.prop.b;
         }
     };
@@ -224,8 +216,7 @@ var SelfAssert = /** @class */ (function () {
     SelfAssert.prototype.inThis = function () {
         if ("a" in this) {
             var y = this.a;
-        }
-        else {
+        } else {
         }
     };
     return SelfAssert;

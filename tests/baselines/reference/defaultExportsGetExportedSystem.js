@@ -9,8 +9,7 @@ export default function foo() {}
 
 //// [a.js]
 System.register([], function (exports_1, context_1) {
-    "use strict";
-    var Foo;
+    "use strict";var Foo;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [],
@@ -22,8 +21,7 @@ System.register([], function (exports_1, context_1) {
 });
 //// [b.js]
 System.register([], function (exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
+    "use strict";var __moduleName = context_1 && context_1.id;
     function foo() { }
     exports_1("default", foo);
     return {

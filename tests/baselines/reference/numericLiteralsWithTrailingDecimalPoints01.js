@@ -69,4 +69,3 @@ var test16 = 3 // comment time
     .toString();
 var test17 = 3. // comment time again
     .toString();
-

@@ -12,7 +12,9 @@ var m3 = /** @class */ (function () {
     return m3;
 }()); // ok since the module is not instantiated
 var m3a;
-(function (m3a) {var y = 2;})(m3a || (m3a = {}));
+(function (m3a) {
+    var y = 2;
+})(m3a || (m3a = {}));
 var m3a = /** @class */ (function () {
     function m3a() {}
     m3a.prototype.foo = function () { };

@@ -16,8 +16,7 @@ function foo() {
 //// [capturedLetConstInLoop11.js]
 var _loop_1 = function () {
     var x = 1;
-    (
-        function () { return x; });
+    (function () { return x; });
 };
 for (;;) {
     _loop_1();

@@ -158,8 +158,7 @@ var m2;
 })(m2 || (m2 = {}));
 // Dotted module
 var m3;
-(function (m3) {
-    var m4;
+(function (m3) {var m4;
     (function (m4) {
         // global vars in function declaration
         num = typeof var1 === "string" && var1.length; // string

@@ -30,9 +30,9 @@ exports.context = (_a = {},
     _a[context_1.Key] = 'bar',
     _a);
 
-exports.withContext = function (_a) {
+var withContext = function (_a) {
     var _b = context_1.Key, value = _a[_b];
-    return value;};
+    return value;};exports.withContext = withContext;
 
 
 //// [context.d.ts]

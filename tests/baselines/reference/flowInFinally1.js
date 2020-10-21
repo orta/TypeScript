@@ -24,8 +24,7 @@ var a = null;
 
 try {
     a = new A();
-}
-finally {
+} finally {
     if (a) {
         a.method();
     }

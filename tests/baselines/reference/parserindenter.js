@@ -936,6 +936,7 @@ var Formatting;
                 else {
                     if (includeNonIndentChars)
                         indentSize += 1;
+
                     else
                         break;
                 }
@@ -1166,6 +1167,7 @@ var Formatting;
                 StringUtils.foreach(existingIndentation, function (c) {
                     if (c == '\t')
                         totalIndent += tabSize;
+
                     else
                         totalIndent++;
                 });
@@ -1173,6 +1175,7 @@ var Formatting;
                 totalIndent += level * indentSize;
                 if (totalIndent < 0)
                     return "";
+
                 else
                     return this.GetIndentString(null, totalIndent, tabSize, convertTabsToSpaces);
             }
@@ -1386,7 +1389,8 @@ var Formatting;
                     }
 
                     indentNode = indentNode.Parent;
-                } while (indentNode != null);
+                }
+                while (indentNode != null);
             }
         };
 

@@ -54,7 +54,6 @@ function a(a = 10) {
     "use strict";
 }
 
-
 export var foo = 10;
 function b(a = 10) {
 }

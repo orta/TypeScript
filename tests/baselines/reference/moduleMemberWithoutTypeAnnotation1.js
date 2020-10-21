@@ -48,8 +48,7 @@ module TypeScript.Syntax {
 
 //// [moduleMemberWithoutTypeAnnotation1.js]
 var TypeScript;
-(function (TypeScript) {
-    var Parser;
+(function (TypeScript) {var Parser;
     (function (Parser) {
         var SyntaxCursor = /** @class */ (function () {
             function SyntaxCursor() {
@@ -96,8 +95,7 @@ var TypeScript;
     }());
     TypeScript.SyntaxNode = SyntaxNode;
 })(TypeScript || (TypeScript = {}));
-(function (TypeScript) {
-    var Syntax;
+(function (TypeScript) {var Syntax;
     (function (Syntax) {
         function childIndex() { }
         Syntax.childIndex = childIndex;

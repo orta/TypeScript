@@ -14,7 +14,6 @@ exports.__esModule = true;
 exports.x = void 0;
 
 
-
 //// [internalAliasInterfaceInsideTopLevelModuleWithExport.d.ts]
 export declare module a {
     interface I {

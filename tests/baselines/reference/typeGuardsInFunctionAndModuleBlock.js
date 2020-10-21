@@ -140,8 +140,7 @@ var m;
         var y;
         if (typeof x === "string") {
             y = x; // string;
-        }
-        else {
+        } else {
             y = typeof x === "boolean"
                 ? x.toString() // boolean
                 : x.toString(); // number
@@ -152,15 +151,13 @@ var m1;
 (function (m1) {
     var x;
     var m2;
-    (function (m2) {
-        var m3;
+    (function (m2) {var m3;
         (function (m3) {
             var b = x; // new scope - number | boolean | string
             var y;
             if (typeof x === "string") {
                 y = x; // string;
-            }
-            else {
+            } else {
                 y = typeof x === "boolean"
                     ? x.toString() // boolean
                     : x.toString(); // number

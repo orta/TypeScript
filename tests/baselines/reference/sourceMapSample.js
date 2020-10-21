@@ -37,8 +37,7 @@ module Foo.Bar {
 
 //// [sourceMapSample.js]
 var Foo;
-(function (Foo) {
-    var Bar;
+(function (Foo) {var Bar;
     (function (Bar) {
         "use strict";
         var Greeter = /** @class */ (function () {

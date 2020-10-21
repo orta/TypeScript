@@ -26,8 +26,7 @@ export class Test {
 
 //// [interfaceImplementation6.js]
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     exports.Test = void 0;
 
     var C1 = /** @class */ (function () {

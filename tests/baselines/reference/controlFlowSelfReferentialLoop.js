@@ -125,6 +125,7 @@ function getObject(id: string | number) {
 // Repro from #12319
 exports.__esModule = true;
 function md5(string) {
+
     function FF(a, b, c, d, x, s, ac) {
         return 0;
     };

@@ -51,8 +51,7 @@ var Foo = /** @class */ (function () {
     return Foo;
 }());
 var N;
-(function (N) {
-    var F;
+(function (N) {var F;
     (function (F) {
         var t;
     })(F = N.F || (N.F = {}));

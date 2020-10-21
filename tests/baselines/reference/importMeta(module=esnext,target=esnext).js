@@ -52,6 +52,7 @@ const { a, b, c } = import.meta.wellKnownProperty;
 
     document.body.appendChild(image);
 })();
+export {};
 //// [moduleLookingFile01.js]
 export let x = import.meta;
 export let y = import.metal;
@@ -60,6 +61,7 @@ export let z = import.import.import.malkovich;
 let globalA = import.meta;
 let globalB = import.metal;
 let globalC = import.import.import.malkovich;
+export {};
 //// [assignmentTargets.js]
 export const foo = import.meta.blah = import.meta.blue = import.meta;
 import.meta = foo;

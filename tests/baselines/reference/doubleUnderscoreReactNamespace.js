@@ -15,4 +15,3 @@ export {}
 exports.__esModule = true;
 
 var thing = __make(__foot, null);
-

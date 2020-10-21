@@ -60,8 +60,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 
 function asyncFoo() {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
+    return __awaiter(this, void 0, void 0, function () {return __generator(this, function (_a) {
             return [2 /*return*/, {
                     bar: {
                         baz: {

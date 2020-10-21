@@ -124,7 +124,7 @@ Object.defineProperty(module.exports, "j", { value: function j() { } });
 export function a(): void;
 export function b(): void;
 export namespace b {
-    export const cat: string;
+    const cat: string;
 }
 /**
  * @param {number} a
@@ -149,7 +149,7 @@ export namespace f {
      * @template T
      * @param {T} a
      */
-    export function self<T>(a: T): T;
+    function self<T>(a: T): T;
 }
 /**
  * @param {{x: string}} a

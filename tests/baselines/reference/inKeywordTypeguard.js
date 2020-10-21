@@ -104,6 +104,13 @@ function positiveIntersectionTest(x: { a: string } & { b: string }) {
         let n: never = x;
     }
 }
+function negativeIntersectionTest() {
+    if ("ontouchstart" in window) {
+        window.ontouchstart
+    } else {
+        window.ontouchstart
+    }
+}
 
 
 //// [inKeywordTypeguard.js]
@@ -118,8 +125,7 @@ var B = /** @class */ (function () {
 function negativeClassesTest(x) {
     if ("a" in x) {
         x.b = "1";
-    }
-    else {
+    } else {
         x.a = "1";
     }
 }
@@ -127,8 +133,7 @@ function negativeClassesTest(x) {
 function positiveClassesTest(x) {
     if ("a" in x) {
         x.b = "1";
-    }
-    else {
+    } else {
         x.a = "1";
     }
 }
@@ -144,8 +149,7 @@ var BWithOptionalProp = /** @class */ (function () {
 function positiveTestClassesWithOptionalProperties(x) {
     if ("a" in x) {
         x.a = "1";
-    }
-    else {
+    } else {
         x.b = "1";
     }
 }
@@ -166,8 +170,7 @@ function negativeTestClassesWithMembers(x) {
     if ("a" in x) {
         x.a();
         x.b();
-    }
-    else {
+    } else {
     }
 }
 
@@ -175,8 +178,7 @@ function negativeTestClassesWithMemberMissingInBothClasses(x) {
     if ("c" in x) {
         x.a();
         x.b();
-    }
-    else {
+    } else {
         x.a();
         x.b();
     }
@@ -193,8 +195,7 @@ var D = /** @class */ (function () {
 function negativeMultipleClassesTest(x) {
     if ("a" in x) {
         x.b = "1";
-    }
-    else {
+    } else {
         x.a = "1";
     }
 }
@@ -206,8 +207,7 @@ var ClassWithUnionProp = /** @class */ (function () {
 function negativePropTest(x) {
     if ("a" in x.prop) {
         var y = x.prop.b;
-    }
-    else {
+    } else {
         var z = x.prop.a;
     }
 }
@@ -218,8 +218,7 @@ var NegativeClassTest = /** @class */ (function () {
     NegativeClassTest.prototype.inThis = function () {
         if ("a" in this.prop) {
             var z = this.prop.b;
-        }
-        else {
+        } else {
             var y = this.prop.a;
         }
     };
@@ -230,8 +229,7 @@ var UnreachableCodeDetection = /** @class */ (function () {
     }
     UnreachableCodeDetection.prototype.inThis = function () {
         if ("a" in this) {
-        }
-        else {
+        } else {
             var y = this.a;
         }
     };
@@ -240,8 +238,14 @@ var UnreachableCodeDetection = /** @class */ (function () {
 function positiveIntersectionTest(x) {
     if ("a" in x) {
         var s = x.a;
-    }
-    else {
+    } else {
         var n = x;
+    }
+}
+function negativeIntersectionTest() {
+    if ("ontouchstart" in window) {
+        window.ontouchstart;
+    } else {
+        window.ontouchstart;
     }
 }

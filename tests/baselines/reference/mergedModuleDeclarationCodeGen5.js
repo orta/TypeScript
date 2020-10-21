@@ -20,10 +20,8 @@ module M.buz.plop {
 
 //// [mergedModuleDeclarationCodeGen5.js]
 var M;
-(function (M_1) {
-    var buz;
-    (function (buz) {
-        var plop;
+(function (M_1) {var buz;
+    (function (buz) {var plop;
         (function (plop) {
             function doom() { }
             plop.doom = doom;
@@ -32,10 +30,8 @@ var M;
         })(plop = buz.plop || (buz.plop = {}));
     })(buz = M_1.buz || (M_1.buz = {}));
 })(M || (M = {}));
-(function (M) {
-    var buz;
-    (function (buz_1) {
-        var plop;
+(function (M) {var buz;
+    (function (buz_1) {var plop;
         (function (plop_1) {
             function gunk() { }
             function buz() { }

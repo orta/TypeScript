@@ -23,13 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var decorator;
-let Foo = /** @class */ (() => {
-    let Foo = class Foo {};
-    Foo = __decorate([
-        decorator
-    ], Foo);
-    return Foo;
-})();
+
+let Foo = class Foo {};
+Foo = __decorate([
+    decorator
+], Foo);
 exports.default = Foo;
 //// [b.js]
 "use strict";
@@ -41,11 +39,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var decorator;
-let default_1 = /** @class */ (() => {
-    let default_1 = class {};
-    default_1 = __decorate([
-        decorator
-    ], default_1);
-    return default_1;
-})();
+
+let default_1 = class {};
+default_1 = __decorate([
+    decorator
+], default_1);
 exports.default = default_1;

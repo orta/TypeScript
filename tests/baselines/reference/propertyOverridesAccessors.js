@@ -28,9 +28,9 @@ class B extends A {
             writable: true,
             value: 'yep'
         }); // error
-    }}
-class C {
-    constructor() {
+    }
+}
+class C {constructor() {
         Object.defineProperty(this, "_secret", {
             enumerable: true,
             configurable: true,
@@ -50,4 +50,5 @@ class D extends C {
             writable: true,
             value: 101
         }); // error
-    }}
+    }
+}

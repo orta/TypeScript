@@ -107,8 +107,7 @@ var A4;
     while (true)
         ;
     var A;
-    (function (A) {
-        var E;
+    (function (A) {var E;
         (function (E) {
             E[E["X"] = 0] = "X";
         })(E || (E = {}));

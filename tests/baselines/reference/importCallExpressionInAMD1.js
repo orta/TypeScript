@@ -18,16 +18,14 @@ function foo() {
 
 //// [0.js]
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.foo = void 0;
     function foo() { return "foo"; }
     exports.foo = foo;
 });
 //// [1.js]
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    "use strict";Object.defineProperty(exports, "__esModule", { value: true });
     exports.p2 = void 0;
     new Promise((resolve_1, reject_1) => { require(["./0"], resolve_1, reject_1); });
     var p1 = new Promise((resolve_2, reject_2) => { require(["./0"], resolve_2, reject_2); });

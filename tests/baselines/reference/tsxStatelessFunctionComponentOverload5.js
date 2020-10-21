@@ -58,8 +58,7 @@ const b8 = <MainButton data-format />;  // incorrect type for specified hyphanat
 
 //// [file.jsx]
 define(["require", "exports", "react"], function (require, exports, React) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     exports.MainButton = void 0;
 
     var obj0 = {

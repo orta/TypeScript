@@ -3,8 +3,7 @@ export default class DefaultClass { }
 
 //// [file.js]
 define("declarationEmitAmdModuleDefault", ["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
     var DefaultClass = /** @class */ (function () {
         function DefaultClass() {}
         return DefaultClass;

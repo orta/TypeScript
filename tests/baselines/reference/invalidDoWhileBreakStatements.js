@@ -45,8 +45,7 @@ break;
 
 // non-existent label
 ONE: do
-    break TWO;
-while (true);
+    break TWO; while (true);
 
 // break from inside function
 TWO: do {

@@ -50,8 +50,7 @@ var M;
         m.c = c;
     })(m = M.m || (M.m = {}));
 })(M || (M = {}));
-(function (M) {
-    var N;
+(function (M) {var N;
     (function (N) {
         var Window = /** @class */ (function () {
             function Window() {}

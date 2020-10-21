@@ -2371,7 +2371,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -3309,8 +3309,7 @@ var TypeScript;
         ImportDeclaration.prototype.getAliasName = function (aliasAST) {if (aliasAST === void 0) { aliasAST = this.alias; }
             if (aliasAST.nodeType == NodeType.Name) {
                 return aliasAST.actualText;
-            }
-            else {
+            } else {
                 var dotExpr = aliasAST;
                 return this.getAliasName(dotExpr.operand1) + "." + this.getAliasName(dotExpr.operand2);
             }
@@ -3841,8 +3840,7 @@ var TypeScript;
             if (this.isStatementBlock) {
                 emitter.writeLineToOutput(" {");
                 emitter.indenter.increaseIndent();
-            }
-            else {
+            } else {
                 emitter.setInVarBlock(this.statements.members.length);
             }
             var temp = emitter.setInObjectLiteral(false);

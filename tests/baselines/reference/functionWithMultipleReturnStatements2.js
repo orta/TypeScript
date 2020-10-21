@@ -94,11 +94,11 @@ function f12() {
 //// [functionWithMultipleReturnStatements2.js]
 // return type of a function with multiple returns is the BCT of each return statement
 // no errors expected here
+
 function f1() {
     if (true) {
         return 1;
-    }
-    else {
+    } else {
         return null;
     }
 }
@@ -106,11 +106,9 @@ function f1() {
 function f2() {
     if (true) {
         return 1;
-    }
-    else if (false) {
+    } else if (false) {
         return null;
-    }
-    else {
+    } else {
         return 2;
     }
 }
@@ -135,8 +133,7 @@ function f5() {
 function f6(x) {
     if (true) {
         return x;
-    }
-    else {
+    } else {
         return null;
     }
 }
@@ -154,8 +151,7 @@ var b;
 function f9() {
     if (true) {
         return a;
-    }
-    else {
+    } else {
         return b;
     }
 }
@@ -164,8 +160,7 @@ function f9() {
 function f10() {
     if (true) {
         return b;
-    }
-    else {
+    } else {
         return a;
     }
 }
@@ -174,8 +169,7 @@ function f10() {
 function f11() {
     if (true) {
         return function (x) { };
-    }
-    else {
+    } else {
         return function (x) { };
     }
 }
@@ -184,8 +178,7 @@ function f11() {
 function f12() {
     if (true) {
         return function (x) { };
-    }
-    else {
+    } else {
         return function (x) { };
     }
 }

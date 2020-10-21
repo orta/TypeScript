@@ -60,6 +60,7 @@ var d9 = [[...temp1], ...["hello"]];
 //      Elisionopt   SpreadElement
 //      ElementList, Elisionopt   AssignmentExpression
 //      ElementList, Elisionopt   SpreadElement
+
 // SpreadElement:
 //      ...   AssignmentExpression
 var a0 = [, , 2, 3, 4];

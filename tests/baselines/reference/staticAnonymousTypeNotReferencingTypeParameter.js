@@ -263,8 +263,7 @@ var ListWrapper = /** @class */ (function () {
     ListWrapper.sort = function (dit, l, compareFn) {
         if (isPresent(compareFn)) {
             l.sort(compareFn);
-        }
-        else {
+        } else {
             l.sort();
         }
     };

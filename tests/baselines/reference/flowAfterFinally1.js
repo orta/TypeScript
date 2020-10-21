@@ -19,8 +19,7 @@ var result;
 openFile();
 try {
     result = someOperation();
-}
-finally {
+} finally {
     closeFile();
 }
 

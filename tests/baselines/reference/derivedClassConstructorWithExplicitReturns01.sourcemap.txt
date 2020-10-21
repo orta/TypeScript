@@ -12,7 +12,7 @@ sourceFile:derivedClassConstructorWithExplicitReturns01.ts
 >>>    var extendStatics = function (d, b) {
 >>>        extendStatics = Object.setPrototypeOf ||
 >>>            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
->>>            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+>>>            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
 >>>        return extendStatics(d, b);
 >>>    };
 >>>    return function (d, b) {
@@ -462,27 +462,27 @@ sourceFile:derivedClassConstructorWithExplicitReturns01.ts
 ---
 >>>        }
 1 >^^^^^^^^^
-2 >         ^^^^->
 1 >
   >        }
 1 >Emitted(38, 10) Source(29, 10) + SourceIndex(0)
 ---
+>>>
 >>>        else
 >>>            return null;
-1->^^^^^^^^^^^^
+1 >^^^^^^^^^^^^
 2 >            ^^^^^^^
 3 >                   ^^^^
 4 >                       ^
-1->
+1 >
   >        else
   >            
 2 >            return 
 3 >                   null
 4 >                       ;
-1->Emitted(40, 13) Source(31, 13) + SourceIndex(0)
-2 >Emitted(40, 20) Source(31, 20) + SourceIndex(0)
-3 >Emitted(40, 24) Source(31, 24) + SourceIndex(0)
-4 >Emitted(40, 25) Source(31, 25) + SourceIndex(0)
+1 >Emitted(41, 13) Source(31, 13) + SourceIndex(0)
+2 >Emitted(41, 20) Source(31, 20) + SourceIndex(0)
+3 >Emitted(41, 24) Source(31, 24) + SourceIndex(0)
+4 >Emitted(41, 25) Source(31, 25) + SourceIndex(0)
 ---
 >>>    }
 1 >^^^^
@@ -491,8 +491,8 @@ sourceFile:derivedClassConstructorWithExplicitReturns01.ts
 1 >
   >    
 2 >    }
-1 >Emitted(41, 5) Source(32, 5) + SourceIndex(0)
-2 >Emitted(41, 6) Source(32, 6) + SourceIndex(0)
+1 >Emitted(42, 5) Source(32, 5) + SourceIndex(0)
+2 >Emitted(42, 6) Source(32, 6) + SourceIndex(0)
 ---
 >>>    return D;
 1->^^^^
@@ -500,8 +500,8 @@ sourceFile:derivedClassConstructorWithExplicitReturns01.ts
 1->
   >
 2 >    }
-1->Emitted(42, 5) Source(33, 1) + SourceIndex(0)
-2 >Emitted(42, 13) Source(33, 2) + SourceIndex(0)
+1->Emitted(43, 5) Source(33, 1) + SourceIndex(0)
+2 >Emitted(43, 13) Source(33, 2) + SourceIndex(0)
 ---
 >>>}(C));
 1 >
@@ -534,11 +534,11 @@ sourceFile:derivedClassConstructorWithExplicitReturns01.ts
   >               return null;
   >       }
   >   }
-1 >Emitted(43, 1) Source(33, 1) + SourceIndex(0)
-2 >Emitted(43, 2) Source(33, 2) + SourceIndex(0)
-3 >Emitted(43, 2) Source(16, 1) + SourceIndex(0)
-4 >Emitted(43, 3) Source(16, 17) + SourceIndex(0)
-5 >Emitted(43, 4) Source(16, 18) + SourceIndex(0)
-6 >Emitted(43, 7) Source(33, 2) + SourceIndex(0)
+1 >Emitted(44, 1) Source(33, 1) + SourceIndex(0)
+2 >Emitted(44, 2) Source(33, 2) + SourceIndex(0)
+3 >Emitted(44, 2) Source(16, 1) + SourceIndex(0)
+4 >Emitted(44, 3) Source(16, 17) + SourceIndex(0)
+5 >Emitted(44, 4) Source(16, 18) + SourceIndex(0)
+6 >Emitted(44, 7) Source(33, 2) + SourceIndex(0)
 ---
 >>>//# sourceMappingURL=derivedClassConstructorWithExplicitReturns01.js.map

@@ -104,9 +104,7 @@ var C1 = /** @class */ (function () {
     function C1() {
     }
     C1.prototype.f = function () {
-        return __asyncGenerator(this, arguments, function f_1() {
-            return __generator(this, function (_a) {
-                return [2 /*return*/];
+        return __asyncGenerator(this, arguments, function f_1() {return __generator(this, function (_a) {return [2 /*return*/];
             });
         });
     };
@@ -156,14 +154,10 @@ var C2 = /** @class */ (function () {
     function C2() {
     }
     C2.prototype.f = function () {
-        return __asyncGenerator(this, arguments, function f_1() {
-            var x;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, __await(void 0)];
+        return __asyncGenerator(this, arguments, function f_1() {var x;
+            return __generator(this, function (_a) {switch (_a.label) {case 0: return [4 /*yield*/, __await(void 0)];
                     case 1: return [4 /*yield*/, _a.sent()];
-                    case 2:
-                        x = _a.sent();
+                    case 2:x = _a.sent();
                         return [2 /*return*/];
                 }
             });
@@ -215,14 +209,10 @@ var C3 = /** @class */ (function () {
     function C3() {
     }
     C3.prototype.f = function () {
-        return __asyncGenerator(this, arguments, function f_1() {
-            var x;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, __await(1)];
+        return __asyncGenerator(this, arguments, function f_1() {var x;
+            return __generator(this, function (_a) {switch (_a.label) {case 0: return [4 /*yield*/, __await(1)];
                     case 1: return [4 /*yield*/, _a.sent()];
-                    case 2:
-                        x = _a.sent();
+                    case 2:x = _a.sent();
                         return [2 /*return*/];
                 }
             });
@@ -297,14 +287,10 @@ var C4 = /** @class */ (function () {
     function C4() {
     }
     C4.prototype.f = function () {
-        return __asyncGenerator(this, arguments, function f_1() {
-            var x;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [5 /*yield**/, __values(__asyncDelegator(__asyncValues([1])))];
+        return __asyncGenerator(this, arguments, function f_1() {var x;
+            return __generator(this, function (_a) {switch (_a.label) {case 0: return [5 /*yield**/, __values(__asyncDelegator(__asyncValues([1])))];
                     case 1: return [4 /*yield*/, __await.apply(void 0, [_a.sent()])];
-                    case 2:
-                        x = _a.sent();
+                    case 2:x = _a.sent();
                         return [2 /*return*/];
                 }
             });
@@ -379,13 +365,8 @@ var C5 = /** @class */ (function () {
     function C5() {
     }
     C5.prototype.f = function () {
-        return __asyncGenerator(this, arguments, function f_1() {
-            var x;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [5 /*yield**/, __values(__asyncDelegator(__asyncValues((function () { return __asyncGenerator(this, arguments, function () { return __generator(this, function (_a) {
-                            switch (_a.label) {
-                                case 0: return [4 /*yield*/, __await(1)];
+        return __asyncGenerator(this, arguments, function f_1() {var x;
+            return __generator(this, function (_a) {switch (_a.label) {case 0: return [5 /*yield**/, __values(__asyncDelegator(__asyncValues((function () { return __asyncGenerator(this, arguments, function () { return __generator(this, function (_a) {switch (_a.label) {case 0: return [4 /*yield*/, __await(1)];
                                 case 1: return [4 /*yield*/, _a.sent()];
                                 case 2:
                                     _a.sent();
@@ -393,8 +374,7 @@ var C5 = /** @class */ (function () {
                             }
                         }); }); })())))];
                     case 1: return [4 /*yield*/, __await.apply(void 0, [_a.sent()])];
-                    case 2:
-                        x = _a.sent();
+                    case 2:x = _a.sent();
                         return [2 /*return*/];
                 }
             });
@@ -446,13 +426,9 @@ var C6 = /** @class */ (function () {
     function C6() {
     }
     C6.prototype.f = function () {
-        return __asyncGenerator(this, arguments, function f_1() {
-            var x;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, __await(1)];
-                    case 1:
-                        x = _a.sent();
+        return __asyncGenerator(this, arguments, function f_1() {var x;
+            return __generator(this, function (_a) {switch (_a.label) {case 0: return [4 /*yield*/, __await(1)];
+                    case 1:x = _a.sent();
                         return [2 /*return*/];
                 }
             });
@@ -504,10 +480,7 @@ var C7 = /** @class */ (function () {
     function C7() {
     }
     C7.prototype.f = function () {
-        return __asyncGenerator(this, arguments, function f_1() {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, __await(1)];
+        return __asyncGenerator(this, arguments, function f_1() {return __generator(this, function (_a) {switch (_a.label) {case 0: return [4 /*yield*/, __await(1)];
                     case 1: return [2 /*return*/, _a.sent()];
                 }
             });
@@ -561,8 +534,7 @@ var C8 = /** @class */ (function () {
     C8.prototype.g = function () {
     };
     C8.prototype.f = function () {
-        return __asyncGenerator(this, arguments, function f_1() {
-            return __generator(this, function (_a) {
+        return __asyncGenerator(this, arguments, function f_1() {return __generator(this, function (_a) {
                 this.g();
                 return [2 /*return*/];
             });
@@ -575,7 +547,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -635,8 +607,7 @@ var C9 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     C9.prototype.f = function () {
-        return __asyncGenerator(this, arguments, function f_1() {
-            return __generator(this, function (_a) {
+        return __asyncGenerator(this, arguments, function f_1() {return __generator(this, function (_a) {
                 _super.prototype.g.call(this);
                 return [2 /*return*/];
             });

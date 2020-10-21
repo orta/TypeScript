@@ -33,10 +33,10 @@ function useRef(current) {
     return { current: current };
 }
 exports.useRef = useRef;
-exports.useCsvParser = function () {
+var useCsvParser = function () {
     var parserRef = useRef(null);
     return parserRef;
-};
+};exports.useCsvParser = useCsvParser;
 
 
 //// [index.d.ts]

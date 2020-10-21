@@ -55,14 +55,17 @@ exports.__esModule = true;
 exports.foo = void 0;
 function a(a) {
     "use strict";
-    if (a === void 0) { a = 10; }}
+    if (a === void 0) { a = 10; }
+}
 
 exports.foo = 10;
-function b(a) {if (a === void 0) { a = 10; }}
+function b(a) {if (a === void 0) { a = 10; }
+}
 
 function container() {
     "use strict";
-    function f(a) {if (a === void 0) { a = 10; }}
+    function f(a) {if (a === void 0) { a = 10; }
+    }
 }
 
 function rest() {
@@ -84,7 +87,8 @@ function rest1(a) {
 
 function paramDefault(param) {
     'use strict';
-    if (param === void 0) { param = 1; }}
+    if (param === void 0) { param = 1; }
+}
 
 function objectBindingPattern(_a) {
     'use strict';
@@ -99,13 +103,15 @@ function arrayBindingPattern(_a) {
 function manyParameter(a, b) {
     "use strict";
     if (a === void 0) { a = 10; }
-    if (b === void 0) { b = 20; }}
+    if (b === void 0) { b = 20; }
+}
 
 function manyPrologue(a, b) {
     "foo";
     "use strict";
     if (a === void 0) { a = 10; }
-    if (b === void 0) { b = 20; }}
+    if (b === void 0) { b = 20; }
+}
 
 function invalidPrologue(a, b) {
     "foo";

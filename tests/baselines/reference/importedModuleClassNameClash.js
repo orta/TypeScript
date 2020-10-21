@@ -8,8 +8,7 @@ class foo { }
 
 //// [importedModuleClassNameClash.js]
 define(["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
+    "use strict";exports.__esModule = true;
 
     var foo = /** @class */ (function () {
         function foo() {}

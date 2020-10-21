@@ -96,4 +96,3 @@ var aFunctionInModule = M.F2;
 
 // no initializer or annotation, so this is an 'any'
 var x;
-

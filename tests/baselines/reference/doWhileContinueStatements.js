@@ -45,7 +45,8 @@ do {
 
 ONE: do {
     continue ONE;
-} while (true);
+}
+while (true);
 
 TWO: THREE: do {
     continue THREE;
@@ -59,17 +60,13 @@ FOUR: do {
 
 do {
     SIX: do
-        continue SIX;
-    while (true);
+        continue SIX; while (true);
 } while (true);
 
 SEVEN: do
     do
         do
-            continue SEVEN;
-        while (true);
-    while (true);
-while (true);
+            continue SEVEN; while (true); while (true); while (true);
 
 EIGHT: do {
     var fn = function () { };

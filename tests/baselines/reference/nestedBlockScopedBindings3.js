@@ -72,8 +72,7 @@ function a5() {
 function a0() {
     {
         var _loop_1 = function (x) {
-            (
-                function () { return x; });
+            (function () { return x; });
         };
         for (var x = 0; x < 1;) {
             _loop_1(x);
@@ -81,8 +80,7 @@ function a0() {
     }
     {
         var _loop_2 = function (x) {
-            (
-                function () { return x; });
+            (function () { return x; });
         };
         for (var x = void 0;;) {
             _loop_2(x);
@@ -92,15 +90,13 @@ function a0() {
 
 function a1() {
     var _loop_3 = function (x) {
-        (
-            function () { return x; });
+        (function () { return x; });
     };
     for (var x = void 0; x < 1;) {
         _loop_3(x);
     }
     var _loop_4 = function (x) {
-        (
-            function () { return x; });
+        (function () { return x; });
     };
     for (var x = void 0;;) {
         _loop_4(x);
@@ -131,8 +127,7 @@ function a3() {
 function a4() {
     var _loop_5 = function (x) {
         x = x + 1;
-        (
-            function () { return x; });
+        (function () { return x; });
         out_x_1 = x;
     };
     var out_x_1;
@@ -151,8 +146,7 @@ function a4() {
 function a5() {
     var _loop_6 = function (x) {
         x = x + 1;
-        (
-            function () { return x; });
+        (function () { return x; });
         out_x_2 = x;
     };
     var out_x_2;
@@ -163,8 +157,7 @@ function a5() {
     switch (1) {
         case 1:
             var x_1;
-            (
-                function () { return x_1; });
+            (function () { return x_1; });
             break;
     }
 }

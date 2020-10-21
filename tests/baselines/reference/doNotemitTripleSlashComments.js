@@ -39,12 +39,13 @@ function bar() { }
 var x = 10;
 
 var y = "hello";
-
-
 //// [file1.js]
+
 function foo() { }
 
 
 var z = "world";
 //// [file2.js]
+
+
 function bar() { }

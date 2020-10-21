@@ -784,8 +784,7 @@ var TypeScript;
                 if ((preAst.operand1) && (walker.options.goNextSibling)) {
                     preAst.operand1 = walker.walk(preAst.operand1, preAst);
                 }
-            }
-            else {
+            } else {
                 if (preAst.operand1) {
                     preAst.operand1 = walker.walk(preAst.operand1, preAst);
                 }

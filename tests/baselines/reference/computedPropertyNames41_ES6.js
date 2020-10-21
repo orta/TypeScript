@@ -14,7 +14,7 @@ class Foo {}
 class Foo2 {}
 
 class C {
-    // Computed properties
 
+    // Computed properties
     static [""]() { return new Foo; }
 }

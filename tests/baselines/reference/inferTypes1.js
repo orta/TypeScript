@@ -235,4 +235,3 @@ function invoker(key) {var args = [];
 }
 
 var result = invoker('test', true)({ test: function (a) { return 123; } });
-

@@ -63,7 +63,7 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -101,10 +101,8 @@ obj.foo.apply(obj, __spreadArrays([1, 2], a));
 obj.foo.apply(obj, __spreadArrays([1, 2], a, ["abc"]));
 
 obj.foo.apply(obj, __spreadArrays([1, 2], a)).foo(1, 2, "abc");
-(
-    _a = obj.foo.apply(obj, __spreadArrays([1, 2], a))).foo.apply(_a, __spreadArrays([1, 2], a));
-(
-    _b = obj.foo.apply(obj, __spreadArrays([1, 2], a))).foo.apply(_b, __spreadArrays([1, 2], a, ["abc"]));
+(_a = obj.foo.apply(obj, __spreadArrays([1, 2], a))).foo.apply(_a, __spreadArrays([1, 2], a));
+(_b = obj.foo.apply(obj, __spreadArrays([1, 2], a))).foo.apply(_b, __spreadArrays([1, 2], a, ["abc"]));
 
 (obj.foo)(1, 2, "abc");
 obj.foo.apply(obj, __spreadArrays([1, 2], a));
@@ -115,10 +113,8 @@ obj.foo.apply(obj, __spreadArrays([1, 2], a, ["abc"]));
 (_d = obj.foo.apply(obj, __spreadArrays([1, 2], a))).foo.apply(_d, __spreadArrays([1, 2], a, ["abc"]));
 
 xa[1].foo(1, 2, "abc");
-(
-    _e = xa[1]).foo.apply(_e, __spreadArrays([1, 2], a));
-(
-    _f = xa[1]).foo.apply(_f, __spreadArrays([1, 2], a, ["abc"]));
+(_e = xa[1]).foo.apply(_e, __spreadArrays([1, 2], a));
+(_f = xa[1]).foo.apply(_f, __spreadArrays([1, 2], a, ["abc"]));
 
 (_g = xa[1]).foo.apply(_g, [1, 2, "abc"]);
 
