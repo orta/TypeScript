@@ -2066,7 +2066,7 @@ namespace ts {
             return createNodeArray(list, listPos);
         }
 
-        function parseListElement<T extends Node>(parsingContext: ParsingContext, parseElement: () => T): T {
+        function parseListElement<T extends Node | undefined>(parsingContext: ParsingContext, parseElement: () => T): T {
             const node = currentNode(parsingContext);
             if (node) {
                 return <T>consumeNode(node);
@@ -2405,7 +2405,9 @@ namespace ts {
         }
 
         // Parses a comma-delimited list of elements
-        function parseDelimitedList<T extends Node>(kind: ParsingContext, parseElement: () => T, considerSemicolonAsDelimiter?: boolean): NodeArray<T> {
+        function parseDelimitedList<T extends Node>(kind: ParsingContext, parseElement: () => T, considerSemicolonAsDelimiter?: boolean): NodeArray<T>;
+        function parseDelimitedList<T extends Node | undefined>(kind: ParsingContext, parseElement: () => T, considerSemicolonAsDelimiter?: boolean): NodeArray<NonNullable<T>> | undefined;
+        function parseDelimitedList<T extends Node | undefined>(kind: ParsingContext, parseElement: () => T, considerSemicolonAsDelimiter?: boolean): NodeArray<NonNullable<T>> | undefined {
             const saveParsingContext = parsingContext;
             parsingContext |= 1 << kind;
             const list = [];
@@ -2415,7 +2417,11 @@ namespace ts {
             while (true) {
                 if (isListElement(kind, /*inErrorRecovery*/ false)) {
                     const startPos = scanner.getStartPos();
-                    list.push(parseListElement(kind, parseElement));
+                    const result = parseListElement(kind, parseElement);
+                    if (!result) {
+                        return undefined;
+                    }
+                    list.push(result as NonNullable<T>);
                     commaStart = scanner.getTokenPos();
 
                     if (parseOptional(SyntaxKind.CommaToken)) {
@@ -2922,6 +2928,14 @@ namespace ts {
             return name;
         }
 
+        function isParameterNameStart() {
+            return isIdentifier() || token() === SyntaxKind.OpenBracketToken || token() === SyntaxKind.OpenBraceToken;
+        }
+
+        function parseParameterForSpeculation() {
+            return parseParameterWorker(/*inOuterAwaitContext*/ false, /*allowAmbiguity*/ false);
+        }
+
         function parseParameterInOuterAwaitContext() {
             return parseParameterWorker(/*inOuterAwaitContext*/ true);
         }
@@ -2930,7 +2944,9 @@ namespace ts {
             return parseParameterWorker(/*inOuterAwaitContext*/ false);
         }
 
-        function parseParameterWorker(inOuterAwaitContext: boolean): ParameterDeclaration {
+        function parseParameterWorker(inOuterAwaitContext: boolean): ParameterDeclaration;
+        function parseParameterWorker(inOuterAwaitContext: boolean, allowAmbiguity: false): ParameterDeclaration | undefined;
+        function parseParameterWorker(inOuterAwaitContext: boolean, allowAmbiguity = true): ParameterDeclaration | undefined {
             const pos = getNodePos();
             const hasJSDoc = hasPrecedingJSDocComment();
             if (token() === SyntaxKind.ThisKeyword) {
@@ -2948,6 +2964,9 @@ namespace ts {
 
             // FormalParameter [Yield,Await]:
             //      BindingElement[?Yield,?Await]
+            if (!allowAmbiguity && !isParameterNameStart()) {
+                return undefined;
+            }
 
             // Decorators are parsed in the outer [Await] context, the rest of the parameter is parsed in the function's [Await] context.
             const decorators = inOuterAwaitContext ? doInAwaitContext(parseDecorators) : parseDecorators();
@@ -2998,7 +3017,7 @@ namespace ts {
             return false;
         }
 
-        function parseParametersWorker(flags: SignatureFlags) {
+        function parseParametersWorker(flags: SignatureFlags, allowAmbiguityInParameters = true) {
             // FormalParameters [Yield,Await]: (modified)
             //      [empty]
             //      FormalParameterList[?Yield,Await]
@@ -3020,10 +3039,15 @@ namespace ts {
 
             const parameters = flags & SignatureFlags.JSDoc ?
                 parseDelimitedList(ParsingContext.JSDocParameters, parseJSDocParameter) :
-                parseDelimitedList(ParsingContext.Parameters, savedAwaitContext ? parseParameterInOuterAwaitContext : parseParameter);
+                parseDelimitedList(ParsingContext.Parameters, savedAwaitContext ? parseParameterInOuterAwaitContext
+                                                                                : allowAmbiguityInParameters ? parseParameter : parseParameterForSpeculation);
 
             setYieldContext(savedYieldContext);
             setAwaitContext(savedAwaitContext);
+
+            // if (!parameters) {
+            //     return false;
+            // }
 
             return parameters;
         }
@@ -3047,6 +3071,9 @@ namespace ts {
             }
 
             const parameters = parseParametersWorker(flags);
+            if (!parameters) {
+                return createNodeArray([], getNodePos());
+            }
             parseExpected(SyntaxKind.CloseParenToken);
             return parameters;
         }
@@ -3139,8 +3166,9 @@ namespace ts {
         }
 
         function parseIndexSignatureDeclaration(pos: number, hasJSDoc: boolean, decorators: NodeArray<Decorator> | undefined, modifiers: NodeArray<Modifier> | undefined): IndexSignatureDeclaration {
-            const parameters = parseBracketedList(ParsingContext.Parameters, parseParameter, SyntaxKind.OpenBracketToken, SyntaxKind.CloseBracketToken);
+            const parameters = parseBracketedList<ParameterDeclaration>(ParsingContext.Parameters, parseParameter, SyntaxKind.OpenBracketToken, SyntaxKind.CloseBracketToken);
             const type = parseTypeAnnotation();
+
             parseTypeMemberSemicolon();
             const node = factory.createIndexSignature(decorators, modifiers, parameters, type);
             return withJSDoc(finishNode(node, pos), hasJSDoc);
@@ -4280,7 +4308,12 @@ namespace ts {
                 parameters = createMissingList<ParameterDeclaration>();
             }
             else {
-                parameters = parseParametersWorker(isAsync);
+                const potentialParams = parseParametersWorker(isAsync, allowAmbiguity);
+                if (!potentialParams) {
+                    return undefined;
+                }
+                parameters = potentialParams;
+
                 if (!parseExpected(SyntaxKind.CloseParenToken) && !allowAmbiguity) {
                     return undefined;
                 }
